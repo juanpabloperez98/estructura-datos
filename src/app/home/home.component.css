@@ -17,10 +17,16 @@ h1{
 .btn-go:hover{
     border: 2px double white;
 }
-
-#woman-content img{
-    width: 100%;
+.card .card-body h1,.card .card-body p{
+    color:black;
 }
-.carousel-control-next span{
-    background-color: black !important;
+button.carousel-control-prev{
+    margin-left: 18pc;
+} 
+button.carousel-control-next{
+    margin-right: 18pc;
+} 
+
+button img{
+    width: 40%;
 }
