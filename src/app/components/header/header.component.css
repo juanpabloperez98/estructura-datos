@@ -1,0 +1,19 @@
+ul li a {
+    color: #fff;
+}
+
+ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+ul li {
+    margin-left: 45px;
+    font-size: 20px;
+}
+
+
+/* .button {
+    font-size: 150px;
+    margin-left: 80px;
+} */
