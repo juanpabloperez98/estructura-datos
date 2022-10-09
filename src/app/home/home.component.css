@@ -1,32 +1,69 @@
-*{
+* {
     color: white;
 }
-.banner{
+
+.banner {
     background-color: black;
 }
-.banner #content-after-banner{
+
+.banner #content-after-banner {
     width: 90%;
     margin: auto;
 }
-h1{
+
+h1 {
     font-size: 30px;
 }
-.btn-go{
+
+.btn-go {
     border: 1px solid white;
 }
-.btn-go:hover{
+
+.btn-go:hover {
     border: 2px double white;
 }
-.card .card-body h1,.card .card-body p{
-    color:black;
-}
-button.carousel-control-prev{
-    margin-left: 18pc;
-} 
-button.carousel-control-next{
-    margin-right: 18pc;
-} 
 
-button img{
+.card .card-body h1,
+.card .card-body p {
+    color: black;
+}
+
+button.carousel-control-prev {
+    margin-left: 18pc;
+}
+
+button.carousel-control-next {
+    margin-right: 18pc;
+}
+
+button img {
     width: 40%;
+}
+
+#module {
+    margin-top: 20px;
+}
+
+#modules {
+    padding: 100px 100px;
+}
+
+#modules img {
+    width: 100%;
+}
+
+#color {
+    color: black;
+}
+
+#color1 {
+    color: rgb(79, 79, 79);
+    font-size: 110%;
+    line-height: 120%
+}
+
+#btn-module {
+    display: block;
+    margin: auto;
+    width: 25%;
 }
