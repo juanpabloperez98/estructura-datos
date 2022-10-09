@@ -3,24 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 
 
 import { FooterComponent } from './components/footer/footer.component';
-import { ModulosComponent } from './components/modulos/modulos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatSliderModule } from '@angular/material/slider';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ModulosComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    NgbModule,
+  ],
+  exports: [
+    MatSliderModule,
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
