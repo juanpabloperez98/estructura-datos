@@ -1,0 +1,11 @@
+Footer {
+    background-color: #212529;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#colorLink {
+    color: #fbfbfb
+}
