@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { routing, appRoutingProviders } from './app.routing';
+import { Routes, RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { HomeComponent } from './home/home.component';
+import { Approutes } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,18 +22,19 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    routing,
     BrowserAnimationsModule,
     MatSliderModule,
     NgbModule,
+    RouterModule.forRoot(Approutes),
   ],
   exports: [
     MatSliderModule,
   ],
-  providers: [appRoutingProviders],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

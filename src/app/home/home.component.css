@@ -1,0 +1,26 @@
+*{
+    color: white;
+}
+.banner{
+    background-color: black;
+}
+.banner #content-after-banner{
+    width: 90%;
+    margin: auto;
+}
+h1{
+    font-size: 30px;
+}
+.btn-go{
+    border: 1px solid white;
+}
+.btn-go:hover{
+    border: 2px double white;
+}
+
+#woman-content img{
+    width: 100%;
+}
+.carousel-control-next span{
+    background-color: black !important;
+}
