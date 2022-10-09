@@ -11,17 +11,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
     routing,
-    BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
     NgbModule,

@@ -1,0 +1,36 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 325px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar.close{
+    left: -325px;
+}
+
+.wrapper .sidebar span{
+    left: 270px;
+    top: 250px;
+    position: absolute;
+    padding: 10px;
+    /* background-color: rgb(255, 240, 240); */
+    border-radius: 100px;
+}
