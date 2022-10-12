@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { Approutes } from './app-routing.module';
+import { ModulosComponent } from './modulos/modulos.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Approutes } from './app-routing.module';
     FooterComponent,
     SidenavComponent,
     HomeComponent,
+    ModulosComponent,
   ],
   imports: [
     BrowserModule,
