@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid w-75">
-        <img src="assets/images/logo/logoUTP.png" class="app-logo" alt="Logotipo" width="100" height="50" />
+        <img src="assets/images/logo/logoUTP.png" class="app-logo" id="logo" alt="Logotipo" width=80px />
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -10,10 +10,10 @@
                     <a class="nav-link active" aria-current="page" [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
                 </li>
                 <li class="nav-item marg-default">
-                    <a class="nav-link" [routerLinkActive]="['active']">Manual de usuario</a>
+                    <a class="nav-link disabled" [routerLinkActive]="['active']">Manual de usuario</a>
                 </li>
                 <li class="nav-item marg-default">
-                    <a class="nav-link" href="#" [routerLinkActive]="['active']">Manuel técnico</a>
+                    <a class="nav-link disabled" href="#" [routerLinkActive]="['active']">Manuel técnico</a>
                 </li>
                 <li class="nav-item" id="btn-module">
                     <button type="button" class="btn btn-light" [routerLink]="['/modules/main']">Modulos</button>
