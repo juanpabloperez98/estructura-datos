@@ -1,0 +1,11 @@
+#btn-module {
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
