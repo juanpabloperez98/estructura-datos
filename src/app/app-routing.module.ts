@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { BlankIntroComponent } from './introduccion/blank-intro/blank-intro.component';
 import { ModulosComponent } from './modulos/modulos.component';
+
 
 export const Approutes: Routes = [
   {
@@ -12,16 +14,17 @@ export const Approutes: Routes = [
     path:'modules',
     component:ModulosComponent,
     pathMatch: 'full'
-
-    /* children:[
+  },
+  {
+    path: 'intro',
+    component:BlankIntroComponent,
+    children: [
       {
         path: '',
-        loadChildren: () => import('./modules/modules.module').then( x => x.ModulesModule )
+        loadChildren: () => import('./introduccion/introduccion.module').then( x => x.IntroduccionModule )
       },
-    ] */
+    ]
   },
-
-  
   {
     path: '**',
     redirectTo: '/auth'
