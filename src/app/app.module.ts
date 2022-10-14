@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
@@ -21,6 +20,8 @@ import { TiposBlankComponent } from './tipos-blank/tipos-blank.component';
 import { LinealesBlankComponent } from './lineales-blank/lineales-blank.component';
 import { NoLinealesBlankComponent } from './no-lineales-blank/no-lineales-blank.component';
 import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-introduccion.component';
+import { Modulo1TipoComponent } from './modulo1-tipo/modulo1-tipo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-int
     LinealesBlankComponent,
     NoLinealesBlankComponent,
     Modulo1IntroduccionComponent,
+    Modulo1TipoComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,6 +45,7 @@ import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-int
     MatSliderModule,
     NgbModule,
     RouterModule.forRoot(Approutes),
+    ReactiveFormsModule
   ],
   exports: [
     MatSliderModule,
