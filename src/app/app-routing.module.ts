@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { IntroBlankComponent } from './intro-blank/intro-blank.component';
 import { LinealesBlankComponent } from './lineales-blank/lineales-blank.component';
+import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-introduccion.component';
 import { ModulosComponent } from './modulos/modulos.component';
 import { NoLinealesBlankComponent } from './no-lineales-blank/no-lineales-blank.component';
 import { TiposBlankComponent } from './tipos-blank/tipos-blank.component';
@@ -36,6 +37,11 @@ export const Approutes: Routes = [
   {
     path:'no-lineales-blank',
     component:NoLinealesBlankComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'modulo1-introduccion',
+    component:Modulo1IntroduccionComponent,
     pathMatch: 'full'
   },
   {
