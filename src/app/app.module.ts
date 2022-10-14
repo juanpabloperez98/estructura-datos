@@ -16,6 +16,11 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { Approutes } from './app-routing.module';
 import { ModulosComponent } from './modulos/modulos.component';
+import { IntroBlankComponent } from './intro-blank/intro-blank.component';
+import { TiposBlankComponent } from './tipos-blank/tipos-blank.component';
+import { LinealesBlankComponent } from './lineales-blank/lineales-blank.component';
+import { NoLinealesBlankComponent } from './no-lineales-blank/no-lineales-blank.component';
+import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-introduccion.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { ModulosComponent } from './modulos/modulos.component';
     SidenavComponent,
     HomeComponent,
     ModulosComponent,
+    IntroBlankComponent,
+    TiposBlankComponent,
+    LinealesBlankComponent,
+    NoLinealesBlankComponent,
+    Modulo1IntroduccionComponent,
   ],
   imports: [
     BrowserModule,

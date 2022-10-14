@@ -1,0 +1,15 @@
+.card img {
+    width: 2s00px;
+    height: 200px;
+    margin: auto;
+}
+
+.card p {
+    min-height: 100px;
+}
+
+#btn-module {
+    display: block;
+    margin: auto;
+    width: 25%;
+}
