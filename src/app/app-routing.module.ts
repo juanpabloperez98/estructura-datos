@@ -14,14 +14,21 @@ export const Approutes: Routes = [
     component: HomeComponent,
     pathMatch: 'full'
   },
+  // Modulos
   {
     path:'modules',
     component:ModulosComponent,
     pathMatch: 'full'
   },
+  //Introducción
   {
     path:'introduccion-blank',
     component:IntroBlankComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'module1/introduccion',
+    component:Modulo1IntroduccionComponent,
     pathMatch: 'full'
   },
   {
