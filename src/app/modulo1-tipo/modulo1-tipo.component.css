@@ -4,7 +4,7 @@
 }
 
 #principal {
-    font-size: 120%;
+    font-size: 100%;
     width: 35rem;
     text-align: justify;
 }
@@ -17,10 +17,4 @@
 
 .card-title {
     font-size: 250%;
-}
-
-.card img {
-    width: 400px;
-    height: 400px;
-    margin: auto;
 }

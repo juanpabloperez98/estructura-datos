@@ -24,6 +24,7 @@ import { Modulo1TipoComponent } from './modulo1-tipo/modulo1-tipo.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Modulo1AbstraccionComponent } from './modulo1-abstraccion/modulo1-abstraccion.component';
 import { Modulo1FuncionComponent } from './modulo1-funcion/modulo1-funcion.component';
+import { Modulo1AlgoritmosComponent } from './modulo1-algoritmos/modulo1-algoritmos.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { Modulo1FuncionComponent } from './modulo1-funcion/modulo1-funcion.compo
     Modulo1AbstraccionComponent,
     
     Modulo1FuncionComponent,
+          Modulo1AlgoritmosComponent,
     
   ],
   imports: [
