@@ -1,6 +1,15 @@
-#tit {
-    font-size: 400%;
+.title-content h1 {
+    font-size: 50px;
     font-family: initial;
+}
+.title-content a{
+    cursor: pointer;
+}
+.title-content img {
+    width: 40px;
+}
+.title-content a:hover > img{
+    width: 45px;
 }
 
 #principal {
