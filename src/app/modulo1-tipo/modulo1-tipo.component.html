@@ -1,6 +1,12 @@
 <div class="row mx-auto mb-5 ">
-    <div class="my-5 col-lg-12 text-center">
-        <h1 id="tit">Tipo de datos </h1>
+    <div class="my-5 col-lg-12 text-center title-content">
+        <a [routerLink]="['/modulo1-introduccion']" class="d-inline-block mr-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/left-row.png" alt="left-row.png">
+        </a>
+        <h1 class="d-inline-block" id="tit">Tipo de datos </h1>
+        <a [routerLink]="['/modulo1-tipo']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
     </div>
 
     <div class="card mx-auto my-2 text-center col-12" id=principal style="width: 45rem;">
@@ -28,15 +34,24 @@
                     <li> <strong>Caracteres:</strong> El tipo de dato carácter es un dígito individual el cual se puede representar como numéricos (0 al 9), letras (a-z) y símbolos (!"$&/\).</li>
                 </p>
 
-                <pre class="language-language-markup line-numbers"><code>
-                    char caracter;
-                    </code></pre>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c">
+                        char caracter;
+                    </code>
+                </pre>
 
                 <p class="card-text mx-auto my-4">
                     <li> <strong>Numéricos:</strong> Este tipo de dato puede ser entero o flotante (Real). Los enteros son valores sin punto decimal, pueden ser positivos negativos y cero. Ejemplo: -7, -3, 0, 3, 7.</li>
                 </p>
 
                 <!--codigo  -->
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        int main(){{ '{' }}
+                            printf("Hola mundo");
+                        {{ '}' }}
+                    </code>
+                </pre>
 
                 <p class="card-text mx-auto my-4">
                     <li> <strong>Booleanos:</strong> Este es tipo de dato se emplea para valores lógicos, su comportamiento se basa en “True” (Verdadero) o “False” (Falso), los podemos como datos comparativos, esta comparación devuelve uno u otro.</li>
