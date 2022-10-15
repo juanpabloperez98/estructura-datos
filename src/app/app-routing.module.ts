@@ -11,6 +11,7 @@ import { Modulo1TipoComponent } from './modulo1-tipo/modulo1-tipo.component';
 import { Modulo1AbstraccionComponent } from './modulo1-abstraccion/modulo1-abstraccion.component';
 import { Modulo1FuncionComponent } from './modulo1-funcion/modulo1-funcion.component';
 import { Modulo1AlgoritmosComponent } from './modulo1-algoritmos/modulo1-algoritmos.component';
+import { Modulo1ArreglosComponent } from './modulo1-arreglos/modulo1-arreglos.component';
 
 export const Approutes: Routes = [
   {
@@ -78,6 +79,11 @@ export const Approutes: Routes = [
   {
     path:'modulo1-algoritmos',
     component:Modulo1AlgoritmosComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'modulo1-arreglos',
+    component:Modulo1ArreglosComponent,
     pathMatch: 'full'
   },
   {
