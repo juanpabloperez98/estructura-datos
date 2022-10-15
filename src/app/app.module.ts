@@ -10,7 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
 import { Approutes } from './app-routing.module';
@@ -22,6 +22,7 @@ import { NoLinealesBlankComponent } from './no-lineales-blank/no-lineales-blank.
 import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-introduccion.component';
 import { Modulo1TipoComponent } from './modulo1-tipo/modulo1-tipo.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Modulo1AbstraccionComponent } from './modulo1-abstraccion/modulo1-abstraccion.component';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     NoLinealesBlankComponent,
     Modulo1IntroduccionComponent,
     Modulo1TipoComponent,
+    Modulo1AbstraccionComponent,
     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    NgbModule,
+   
     RouterModule.forRoot(Approutes),
     ReactiveFormsModule
   ],

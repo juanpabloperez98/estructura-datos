@@ -1,0 +1,136 @@
+<div class="row mx-auto mb-5 ">
+    <div class="my-5 col-lg-12 text-center">
+        <h1 id="tit">Representacion binaria </h1>
+    </div>
+
+    <div class="card mx-auto " style="width: 35rem;">
+        <div class="card-body">
+            <div>
+                <p class="card-text mx-auto my-4">
+                    La representación binaria de los datos se usa en el lenguaje máquina, todos los tipos de datos tienen su representación binaria por lo que cada tipo de dato tiene un tamaño de espacio en la memoria de la máquina.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Los tipos de datos determinan el espacio de almacenamiento que se debe asignar junto con los tipos de operaciones permitidas.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Un ejemplo de cómo se almacenan los enteros de forma binaria:
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Numero = 13;
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Representación decimal: 13 = 1*10^1 + 3*10^0
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Representación binaria: 1101 = 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 ModalExample
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Cada 1 o 0 es llamado bit, por lo que el numero 13 requiere de 4 bits de almacenamiento.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card  mx-auto" style="width: 35rem; height:350px;">
+        <div class="card-body">
+            <div>
+                <p class="card-text mx-auto my-4">
+                    Para representar –127 en forma binaria se procede de la siguiente manera:
+                </p>
+                <p class="card-text mx-auto my-4">
+                    <li>Se convierte el 127 a binario: 127 = 111 1111.</li>
+                </p>
+                <p class="card-text mx-auto my-4">
+                    <li>Como es negativo se representa cada bit de la siguiente manera: se pone un 0 si hay un 1 y si hay un 0 se pone un 1. De modo que se tiene 000 0000.</li>
+                </p>
+                <p class="card-text mx-auto my-4">
+                    <li>Se toma su signo, en este caso como es negativo se le agrega de complemento un 1 entonces queda: 10000000 </li>
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id="tabla" class="my-5">
+        <table class="table">
+            <tr>
+                <th>Valores de 8 bits</th>
+                <th>Interpretado en complemento a uno en decimal</th>
+                <th>Interpretado como entero sin sgno en decimal</th>
+            </tr>
+            <tr>
+                <td>00000000</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>00000001</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>00000010</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>01111110</td>
+                <td>126</td>
+                <td>126</td>
+            </tr>
+            <tr>
+                <td>01111111</td>
+                <td>127</td>
+                <td>127</td>
+            </tr>
+            <tr>
+                <td>10000000</td>
+                <td>-127</td>
+                <td>128</td>
+            </tr>
+            <tr>
+                <td>10000001</td>
+                <td>-126</td>
+                <td>129</td>
+            </tr>
+            <tr>
+                <td>10000010</td>
+                <td>-125</td>
+                <td>130</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>11111101</td>
+                <td>-2</td>
+                <td>253</td>
+            </tr>
+            <tr>
+                <td>11111110</td>
+                <td>-1</td>
+                <td>254</td>
+            </tr>
+            <tr>
+                <td>11111111</td>
+                <td>-0</td>
+                <td>255</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+    <a id="colorLink" class="btn btn-primary col-lg-3  "> VER EJEMPLOS </a>
+</div>

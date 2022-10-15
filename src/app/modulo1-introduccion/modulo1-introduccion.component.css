@@ -18,3 +18,7 @@
     height: 400px;
     margin: auto;
 }
+
+.card {
+    cursor: default;
+}

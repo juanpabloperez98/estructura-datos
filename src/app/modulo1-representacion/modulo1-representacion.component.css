@@ -1,0 +1,39 @@
+#tabla {
+    margin: 150px;
+    width: 1000px;
+}
+
+table {
+    text-align: center;
+    width: 70rem;
+    cursor: default;
+}
+
+table th {
+    background: black;
+    color: white;
+}
+
+th,
+td {
+    padding: 20px
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(244, 243, 243);
+}
+
+#tit {
+    font-size: 400%;
+    font-family: initial;
+}
+
+.card-text {
+    font-size: 120%;
+    width: 25rem;
+    text-align: justify;
+}
+
+.card-title {
+    font-size: 250%;
+}
