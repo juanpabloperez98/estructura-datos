@@ -23,6 +23,7 @@ import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-int
 import { Modulo1TipoComponent } from './modulo1-tipo/modulo1-tipo.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Modulo1AbstraccionComponent } from './modulo1-abstraccion/modulo1-abstraccion.component';
+import { Modulo1FuncionComponent } from './modulo1-funcion/modulo1-funcion.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,8 @@ import { Modulo1AbstraccionComponent } from './modulo1-abstraccion/modulo1-abstr
     Modulo1IntroduccionComponent,
     Modulo1TipoComponent,
     Modulo1AbstraccionComponent,
+    
+    Modulo1FuncionComponent,
     
   ],
   imports: [

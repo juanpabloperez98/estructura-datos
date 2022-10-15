@@ -1,0 +1,96 @@
+<div class="row mx-auto mb-5 ">
+    <div class="my-5 col-lg-12 text-center">
+        <h1 id="tit">Concepto de función</h1>
+    </div>
+    <div class="card mx-auto col-lg-8" style="width: 70rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> ¿Qué es una función?</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    Una función es una herramienta de abstracción para separar su comportamiento físico de su implementación, es importante hacerlo por dos razones.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Es fácil diseñar programas usando descomposición funcional, esto no es más que descomponer un problema grande en problemas más pequeños, cada uno expresado como una llamada a una función.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    La separación del comportamiento físico y la implementación alienta a la creación de software reusable, esto sirve para usar el código escrito anteriormente y usarlo en diferentes aplicaciones, “<span id="special-text">No reinventar la rueda</span>”.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Hay dos categorías de funciones, las que regresan un determinado valor y las que no, estas últimas están más enfocadas a realizar procedimientos, estos procedimientos se les denomina efectos colaterales, como la modificación de variables en la lista de
+                    parámetros o la modificación de variables globales.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Al diseñar e implementar las funciones se requiere poner atención cuidadosa al flujo de datos de la lista de parámetros. El flujo de datos es el flujo de la información del llamador hacia la función y de la función hacia el llamador, para cada parámetro
+                    de la lista de parámetros de la función, hay tres posibilidades: un camino de datos dentro de la función, un camino fuera de la función, o dos flujos dentro y fuera de la función. La dirección del flujo de datos determina el método
+                    de pasar los parámetros.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class=" card col-lg-6 mx-auto" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> Declaración de una función</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 "> En un programa existen la declaración de la función, la llamada de la función y la definición de la función.
+                </p>
+                <p class="card-text mx-auto my-4 "> El prototipo de la declaración de la función es:
+                </p>
+                <!-- returnType functionName (parameter1, parameter2,...) {
+    // function body   
+} -->
+                <p class="card-text mx-auto my-4 "> Un ejemplo de la declaración de la función, donde la lista de argumentos se declara con tipo y nombre, y cada argumento se debe declarar independientemente, de la siguiente manera:
+                </p>
+                <!-- float volumen(int x, float y, float z){
+    float v = a*b*c;
+} -->
+                <p class="card-text mx-auto my-4 "> La función volumen puede ser invocada de la siguiente forma:
+                </p>
+                <!--float cubo1 = volumen (b1, w1, h1)  -->
+                <p class="card-text mx-auto my-4 "> Con la condición de que las variables b1, w1 y h1 se declaren con anterioridad.
+
+                </p>
+                <p class="card-text mx-auto my-4 ">En el flujo de datos dentro de la función, el llamador pasa una copia del parámetro en uso a la función y no quiere que la función modifique el parámetro en uso. La función inspeccionara, pero no modificara el parámetro en uso del llamador.
+                    Este es llamado el paso de los argumentos por valores.
+                </p>
+                <p class="card-text mx-auto my-4 ">En forma tradicional las funciones pasan los argumentos por valor. La llamada a función crea un nuevo conjunto de variables y copia los valores de los argumentos dentro de ellos. La función no tiene acceso a las variables actuales en el
+                    programa que llama y solamente trabaja en las copias de los valores. Un ejemplo es el siguiente:
+                </p>
+                <!-- int Trans(int someInt) { 
+
+    return 2 * someInt + 5;     
+} -->
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-6 mx-auto" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> Procedimientos</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 "> Los procedimientos son similares a las funciones, aunque más resumidos. Debido a que los procedimientos no retornan valores, no hacen uso de la sentencia return para devolver valores y no tienen tipo específico, solo <span id="special-text">void</span>.
+                    Veamos un ejemplo:
+                </p>
+
+                <!-- void procedimiento(int n, string nombre)
+{
+    if(n == 0)
+    {
+        cout << "hola" << nombre;
+        return;
+    }
+    cout << "adios" << nombre;
+} -->
+
+                <p class=" card-text mx-auto my-4 "> De este ejemplo podemos ver que ya no se usa un tipo sino que se pone void, indicando que no retorna valores, también podemos ver que un procedimiento también puede recibir parámetros o argumentos.
+
+                </p>
+                <p class=" card-text mx-auto my-4 "> <span id="special-text">Nota: </span>Los procedimientos también pueden usar la sentencia return, pero no con un valor. En los procedimientos el return sólo se utiliza para finalizar allí la ejecución de la función.
+
+                </p>
+                <p class=" card-text mx-auto my-4 "> Los procedimientos son similares a las funciones, aunque más resumidos. Debido a que los procedimientos no retornan valores, no hacen uso de la sentencia return para devolver valores y no tienen tipo específico, solo <span id="special-text">void</span>.
+
+                </p>
+
+            </div>
