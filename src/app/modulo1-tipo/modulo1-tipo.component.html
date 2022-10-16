@@ -1,4 +1,4 @@
-<div class="row mx-auto mb-5 ">
+<div class="row mx-auto mb-5" id="main-content">
     <div class="my-5 col-lg-12 text-center title-content">
         <a [routerLink]="['/modulo1-introduccion']" class="d-inline-block mr-4">
             <img class="d-inline-block mb-3" src="../../assets/images/icons/left-row.png" alt="left-row.png">
@@ -90,6 +90,26 @@
 
     </div>
 
-
-
+    <div class="col-lg-3 mt-5 mx-auto text-center">
+        <a id="btn-example" (click)="openExampleModal()" class="btn-primary p-3 d-inline-block">VER EJEMPLOS</a>
+    </div>
 </div>
+<div class="row">
+    <div class="col-12">
+  
+    </div>
+</div>
+
+<!-- Modal Examples -->
+<ng-template #exampleModal let-modal>
+    <div class="modal-header" data-theme>
+        <h4 class="modal-title" id="modal-basic-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body card-body">
+        <h1>Working</h1>
+    </div>
+    <!-- <button type="button" class="btn btn-danger pull-right" (click)="modal.dismiss('close click')">Cancelar</button> -->
+</ng-template>

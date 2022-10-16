@@ -33,3 +33,11 @@
     height: 400px;
     margin: auto;
 }
+
+#btn-example{
+    border-radius: 10px;
+}
+
+#btn-example:hover{
+    background-color: rgb(50, 50, 218) !important;
+}
