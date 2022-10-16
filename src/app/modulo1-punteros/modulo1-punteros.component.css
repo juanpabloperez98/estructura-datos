@@ -2,3 +2,17 @@
     font-size: 400%;
     font-family: initial;
 }
+
+.card-text {
+    font-size: 120%;
+    text-align: justify;
+}
+
+#special-text {
+    color: rgb(0, 187, 255);
+}
+
+.card img {
+    width: 350px;
+    height: 350px;
+}
