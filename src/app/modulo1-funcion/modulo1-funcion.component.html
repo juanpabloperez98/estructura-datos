@@ -37,17 +37,32 @@
                 </p>
                 <p class="card-text mx-auto my-4 "> El prototipo de la declaración de la función es:
                 </p>
-                <!-- returnType functionName (parameter1, parameter2,...) {
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+     returnType functionName (parameter1, parameter2,...) {{'{'}}
     // function body   
-} -->
+{{'}'}}
+                    </code>
+                </pre>
+
                 <p class="card-text mx-auto my-4 "> Un ejemplo de la declaración de la función, donde la lista de argumentos se declara con tipo y nombre, y cada argumento se debe declarar independientemente, de la siguiente manera:
                 </p>
-                <!-- float volumen(int x, float y, float z){
-    float v = a*b*c;
-} -->
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        float volumen(int x, float y, float z){{'{'}}
+                            float v = a*b*c;
+                        {{'}'}}
+                    </code>
+                </pre>
+
                 <p class="card-text mx-auto my-4 "> La función volumen puede ser invocada de la siguiente forma:
                 </p>
-                <!--float cubo1 = volumen (b1, w1, h1)  -->
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        float cubo1 = volumen (b1, w1, h1)
+                    </code>
+                </pre>
+
                 <p class="card-text mx-auto my-4 "> Con la condición de que las variables b1, w1 y h1 se declaren con anterioridad.
 
                 </p>
@@ -57,15 +72,22 @@
                 <p class="card-text mx-auto my-4 ">En forma tradicional las funciones pasan los argumentos por valor. La llamada a función crea un nuevo conjunto de variables y copia los valores de los argumentos dentro de ellos. La función no tiene acceso a las variables actuales en el
                     programa que llama y solamente trabaja en las copias de los valores. Un ejemplo es el siguiente:
                 </p>
-                <!-- int Trans(int someInt) { 
 
-    return 2 * someInt + 5;     
-} -->
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        int Trans(int someInt) {{'{'}}
+
+                            return 2 * someInt + 5;  
+                            
+                        {{'}'}}
+                    </code>
+                </pre>
+
             </div>
         </div>
     </div>
 
-    <div class=" card col-lg-6 mx-auto my-4" style="width: 37rem;height:28rem;">
+    <div class=" card col-lg-6 mx-auto my-4" style="width: 37rem;height:57rem;">
         <div class="card-body">
             <h1 class="card-title text-center"> Procedimientos</h1>
             <div class="">
@@ -73,27 +95,43 @@
                     Veamos un ejemplo:
                 </p>
 
-                <!-- void procedimiento(int n, string nombre)
-{
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        void procedimiento(int n, string nombre)
+{{'{'}}
     if(n == 0)
-    {
+    {{'{'}}
         cout << "hola" << nombre;
         return;
-    }
+        {{'}'}}
     cout << "adios" << nombre;
-} -->
+    {{'}'}}
+                    </code>
+                </pre>
 
-                <p class=" card-text mx-auto my-4 "> De este ejemplo podemos ver que ya no se usa un tipo sino que se pone void, indicando que no retorna valores, también podemos ver que un procedimiento también puede recibir parámetros o argumentos.
-
+                <p class=" card-text mx-auto my-4 ">
+                    De este ejemplo podemos ver que ya no se usa un tipo sino que se pone void, indicando que no retorna valores, también podemos ver que un procedimiento también puede recibir parámetros o argumentos.
                 </p>
-                <p class=" card-text mx-auto my-4 "> <span id="special-text">Nota: </span><span id="different-text"> procedimientos también pueden usar la sentencia return, pero no con un valor. En los procedimientos el return sólo se utiliza para finalizar allí la ejecución de la función.</span>
-
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">Nota: </span><span id="different-text"> procedimientos también pueden usar la sentencia return, pero no con un valor. En los procedimientos el return sólo se utiliza para finalizar allí la ejecución de la función.</span>
                 </p>
-                <p class=" card-text mx-auto my-4 "> Los procedimientos son similares a las funciones, aunque más resumidos. Debido a que los procedimientos no retornan valores, no hacen uso de la sentencia return para devolver valores y no tienen tipo específico, solo <span id="special-text">void</span>.
-
+                <p class=" card-text mx-auto my-4 ">
+                    Los procedimientos son similares a las funciones, aunque más resumidos. Debido a que los procedimientos no retornan valores, no hacen uso de la sentencia return para devolver valores y no tienen tipo específico, solo <span id="special-text">void</span>.
                 </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        void inicializar(float& delta, float& epsilon) {{'{'}}
+
+                            delta = 0.1; 
+                                
+                            epsilon = 0.002; 
+                                
+                            {{'}'}}
+                    </code>
+                </pre>
 
             </div>
         </div>
     </div>
+    <a class="btn btn-primary col-lg-3 mx-auto  "> VER EJEMPLOS </a>
 </div>

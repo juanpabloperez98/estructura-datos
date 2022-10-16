@@ -12,3 +12,9 @@
 .card-title {
     font-size: 250%;
 }
+
+#btn-module {
+    display: block;
+    margin: auto;
+    width: 25%;
+}

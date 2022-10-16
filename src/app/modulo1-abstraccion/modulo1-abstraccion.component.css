@@ -9,6 +9,14 @@
     text-align: justify;
 }
 
+#estilo p {
+    width: 29rem;
+}
+
 #cambio {
     color: rgb(102, 201, 205);
+}
+
+#nota p {
+    width: 66rem;
 }
