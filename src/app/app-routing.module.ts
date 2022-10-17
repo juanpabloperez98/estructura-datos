@@ -13,6 +13,8 @@ import { Modulo1FuncionComponent } from './modulo1-funcion/modulo1-funcion.compo
 import { Modulo1AlgoritmosComponent } from './modulo1-algoritmos/modulo1-algoritmos.component';
 import { Modulo1ArreglosComponent } from './modulo1-arreglos/modulo1-arreglos.component';
 import { Modulo1PunterosComponent } from './modulo1-punteros/modulo1-punteros.component';
+import { Modulo1CuestionarioComponent } from './modulo1-cuestionario/modulo1-cuestionario.component';
+import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstraccion.component';
 
 export const Approutes: Routes = [
   {
@@ -33,12 +35,7 @@ export const Approutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path:'module1/introduccion',
-    component:Modulo1IntroduccionComponent,
-    pathMatch: 'full'
-  },
-  {
-    path:'tipos-blank',
+    path:'datos-blank',
     component:TiposBlankComponent,
     pathMatch: 'full'
   },
@@ -50,6 +47,12 @@ export const Approutes: Routes = [
   {
     path:'no-lineales-blank',
     component:NoLinealesBlankComponent,
+    pathMatch: 'full'
+  },
+  //Introducción
+  {
+    path:'module1/introduccion',
+    component:Modulo1IntroduccionComponent,
     pathMatch: 'full'
   },
   {
@@ -90,6 +93,17 @@ export const Approutes: Routes = [
   {
     path:'modulo1-punteros',
     component:Modulo1PunterosComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'modulo1-cuestionario',
+    component:Modulo1CuestionarioComponent,
+    pathMatch: 'full'
+  },
+ //datos abstractos
+  {
+    path:'modulo2-abstraccion',
+    component:Modulo2AbstraccionComponent,
     pathMatch: 'full'
   },
   {

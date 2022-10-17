@@ -27,6 +27,8 @@ import { Modulo1FuncionComponent } from './modulo1-funcion/modulo1-funcion.compo
 import { Modulo1AlgoritmosComponent } from './modulo1-algoritmos/modulo1-algoritmos.component';
 import { Modulo1ArreglosComponent } from './modulo1-arreglos/modulo1-arreglos.component';
 import { Modulo1PunterosComponent } from './modulo1-punteros/modulo1-punteros.component';
+import { Modulo1CuestionarioComponent } from './modulo1-cuestionario/modulo1-cuestionario.component';
+import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstraccion.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +45,14 @@ import { Modulo1PunterosComponent } from './modulo1-punteros/modulo1-punteros.co
     Modulo1IntroduccionComponent,
     Modulo1TipoComponent,
     Modulo1AbstraccionComponent,
-    
     Modulo1FuncionComponent,
           Modulo1AlgoritmosComponent,
           Modulo1ArreglosComponent,
           Modulo1PunterosComponent,
+          
+          Modulo1CuestionarioComponent,
+                      Modulo2AbstraccionComponent,
+                     
     
   ],
   imports: [
