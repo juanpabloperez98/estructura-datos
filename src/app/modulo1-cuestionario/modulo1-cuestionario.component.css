@@ -1,0 +1,10 @@
+#color {
+    color: rgb(41, 181, 181);
+    font-weight: bold;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}

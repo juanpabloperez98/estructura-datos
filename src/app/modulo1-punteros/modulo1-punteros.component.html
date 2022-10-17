@@ -1,0 +1,123 @@
+<div class="row mx-auto mb-5 ">
+    <div class="my-5 col-lg-12 text-center">
+        <h1 id="tit">Punteros</h1>
+    </div>
+
+    <div class="card mx-auto col-lg-10" style="width: 70rem;">
+        <div class="card-body">
+
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    Un Puntero es una variable que contiene una dirección de memoria, la cual corresponderá a un dato o a una variable que contiene el dato. Cada variable que se utiliza en una aplicación ocupa una o varias posiciones de memoria. Estas posiciones de memoria
+                    a los que se acceden por medio de una dirección.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Cuando una variable de tipo puntero tiene almacenada una dirección de memoria, se dice que <span id="special-text">apunta</span> al valor que está en esa dirección.
+                </p>
+                <img src="../../assets/images/punteros/PunterosIlus1.png" class="card-img-top " alt="guide.svg">
+                <p class="card-text mx-auto my-4">
+                    En general no importa cuál es valor exacto de un puntero, sino que basta con comprender qué es lo que hay <span id="special-text">al otro lado</span>. Por esto, en los diagramas de la memoria se suele preferir usar flechas en lugar
+                    de las direcciones explícitas:
+                </p>
+                <img src="../../assets/images/punteros/PunterosIlus2.png" class="card-img-top " alt="guide.svg">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mx-auto my-4" style="width: 35rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center my-3"> Declaración de punteros</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    Los punteros se declaran de la siguiente manera:
+                </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        int *x;
+                    </code>
+                </pre>
+                <p class="card-text mx-auto my-4">
+                    Esto se puede leer como <span id="special-text">lo apuntado por x es un entero</span>. En este caso, * no es una multiplicación, sino una derreferenciación.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Una vez declarada x de la manera ya mostrada, los únicos valores válidos que se puede asignar a x son NULL o una dirección de memoria donde haya un entero:
+                </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        int a, b, c;
+float z;
+int *p;
+int *q;
+
+p = NULL; /* valido */
+p = {{'&'}}a; /* valido */
+p = {{'&'}}b; /* valido */
+p = {{'&'}}z; /* invalido (z no es un entero) */
+p = 142857; /* invalido (142857 no es una dirección de memoria) */
+
+q = {{'&'}}b; /* valido */
+q = p; /* valido */
+q = NULL; /* valido */
+q = {{'&'}}p; /* invalido (p no es un entero) */
+                    </code>
+                </pre>
+                <p class="card-text mx-auto my-4">
+                    Declarar varios punteros a la vez:
+                </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        int *x, *y; /* x e y son punteros */
+
+int *x, y; /* x es puntero, y es entero */
+                    </code>
+                </pre>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="card mx-auto my-4" style="width: 35rem;height: 44rem;  ">
+        <div class="card-body">
+            <h1 class="card-title text-center my-3"> Declaración de punteros</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    El operador unario * de los punteros es el operador de derreferenciación. Lo que hace es entregar el valor que está en la dirección de memoria.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    En otras palabras, * significa <span id="special-text">lo apuntado por</span>.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Al derreferenciar un puntero a entero, se obtiene un entero. El puntero derreferenciado puede ser usado en cualquier contexto en que un entero sea válido:
+                </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        int x, y;
+                        int *p;
+                        
+                        x = 5;
+                        p = {{'&'}}x;
+                        
+                        printf("%d", *p); /* imprime 5 */
+                        y = *p * 10 - 7; /* y toma el valor 43 */
+                        *p = 9; /* x toma el valor 9 */
+                    </code>
+                </pre>
+
+                <p class="card-text mx-auto my-4">
+                    En la última sentencia, se está asignando el valor 9 en la memoria que está reservada para la variable x, por lo que la asignacion cambia en efecto el valor de la variable x de manera indirecta.
+                </p>
+                <p class="card-text mx-auto my-4" id="nota">
+                    <span id="special-text">"</span>El operador & permite obtener el número de un cajón dado ( &a sería el número del cajón llamado a , &p sería el número del cajón llamado p ).El operador * permite acceder a un cajón conocido su número.
+                    <span id="special-text">"</span>
+                </p>
+
+
+            </div>
+        </div>
+
+    </div>
+    <a class="btn btn-primary col-lg-3 mx-auto  "> VER EJEMPLOS </a>
+</div>

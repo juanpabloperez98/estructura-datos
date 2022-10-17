@@ -1,0 +1,18 @@
+#tit {
+    font-size: 400%;
+    font-family: initial;
+}
+
+#special-text {
+    color: rgb(0, 136, 255);
+}
+
+.card-text {
+    font-size: 120%;
+    text-align: justify;
+}
+
+#different-text {
+    color: rgb(114, 112, 112);
+    font-size: 80%;
+}

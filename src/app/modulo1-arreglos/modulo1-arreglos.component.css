@@ -1,0 +1,20 @@
+#tit {
+    font-size: 400%;
+    font-family: initial;
+}
+
+.card-text {
+    font-size: 120%;
+    width: 30rem;
+    text-align: justify;
+}
+
+.card-title {
+    font-size: 250%;
+}
+
+#btn-module {
+    display: block;
+    margin: auto;
+    width: 25%;
+}

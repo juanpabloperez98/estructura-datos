@@ -9,7 +9,7 @@
         </a>
     </div>
 
-    <div class="card mx-auto  text-center col-12" id=principal style="width: 40rem;">
+    <div class="card mx-auto my-2 text-center col-12" id=principal style="width: 49rem;height: 15rem">
         <div class="card-body">
             <h1 class="card-title text-center"> ¿Qué son los tipos de datos?</h1>
             <div class="">
@@ -27,7 +27,7 @@
 
     </div>
 
-    <div class="card mx-auto " style="width: 40rem;">
+    <div class="card mx-auto my-4" style="width: 40rem;">
         <div class="card-body">
             <h1 class="card-title text-center"> Tipos de datos elementales</h1>
             <div class="">
@@ -69,14 +69,18 @@
                 </p>
 
                 <!--codigo  -->
-
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c">
+                        bool valorLogico;
+                    </code>
+                </pre>
             </div>
         </div>
 
     </div>
 
 
-    <div class="card mx-auto " style="width: 40rem;">
+    <div class="card mx-auto my-4" style="width: 40rem; height:46rem;">
         <div class="card-body">
             <h1 class="card-title text-center"> Tipos de datos compuestos</h1>
             <div class="">
@@ -92,6 +96,20 @@
                 </p>
 
                 <!--codigo -->
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c">
+                        int my_vector1[10];
+float my_vector2[25];
+string my_vector3[500];
+bool my_vector4[1000];
+char my_vector5[2];
+
+//Formas de declararlo
+string vector[5] = {{'{'}}"5", "hola", "2.7", "8,9", "adios"{{'}'}};
+
+int vector2[] = {{'{'}}1,2,3,4,10,9,80,70,19{{'{'}};
+                    </code>
+                </pre>
 
                 <p class="card-text mx-auto my-4">
                     <li> <strong>Tupla:</strong> es un tipo de dato estructurado formado por la unión de varios
@@ -101,7 +119,11 @@
                 </p>
 
                 <!--codigo  -->
-
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c">
+                        tuple {{'<'}}char, int, float{{'>'}} tupla;
+                    </code>
+                </pre>
             </div>
         </div>
 

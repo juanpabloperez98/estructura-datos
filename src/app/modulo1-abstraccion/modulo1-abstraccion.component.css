@@ -1,0 +1,22 @@
+#tit {
+    font-size: 400%;
+    font-family: initial;
+}
+
+.card-text {
+    font-size: 120%;
+    width: 30rem;
+    text-align: justify;
+}
+
+#estilo p {
+    width: 29rem;
+}
+
+#cambio {
+    color: rgb(102, 201, 205);
+}
+
+#nota p {
+    width: 66rem;
+}
