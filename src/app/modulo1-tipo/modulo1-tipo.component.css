@@ -40,4 +40,12 @@
 
 #btn-example:hover{
     background-color: rgb(50, 50, 218) !important;
+    cursor: pointer;
+}
+.modal-body ol li{
+    margin-top: 10px;
+}
+.modal-body ol li a:hover{
+    cursor: pointer;
+    color: blue;
 }

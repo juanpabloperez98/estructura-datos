@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -10,21 +9,18 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class Modulo1TipoComponent implements OnInit {
 
-
-  @ViewChild('exampleModal') exampleModal: any;
+  closeResult: string = '';
 
   constructor(
-    private modal: NgbModal
+    private modalService: NgbModal
   ) { }
 
   ngOnInit(): void {
   }
 
-  openExampleModal(){
-    this.modal.open(this.exampleModal, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      console.log(result);
+  open(content:any) {
+    this.modalService.open(content, { backdrop: false }).result.then((result) => {
     }, (reason) => {
-      console.log(reason);
     });
   }
 
