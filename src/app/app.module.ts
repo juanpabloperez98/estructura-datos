@@ -29,6 +29,7 @@ import { Modulo1ArreglosComponent } from './modulo1-arreglos/modulo1-arreglos.co
 import { Modulo1PunterosComponent } from './modulo1-punteros/modulo1-punteros.component';
 import { Modulo1CuestionarioComponent } from './modulo1-cuestionario/modulo1-cuestionario.component';
 import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstraccion.component';
+import { HighlightService } from './services/highlight.service';
 
 @NgModule({
   declarations: [
@@ -46,27 +47,25 @@ import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstr
     Modulo1TipoComponent,
     Modulo1AbstraccionComponent,
     Modulo1FuncionComponent,
-          Modulo1AlgoritmosComponent,
-          Modulo1ArreglosComponent,
-          Modulo1PunterosComponent,
-          
-          Modulo1CuestionarioComponent,
-                      Modulo2AbstraccionComponent,
-                     
-    
+    Modulo1AlgoritmosComponent,
+    Modulo1ArreglosComponent,
+    Modulo1PunterosComponent,
+    Modulo1CuestionarioComponent,
+    Modulo2AbstraccionComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
-   
     RouterModule.forRoot(Approutes),
     ReactiveFormsModule
   ],
   exports: [
     MatSliderModule,
   ],
-  providers: [],
+  providers: [
+    HighlightService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

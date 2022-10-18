@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewChecked   } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { HighlightService } from '../services/highlight.service';
 
 @Component({
   selector: 'app-modulo1-tipo',
@@ -12,11 +12,17 @@ export class Modulo1TipoComponent implements OnInit {
   closeResult: string = '';
 
   constructor(
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private highlightService: HighlightService
   ) { }
+
+  ngAfterViewChecked(){
+    this.highlightService.highlightAll();
+  }
 
   ngOnInit(): void {
   }
+  
 
   open(content:any) {
     this.modalService.open(content, { backdrop: false }).result.then((result) => {
