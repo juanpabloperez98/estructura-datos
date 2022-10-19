@@ -1,16 +1,21 @@
-<div class="row mx-auto mb-5 ">
-    <div class="my-5 col-lg-12 text-center">
-        <h1 id="tit">Abstraccion de datos </h1>
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+        <a [routerLink]="['/modulo1-representacion']" class="d-inline-block mr-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/left-row.png" alt="left-row.png">
+        </a>
+        <h1 class="d-inline-block" id="tit"> Abstraccion de datos </h1>
+        <a [routerLink]="['/modulo1-funcion']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
     </div>
 
-    <div class=" card col-lg-6 mx-auto" id="estilo" style="width: 32rem;">
-        <div class="my-2">
+    <div class=" card col-lg-5 mx-auto" id="estilo">
+        <div class="my-1 ">
             <p class=" card-text mx-auto my-4 "> El concepto de abstracción es tomar el modelo de los sistemas que se encuentran dentro del universo, por ejemplo, modelos matemáticos, tales como las ecuaciones que describen el movimiento de los satélites alrededor de la tierra. Se busca
                 recopilar las características más significativas de estos modelos. Dejando de lado las características irrelevantes. Incluyendo solamente las características esenciales.
             </p>
-            <p class="card-text mx-auto my-4"> La abstracción de datos es la separación de las propiedades lógicas de los tipos de datos de su implementación. Si estamos tratando con un tipo particular de datos, queremos hablar sobre ellos en términos de su significado. Es decir, la abstracción
-                consiste en aislar un elemento de su contexto o del resto de los elementos que lo acompañan. Se le da más importancia a “<span id="cambio">¿qué hace?</span>" más que en al "<span id="cambio">¿cómo lo hace?</span>".
-            </p>
+            <p class="card-text mx-auto my-4 "> La abstracción de datos es la separación de las propiedades lógicas de los tipos de datos de su implementación. Si estamos tratando con un tipo particular de datos, queremos hablar sobre ellos en términos de su significado. Es decir, la abstracción
+                consiste en aislar un elemento de su contexto o del resto de los elementos que lo acompañan. Se le da más importancia a “<span id="cambio ">¿qué hace?</span>" más que en al "<span id="cambio ">¿cómo lo hace?</span>". </p>
         </div>
     </div>
 
@@ -22,7 +27,7 @@
         <img class="card-img-top" src="../../assets/images/abstraccion/Programmer.svg">
     </div>
 
-    <div class=" card col-lg-6 mx-auto my-3" style="width: 32rem;">
+    <div class=" card col-lg- mx-auto my-3" style="width: 32rem;">
 
         <p class=" card-text mx-auto my-4 "> cuando se habla de un entero es fácil usarlo pues lo hemos convertido en una generalidad ya que todo el tiempo lo aplicamos para realizar programas. Y un entero es una abstracción de un tipo de dato. Como ejemplo la siguiente operación es una
             abstracción de datos:
@@ -36,7 +41,7 @@
         </p>
 
     </div>
-    <div class=" card col-lg-6 mx-auto my-3" id="nota" style="width: 70rem;">
+    <div class=" card col-lg-10 mx-auto my-3" id="nota" style="width: 70rem;">
         <div id="distribucion ">
             <p class=" card-text mx-auto my-4 ">
                 <span id="cambio">Nota:</span> Debemos usar la abstracción para crear tipos de datos. Un tipo de datos cumple dos funciones, acercar el programa al dominio que estamos programando y ocultar la implementación con una barrera de abstracción.

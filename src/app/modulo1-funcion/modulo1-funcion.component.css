@@ -1,6 +1,18 @@
-#tit {
-    font-size: 400%;
+.title-content h1 {
+    font-size: 50px;
     font-family: initial;
+}
+
+.title-content a {
+    cursor: pointer;
+}
+
+.title-content img {
+    width: 40px;
+}
+
+.title-content a:hover>img {
+    width: 45px;
 }
 
 #special-text {
@@ -15,4 +27,12 @@
 #different-text {
     color: rgb(114, 112, 112);
     font-size: 80%;
+}
+
+#espacio {
+    transform: translate(50px)
+}
+
+#espacio1 {
+    transform: translate(10 px)
 }

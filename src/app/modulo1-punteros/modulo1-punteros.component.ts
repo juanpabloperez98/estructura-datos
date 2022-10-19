@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HighlightService } from '../services/highlight.service';
 @Component({
   selector: 'app-modulo1-punteros',
   templateUrl: './modulo1-punteros.component.html',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Modulo1PunterosComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private highlightService: HighlightService
+  ) { }
 
+  ngAfterViewChecked(){
+    this.highlightService.highlightAll();
+  }
   ngOnInit(): void {
   }
 
