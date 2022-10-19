@@ -5,10 +5,11 @@ import { isPlatformBrowser } from '@angular/common';
 
 
 import 'prismjs';
+import 'prismjs/components/prism-c.min.js';
 import 'prismjs/plugins/toolbar/prism-toolbar';
+import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
 import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
-import 'src/assets/prims/prism.css';
-import 'src/assets/prims/prism.js';
 
 declare var Prism: any;
 
