@@ -55,6 +55,16 @@ export const Approutes: Routes = [
     component:Modulo1IntroduccionComponent,
     pathMatch: 'full'
   },
+  //Ejemplos
+  {
+    path: 'module1',
+    children: [
+      {
+        path: 'ejemplos',
+        loadChildren: () => import('./ejemplos-intro-tipos-datos/ejemplos-intro-tipos-datos.module').then(x => x.EjemplosIntroTiposDatosModule)
+      }
+    ]
+  },
   {
     path:'modulo1-introduccion',
     component:Modulo1IntroduccionComponent,
