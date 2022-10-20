@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HighlightService } from 'src/app/services/highlight.service';
-
 @Component({
   selector: 'app-ejemplo1',
   templateUrl: './ejemplo1.component.html',
@@ -8,15 +6,9 @@ import { HighlightService } from 'src/app/services/highlight.service';
 })
 export class Ejemplo1Component implements OnInit {
 
-  constructor(
-    private highlightService: HighlightService,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewChecked(){
-    this.highlightService.highlightAll();
   }
 
 }

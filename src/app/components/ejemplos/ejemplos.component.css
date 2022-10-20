@@ -18,3 +18,28 @@
 .show_content {
     background-color: rgb(44, 43, 43);
 }
+
+#line_paint{
+    content: '';
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(255,255,255, 0.2);
+    position: absolute;
+    left: 0px;
+}
+
+#lne-current{
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.explain_pass{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}

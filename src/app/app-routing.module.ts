@@ -17,6 +17,7 @@ import { Modulo1CuestionarioComponent } from './modulo1-cuestionario/modulo1-cue
 import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstraccion.component';
 import { Modulo2TipoComponent } from './modulo2-tipo/modulo2-tipo.component';
 
+
 export const Approutes: Routes = [
   {
     path: '',
@@ -61,7 +62,7 @@ export const Approutes: Routes = [
     path: 'module1',
     children: [
       {
-        path: 'ejemplos',
+        path: '',
         loadChildren: () => import('./ejemplos-intro-tipos-datos/ejemplos-intro-tipos-datos.module').then(x => x.EjemplosIntroTiposDatosModule)
       }
     ]
