@@ -1,0 +1,122 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+        <a [routerLink]="['/modulo2-tipo']" class="d-inline-block mr-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/left-row.png" alt="left-row.png">
+        </a>
+        <h1 class="d-inline-block" id="tit">Clases </h1>
+        <a [routerLink]="['/modulo1-algoritmos']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-5" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">¿Qué es una clase?</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 "> Una clase es una colección de variables y funciones que manipulan a las variables. Las variables y funciones que forman a la clase son llamadas miembros. La forma general de la clase es:
+                </p>
+
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        class class-name : inheritance-list {{'{'}}
+
+                            // miembro privado por default
+                            
+                            protected:
+                            
+                            // miembro privado que puede ser inherited
+                            
+                            public:
+                            
+                            // miembro publico
+                            
+                            {{'}'}} object-list;
+                    </code>
+                </pre>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-5" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    La class-name es el nombre del tipo de clase. Una vez que la clase ha sido compilada, la class-name es un nuevo tipo de nombre que puede ser usada para declarar objetos de la clase. El object-list es una lista separada por comas de objetos del tipo class-name.
+                    Esta lista es opcional.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Los objetos clase pueden ser declarados después en el programa solamente usando la class-name. La inheritance-list es también opcional. Cuando está presente este especifica la base clase o clases de la nueva clase inherente.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    La clase puede incluir la función constructor y la función destructor. Ambos son opcionales. Un constructor es llamado cuando un objeto es primero creado. El destructor es llamado cuando un objeto es destruido. Un constructor tiene el mismo nombre que
+                    la clase. Un destructor tiene el mismo nombre que la clase, pero lo precede un ˜. Ni el constructor ni el destructor regresan tipos.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    En una clase jerárquica, el constructor es ejecutado en orden de derivación y el destructor en orden inverso.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-5" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Por default todos los elementos de la clase son privados y puedan ser accesados por otros elementos de la clase. Para permitir que un elemento de la clase sea accesado por una función que no sea miembro de la clase, se le debe anteponer la palabra clave
+                    public. Por ejemplo:
+                </p>
+
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        class myclass {{'{'}}
+
+                          int a, b; // privado de myclass
+                            
+                          public:
+                            
+                          // class members accessible by nonmembers
+                            
+                          void setab(int i, int j) {{'{'}} a = i; b = j; {{'}'}}
+                            
+                          void showab() {{'{'}} cout << a << ’ ’ << b << endl; {{'}'}}
+                            
+                        {{'}'}};
+                        
+                    myclass ob1, ob2;
+                    </code>
+                </pre>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-5" id="espacio" style="width: 37rem; height: 27rem">
+        <div class="card-body">
+
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Esta declaración crea un nuevo tipo de clase myclass que contiene dos variables privadas a y b, también contiene dos funciones públicas setab( ) y showab( ).
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    El fragmento también declara dos objetos del tipo myclass ob1 y ob2. Para permitir que dos miembros de la clase sean inherentes pero que de otra forma sean privados, especificara a estos como protected. Un miembro protegido está disponible a ser una clase
+                    derivada, pero no está disponible si su salida es una clase jerárquica.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Cuando operamos un objeto de una clase se usa el punto, operador para referenciar miembros individuales. El operador flecha se usa cuando accedamos a un objeto a través de un apuntador. Por ejemplo, el siguiente acceso a la función putinfo( ) de ob que
+                    usa el operador punto y la función show( ) usa el operador flecha.
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary col-lg-3 mx-auto  "> VER EJEMPLOS </a>
+</div>

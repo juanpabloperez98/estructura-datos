@@ -18,3 +18,7 @@
 .show_content {
     background-color: rgb(44, 43, 43);
 }
+
+#btn-play {
+    color: blue,
+}

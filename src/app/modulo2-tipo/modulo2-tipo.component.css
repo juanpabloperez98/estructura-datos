@@ -15,6 +15,11 @@
     width: 45px;
 }
 
+#pende img {
+    width: 500px;
+    height: 500px;
+}
+
 .card-text {
     font-size: 120%;
     width: 30rem;
@@ -27,6 +32,8 @@
 
 #color-text li {
     color: rgb(55, 236, 227);
+    width: 60rem;
+    font-size: 100%;
 }
 
 #list-text {
@@ -48,4 +55,16 @@
 
 #propia {
     width: 45rem;
+}
+
+#tam p {
+    width: 50rem;
+}
+
+#tam-text li {
+    width: 50rem;
+}
+
+#tam-strong {
+    font-size: 120%;
 }
