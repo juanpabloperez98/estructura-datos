@@ -1,4 +1,5 @@
 <div class="row mx-auto mb-5" id="main-content">
+
     <div class="my-5 col-lg-12 text-center title-content">
         <a [routerLink]="['/modulo2-abstraccion']" class="d-inline-block mr-4">
             <img class="d-inline-block mb-3" src="../../assets/images/icons/left-row.png" alt="left-row.png">
@@ -9,5 +10,99 @@
         </a>
     </div>
 
+    <div class="card mx-auto my-4 col-lg-5" style="width: 36rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> ¿Qué son los tipos de datos abstractos (TDA)?</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    En muchos casos existen porciones de código similares que no calculan un valor si no que, por ejemplo, presentan información al usuario, leen una colección de datos o calculan más de un valor. A esto se llama procedimiento. Los procedimientos son herramientas
+                    esenciales de programación que generalizan el concepto de operador. Por medio de los procedimientos se pueden definir nuestros propios operadores que se aplican a operandos que no tienen que ser de tipo básico.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    El TAD es un modelo matemático con una serie de operaciones definidas en ese modelo. Este se especifica de dos formas.De manera formal y de manera informal.
+                </p>
 
+            </div>
+        </div>
+    </div>
+
+    <div id="tam-img" class="col-lg-5 me-auto">
+        <img class="card-img-top" src="../../assets/images/tad/Ilus.svg">
+    </div>
+
+    <div class="card mx-auto col-lg-8" style="width: 70rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> Especificación formal del TAD</h1>
+            <div id="tam">
+                <p class="card-text  my-4">
+                    La especificación formal del TAD se hace como si fuera un modelo matemático. Por medio de proposiciones de tal manera que se definen los tipos de datos y operaciones que se realizan a los operandos.
+                </p>
+                <p class="card-text  my-4">
+                    Un enfoque riguroso de la especificación de la última parte supone suministrar un conjunto de axiomas que describan completamente el comportamiento de las operaciones del TAD. Estos axiomas pueden entonces ser usados para verificar formalmente la corrección
+                    del desarrollo de un TAD. Determinar un conjunto completo de axiomas es extremadamente difícil para los TAD no triviales. Por esta razón nos preocuparemos nada más de obtener descripciones informales para las operaciones del TAD.
+                </p>
+                <p class="card-text  my-4">
+                    Las dos partes que componen al TAD donde se declaran los tipos de datos que se hace por medio de aserciones para declarar una precondición y una postcondición, que es la parte pública del TAD y la declaración de las operaciones que es la parte privada
+                    donde se usan los procedimientos.
+                </p>
+                <p class="card-text  my-4">
+                    Una aserción es una proposición lógica que puede ser falsa o verdadera. Precondición es una aserción que debe ser verdadera a la entrada dentro de una operación o una función para que la postcondición sea garantizada.
+                </p>
+                <p class="card-text  my-4">
+                    Postcondición es una aserción que establece los resultados esperados a la salida de una operación o función, asumiendo que las precondiciones son verdaderas.
+                </p>
+                <p class="card-text  my-4">
+                    <span id="special-text">Ejemplo 1:</span> Una función que remueve el último elemento de la lista y que regresa su valor en UltimoValor. GetLast(ListType list, ValueType lastValue).
+                </p>
+                <p class="card-text  my-4">
+                    Así que la precondición es que la lista no está vacía. La postcondición UltimoValor es el valor del último elemento en la lista, el último elemento ha sido removido, y la longitud de la lista ha sido decrementada.
+                </p>
+                <p class="card-text  my-4">
+                    <span id="special-text">Ejemplo 2:</span> Una función divide un número entre otro y prueba un divisor con valor de cero. Divide(int dividend, int divisor, bool error, float result)
+                </p>
+                <p class="card-text  my-4">
+                    <span id="special-text">Postcondición:</span> el error es verdadero si el divisor es cero. El resultado es el dividendo / divisor, si el error es falso. El resultado es indefinido, si el error es verdadero.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mx-auto my-4 col-lg-5" style="width: 36rem;height: 18rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> Especificación informal del TAD</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    Debido a que es muy complicado especificar formalmente un TAD nos preocuparemos nada más de obtener descripciones informales para las operaciones del TAD.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    La especificación informal del TAD se hace por medio de expresiones del lenguaje natural, como una especie de pseudocódigo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mx-auto my-4 col-lg-5" style="width: 36rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Implementación de un TAD </h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    Para la implementación del TAD es fundamental disponer de mecanismos que permitan <span id="special-text">ENCAPSULAR</span>, el tipo de dato y sus operaciones, y <span id="special-text">OCULTAR</span> la información al programador
+                    usuario.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Estas dos características son fundamentales para poder llevar a cabo esta abstracción.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    <span id="special-text">Encapsulación:</span>Ocultar los detalles de implementación del comportamiento de una clase. Permite implementar cambios sin afectar a otros componentes del programa. Implica reutilización.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    <span id="special-text">Ocultación:</span>Restringir el acceso a la información del estado de un objeto. Esta restricción afecta al acceso a los atributos y a algunas de las operaciones del objeto. Implica no manipulación y por tanto
+                    un mejor mantenimiento del sistema.
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary col-lg-3 mx-auto  "> VER EJEMPLOS </a>
 </div>
