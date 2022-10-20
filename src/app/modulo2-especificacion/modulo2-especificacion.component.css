@@ -1,0 +1,44 @@
+.title-content h1 {
+    font-size: 50px;
+    font-family: initial;
+}
+
+.title-content a {
+    cursor: pointer;
+}
+
+.title-content img {
+    width: 40px;
+}
+
+.title-content a:hover>img {
+    width: 45px;
+}
+
+.card-text {
+    font-size: 120%;
+    width: 30rem;
+    text-align: justify;
+}
+
+.card-title {
+    font-size: 250%;
+}
+
+.card {
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2)
+}
+
+#tam-img img {
+    width: 500px;
+    height: 500px;
+}
+
+#tam p {
+    width: 50rem;
+}
+
+#special-text {
+    color: rgb(24, 176, 181);
+    font-weight: bolder;
+}

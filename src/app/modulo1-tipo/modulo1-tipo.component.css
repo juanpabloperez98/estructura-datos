@@ -37,6 +37,10 @@
     margin: auto;
 }
 
+.card {
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2)
+}
+
 #btn-example {
     border-radius: 10px;
 }

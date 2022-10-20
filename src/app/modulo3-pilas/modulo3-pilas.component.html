@@ -1,0 +1,89 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+
+        <h1 class="d-inline-block" id="tit">Pilas </h1>
+        <a [routerLink]="['/modulo2-especificacion']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">¿Qué es una pila?</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Una pila es una estructura de datos dinámica formada por un grupo ordenado de elementos homogéneos (todos del mismo tipo) en la que los elementos sólo pueden ser añadidos o eliminados por un extremo llamado cabecera o cima (top) de la pila.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    De esta forma, los elementos se extraen en orden inverso al seguido en el proceso de inserción. Por ello, una pila es considerada una estructura de datos LIFO (Last In First Out), esto es, que el último elemento que entra es el primero que sale.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Recibe su nombre por su similitud con una pila de objetos; si tenemos una pila de 5 libros, siempre cogemos el de arriba, que es el último que se dejó. Si queremos leer un libro que está en cuarto lugar debemos coger primero el quinto libro y a continuación
+                    el cuarto.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="tam-img" class="col-lg-5 me-auto my-2">
+        <img class="card-img-top" src="../../assets/images/pilas/Ilus1.png">
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Operaciones sobre una pila</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Las operaciones básicas que podemos realizar sobre una pila son dos: almacenamiento (push) y recuperación (pop). Para manejar una estructura de datos tipo pila, un programador debe definir un conjunto de operaciones que permitan al usuario acceder y manipular
+                    los elementos en ella almacenados. Más adelante se detallará cómo en PHP existen una gran cantidad de funciones predefinidas que permiten gestionar esta estructura de datos de forma eficiente.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Generalmente, cada una de estas operaciones suele recibir un nombre fijo e identificativo de la operación que realiza, siendo la terminología utilizada más común la mostrada a continuación:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+
+                    <li><span id="special-text">Meter o Apilar: </span>se denomina así a la operación que añade un elemento a una pila.</li>
+                    <li><span id="special-text">Sacar o Desapilar: </span>operación que saca un elemento de la pila.</li>
+                    <li><span id="special-text">InicializarPila: </span>una vez creada la pila y antes de usarla, esta debe quedar inicialmente vacía.</li>
+                    <li><span id="special-text">PilaVacia: </span>operación que devuelve un valor de tipo lógico para comprobar si la pila se encuentra vacía antes de sacar un elemento.</li>
+                    <li><span id="special-text">PilaLlena: </span>la usaremos en aquellos casos en que sea necesario saber si la pila se encuentra llena antes de añadir un nuevo elemento.</li>
+                    <li><span id="special-text">Cima: </span>útil para obtener el último elemento que fue añadido a la pila, este es, el primero en salir de ella.</li>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Implementación</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Una pila puede ser implementada de dos formas diferentes:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">1. </span>Usando una tabla unidimensional (estructura de datos estática).
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">2. </span>Mediante el uso de punteros (estructura de datos dinámica).
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    El primer caso, tabla, es más sencillo de implementar, sin embargo, y dado que una pila es una estructura de datos dinámica, el uso de punteros es más lógico. Gráficamente la implementación de una pila usando punteros sería:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    El primer caso, tabla, es más sencillo de implementar, sin embargo, y dado que una pila es una estructura de datos dinámica, el uso de punteros es más lógico. Gráficamente la implementación de una pila usando punteros sería:
+                </p>
+
+                <img class="card-img-top" src="../../assets/images/pilas/Ilus2.png">
+
+                <p class=" card-text mx-auto my-4 ">
+                    Cuando se crea la pila el puntero tiene valor Nulo, esto es:
+                </p>
+
+                <img class="card-img-top" id="tam-picture" src="../../assets/images/pilas/Ilus3.png">
+
+            </div>
+        </div>
+    </div>
+</div>
