@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RouterModule} from '@angular/router';
+import { HighlightService } from '../services/highlight.service';
 @Component({
   selector: 'app-modulo1-representacion',
   templateUrl: './modulo1-representacion.component.html',
@@ -7,9 +8,13 @@ import {RouterModule} from '@angular/router';
 })
 export class Modulo1RepresentacionComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private highlightService: HighlightService
+  ) { }
 
-  
+  ngAfterViewChecked(){
+    this.highlightService.highlightAll();
+  }
   ngOnInit(): void {
   }
 
