@@ -16,6 +16,8 @@ import { Modulo1PunterosComponent } from './modulo1-punteros/modulo1-punteros.co
 import { Modulo1CuestionarioComponent } from './modulo1-cuestionario/modulo1-cuestionario.component';
 import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstraccion.component';
 import { Modulo2TipoComponent } from './modulo2-tipo/modulo2-tipo.component';
+import { Modulo2ClasesComponent } from './modulo2-clases/modulo2-clases.component';
+import { Modulo2EspecificacionComponent } from './modulo2-especificacion/modulo2-especificacion.component';
 
 
 export const Approutes: Routes = [
@@ -121,6 +123,16 @@ export const Approutes: Routes = [
   {
     path:'modulo2-tipo',
     component:Modulo2TipoComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'modulo2-clases',
+    component:Modulo2ClasesComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'modulo2-especificacion',
+    component:Modulo2EspecificacionComponent,
     pathMatch: 'full'
   },
   {

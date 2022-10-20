@@ -8,6 +8,10 @@
     min-height: 100px;
 }
 
+.card {
+    height: 23rem;
+}
+
 #btn-module {
     display: block;
     margin: auto;
