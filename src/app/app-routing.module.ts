@@ -18,6 +18,7 @@ import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstr
 import { Modulo2TipoComponent } from './modulo2-tipo/modulo2-tipo.component';
 import { Modulo2ClasesComponent } from './modulo2-clases/modulo2-clases.component';
 import { Modulo2EspecificacionComponent } from './modulo2-especificacion/modulo2-especificacion.component';
+import { Modulo2CuestionarioComponent } from './modulo2-cuestionario/modulo2-cuestionario.component';
 
 export const Approutes: Routes = [
   {
@@ -132,6 +133,11 @@ export const Approutes: Routes = [
   {
     path:'modulo2-especificacion',
     component:Modulo2EspecificacionComponent,
+    pathMatch: 'full'
+  },
+  {
+    path:'modulo2-cuestionario',
+    component:Modulo2CuestionarioComponent,
     pathMatch: 'full'
   },
   {

@@ -33,6 +33,7 @@ import { HighlightService } from './services/highlight.service';
 import { Modulo2TipoComponent } from './modulo2-tipo/modulo2-tipo.component';
 import { Modulo2ClasesComponent } from './modulo2-clases/modulo2-clases.component';
 import { Modulo2EspecificacionComponent } from './modulo2-especificacion/modulo2-especificacion.component';
+import { Modulo2CuestionarioComponent } from './modulo2-cuestionario/modulo2-cuestionario.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,8 @@ import { Modulo2EspecificacionComponent } from './modulo2-especificacion/modulo2
     Modulo2TipoComponent,
     Modulo2ClasesComponent,
     Modulo2EspecificacionComponent,
+    
+    Modulo2CuestionarioComponent,
   ],
   
   imports: [
