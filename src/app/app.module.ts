@@ -34,6 +34,7 @@ import { Modulo2TipoComponent } from './modulo2-tipo/modulo2-tipo.component';
 import { Modulo2ClasesComponent } from './modulo2-clases/modulo2-clases.component';
 import { Modulo2EspecificacionComponent } from './modulo2-especificacion/modulo2-especificacion.component';
 import { Modulo2CuestionarioComponent } from './modulo2-cuestionario/modulo2-cuestionario.component';
+import { Modulo3PilasComponent } from './modulo3-pilas/modulo3-pilas.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { Modulo2CuestionarioComponent } from './modulo2-cuestionario/modulo2-cue
     Modulo2EspecificacionComponent,
     
     Modulo2CuestionarioComponent,
+          Modulo3PilasComponent,
   ],
   
   imports: [
