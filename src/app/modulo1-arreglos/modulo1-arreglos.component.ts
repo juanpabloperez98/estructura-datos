@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HighlightService } from '../services/highlight.service';
 
 @Component({
   selector: 'app-modulo1-arreglos',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Modulo1ArreglosComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private highlightService: HighlightService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  ngAfterViewChecked(){
+    this.highlightService.highlightAll();
+  }
 }

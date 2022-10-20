@@ -1,3 +1,28 @@
+.title-content h1 {
+    font-size: 50px;
+    font-family: initial;
+}
+
+.title-content a {
+    cursor: pointer;
+}
+
+.title-content img {
+    width: 40px;
+}
+
+.title-content a:hover>img {
+    width: 45px;
+}
+
+#prueba {
+    transform: translate(50px)
+}
+
+#prueba1 {
+    transform: translate(-30px)
+}
+
 #tabla {
     margin: 150px;
     width: 1000px;
@@ -21,11 +46,6 @@ td {
 
 tr:nth-child(odd) {
     background-color: rgb(244, 243, 243);
-}
-
-#tit {
-    font-size: 400%;
-    font-family: initial;
 }
 
 .card-text {

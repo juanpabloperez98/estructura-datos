@@ -15,6 +15,7 @@ import { Modulo1ArreglosComponent } from './modulo1-arreglos/modulo1-arreglos.co
 import { Modulo1PunterosComponent } from './modulo1-punteros/modulo1-punteros.component';
 import { Modulo1CuestionarioComponent } from './modulo1-cuestionario/modulo1-cuestionario.component';
 import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstraccion.component';
+import { Modulo2TipoComponent } from './modulo2-tipo/modulo2-tipo.component';
 
 export const Approutes: Routes = [
   {
@@ -117,7 +118,13 @@ export const Approutes: Routes = [
     pathMatch: 'full'
   },
   {
+    path:'modulo2-tipo',
+    component:Modulo2TipoComponent,
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     redirectTo: '/auth'
   }
+  
 ];

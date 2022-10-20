@@ -30,6 +30,7 @@ import { Modulo1PunterosComponent } from './modulo1-punteros/modulo1-punteros.co
 import { Modulo1CuestionarioComponent } from './modulo1-cuestionario/modulo1-cuestionario.component';
 import { Modulo2AbstraccionComponent } from './modulo2-abstraccion/modulo2-abstraccion.component';
 import { HighlightService } from './services/highlight.service';
+import { Modulo2TipoComponent } from './modulo2-tipo/modulo2-tipo.component';
 
 @NgModule({
   declarations: [
@@ -52,12 +53,14 @@ import { HighlightService } from './services/highlight.service';
     Modulo1PunterosComponent,
     Modulo1CuestionarioComponent,
     Modulo2AbstraccionComponent,
+    Modulo2TipoComponent,
   ],
+  
   imports: [
+    RouterModule.forRoot(Approutes),
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    RouterModule.forRoot(Approutes),
     ReactiveFormsModule
   ],
   exports: [

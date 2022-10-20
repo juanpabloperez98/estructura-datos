@@ -21,30 +21,31 @@
     text-align: justify;
 }
 
-#cambio {
-    color: rgb(102, 201, 205);
-}
-
 .card-title {
     font-size: 250%;
 }
 
-#btn-module {
-    display: block;
-    margin: auto;
-    width: 25%;
+#color-text li {
+    color: rgb(55, 236, 227);
 }
 
-#color {
-    color: rgb(149, 147, 147);
-    width: 70rem;
-    font-size: 110%;
+#list-text {
+    color: rgb(0, 0, 0);
 }
 
-#signos {
-    color: aqua;
+#special-text {
+    color: rgb(55, 236, 227);
 }
 
-#prueba {
-    width: 66rem;
+#text-secondary {
+    color: rgb(114, 113, 113);
+}
+
+.card-text {
+    font-size: 120%;
+    text-align: justify;
+}
+
+#propia {
+    width: 45rem;
 }

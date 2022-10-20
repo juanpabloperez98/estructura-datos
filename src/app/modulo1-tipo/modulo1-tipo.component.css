@@ -2,13 +2,16 @@
     font-size: 50px;
     font-family: initial;
 }
-.title-content a{
+
+.title-content a {
     cursor: pointer;
 }
+
 .title-content img {
     width: 40px;
 }
-.title-content a:hover > img{
+
+.title-content a:hover>img {
     width: 45px;
 }
 
@@ -34,18 +37,24 @@
     margin: auto;
 }
 
-#btn-example{
+#btn-example {
     border-radius: 10px;
 }
 
-#btn-example:hover{
+#btn-example:hover {
     background-color: rgb(50, 50, 218) !important;
     cursor: pointer;
 }
-.modal-body ol li{
+
+.modal-body ol li {
     margin-top: 10px;
 }
-.modal-body ol li a:hover{
+
+.modal-body ol li a:hover {
     cursor: pointer;
     color: blue;
+}
+
+#ultimo {
+    width: 49rem;
 }

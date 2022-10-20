@@ -1,0 +1,140 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+        <a [routerLink]="['/modulo1-arreglos']" class="d-inline-block mr-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/left-row.png" alt="left-row.png">
+        </a>
+        <h1 class="d-inline-block" id="tit">Tipos de datos abstractos </h1>
+        <a [routerLink]="['/modulo1-cuestionario']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+    </div>
+
+    <div class="card mx-auto my-4" style="width: 40rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> ¿Qué son los tipos de datos abstractos (TDA)?</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    La abstracción de datos es la separación de las propiedades lógicas de los tipos de datos de su implementación. El punto de vista abstracto indica como se construyen las variables de los tipos y como se acceden a componentes individuales de los programas.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Un tipo de dato abstracto (TDA) es un conjunto de datos u objetos creado de manera personalizada por un programador para un fin específico. Un TDA es una abstracción que permite modelar las características de un elemento en particular.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    La primera cosa con la que uno se enfrenta cuando se escriben programas es el problema. Típicamente, tú te enfrentas a problemas "de la vida real" y te quieres facilitar la existencia por medio de un programa para dichos problemas. Sin embargo, los problemas
+                    de la vida real son nebulosos y la primera cosa que tienes que hacer es tratar de entender el problema para separar los detalles esenciales de los no esenciales: Tratas de obtener tu propia perspectiva abstracta, o modelo, del problema.
+                    Este proceso de modelado se llama abstracción.
+                </p>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="pende" class="col-lg-5 me-auto">
+        <img class="card-img-top" src="../../assets/images/datosAbstractos/Ilus1.svg">
+    </div>
+
+    <div class="card mx-auto my-4" style="width: 35rem; height:37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> Como crearlos</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    El modelo define una perspectiva abstracta del problema. Esto implica que el modelo se enfoca solamente en aspectos relacionados con el problema y que tú tratas de definir propiedades del problema. Estas propiedades incluyen:
+                </p>
+                <p class="card-text mx-auto myfa-stack-2">
+                    <li>
+                        Los datos que son afectados
+                    </li>
+                    <li>
+                        Las operaciones que son identificadas
+                    </li>
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Como ejemplo considera la administración de empleados en una institución. Tu superior viene y te pide que elabores un programa que permita administrar a los empleados. Bueno, esto no es muy específico. Por ejemplo, ¿Qué información de los empleados necesita
+                    la administración ?, ¿Qué tareas deberían ser permitidas? Los empleados son personas caracterizadas por muchas propiedades, unas pocas son:
+                </p>
+                <p class="card-text mx-auto myfa-stack-2" id="color-text">
+
+                    <li>
+                        <span id="list-text">Nombre</span>
+                    </li>
+                    <li>
+                        <span id="list-text">Tamaño</span>
+                    </li>
+                    <li>
+                        <span id="list-text">Fecha de nacimiento</span>
+                    </li>
+                    <li>
+                        <span id="list-text">Forma</span>
+                    </li>
+                    <li>
+                        <span id="list-text">Número social</span>
+                    </li>
+                    <li>
+                        <span id="list-text">Número de cuarto</span>
+                    </li>
+                    <li>
+                        <span id="list-text">Color de pelo</span>
+                    </li>
+                    <li>
+                        <span id="list-text">Pasatiempos</span>
+                    </li>
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mx-auto my-4" style="width: 35rem;">
+        <div class="card-body">
+
+            <div class="">
+                <p class="card-text mx-auto my-4">
+                    Ciertamente que no todas estas propiedades son esenciales para resolver el problema de la administración. Solamente algunas de ellas son específicas del problema. En consecuencia, se crea un modelo de un empleado para el problema. Este modelo solo implica
+                    propiedades que son necesarias para cumplir con los requerimientos de la administración, por ejemplo, el nombre, fecha de nacimiento y el número social. A estas propiedades se les llama los datos del modelo (de empleado). Ahora ya
+                    se tienen descritas a las personas reales por medio de un empleado abstracto.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Desde luego, la pura descripción no es suficiente. Debe haber algunas operaciones definidas con las cuáles la administración sea capaz de manejar los empleados abstractos. Por ejemplo, debe haber una operación que te permita crear un empleado nuevo una
+                    vez que una persona ingrese a la institución.
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Consecuentemente, tienes que identificar las operaciones que deberían ser posibles de ser ejecutadas en un empleado abstracto. Decides también permitir el acceso a los datos del empleado solamente por medio de operaciones asociadas. Esto te permite asegurarte
+                    que los elementos de datos siempre estén en un estado apropiado. Por ejemplo, poder checar si una fecha provista es válida.
+                </p>
+                <p class="card-text mx-auto my-4" id="text-secondary">
+                    <span id="special-text">"</span>Para resumir, la abstracción es la estructuración de un problema nebuloso en entidades bien definidas por medio de la definición de sus datos y operaciones. Consecuentemente, estas entidades combinan
+                    datos y operaciones. No están desacoplados unos de otras.<span id="special-text">"</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mx-auto col-lg-8" style="width: 70rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center"> Propiedades de los TDA</h1>
+            <div style="width: 70rem;">
+                <p class="card-text  my-4">
+                    El ejemplo anterior muestra que por medio de la abstracción se crea una entidad bien definida que puede ser adecuadamente manejada. Estas entidades definen la estructura de datos de un conjunto de elementos. Por ejemplo, cada empleado administrado tiene
+                    un nombre, fecha de nacimiento y número social.
+                </p>
+                <p class="card-text  my-4">
+                    La estructura de los datos puede ser accedida solamente por medio de operaciones definidas. Este conjunto de operaciones es llamada interface y es exportada por la entidad. Una entidad con las propiedades recién descritas se conoce como un tipo de datos
+                    abstracto (TDA).
+                </p>
+                <p class="card-text  my-4">
+                    Una vez que un nuevo empleado es <span id="special-text">"</span>creado<span id="special-text">"</span>, la estructura de datos es llenada con los valores reales : Ahora tú tienes una instancia de un empleado abstracto. Tú puedes crear
+                    tantas instancias de un empleado abstracto como sea necesario para describir cada una de las personas empleadas.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
