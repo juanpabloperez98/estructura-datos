@@ -6,21 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modulo1-cuestionario.component.css']
 })
 export class Modulo1CuestionarioComponent implements OnInit {
-
-  constructor() { }
+public fragebogen:any;
+  constructor() {
+    this.fragebogen = {
+      p1:'',
+      p2:'',
+      p3:'',
+      p4:'',
+      p5:'',
+      p6:''
+    };
+   }
 
   ngOnInit(): void {
   }
-resultado(){
-  var p1, p2, p3, p4, p5, p6, nota;
-  var c1, c2, c3, c4, c5, c6;
-// 1a pregunta
-c1=document.getElementById('p11');
-/* if(c1.checked){
-p1=1;
-}else {p1=0}
 
-} */
-}
+  onsubmit(){
+    alert("formulario enviado ")
+  }
+
 
 }
