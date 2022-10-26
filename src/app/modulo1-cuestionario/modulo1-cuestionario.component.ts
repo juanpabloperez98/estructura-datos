@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HighlightService } from '../services/highlight.service';
 
 @Component({
   selector: 'app-modulo1-cuestionario',
@@ -10,7 +12,14 @@ export class Modulo1CuestionarioComponent implements OnInit {
   listResp:string[]=['p11','p22','p31','p41','p53','p64'];
   numAnswer = 0;
 
-  constructor() {
+  @ViewChild('continueModal') continueModal: any;
+  @ViewChild('reloadModal') reloadModal: any;
+
+  constructor(
+    private modalService: NgbModal,
+    private highlightService: HighlightService
+  ) {
+   
     this.fragebogen = {
       pregunt1:'',
       pregunt2:'',
@@ -54,13 +63,15 @@ export class Modulo1CuestionarioComponent implements OnInit {
       };
     })
     if( this.numAnswer == 6){
-      console.log("todo correcto");
-    }else{
-      console.log("incorrecto");
+      this.modalService.open(this.continueModal, { backdrop: false }).result.then((result) => {
+      }, (reason) => {
+      });
+    }else if(this.numAnswer == 1 || this.numAnswer == 2 ||this.numAnswer == 3 || this.numAnswer == 4 || this.numAnswer == 5){
+      this.modalService.open(this.reloadModal, { backdrop: false }).result.then((result) => {
+      }, (reason) => {
+      });
     }
 
   }
   
-
-
 }

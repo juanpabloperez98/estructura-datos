@@ -23,7 +23,6 @@ export class Modulo1TipoComponent implements OnInit {
   ngOnInit(): void {
   }
   
-
   open(content:any) {
     this.modalService.open(content, { backdrop: false }).result.then((result) => {
     }, (reason) => {

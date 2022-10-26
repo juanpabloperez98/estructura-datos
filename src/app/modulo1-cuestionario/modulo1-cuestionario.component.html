@@ -67,13 +67,46 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
-
-
-
-
 </div>
+
+<ng-template #continueModal let-modal>
+    <div class="modal-header">
+        <!-- <h2 class="modal-title" id="modal-basic-title">Bien hecho ya podemos pasar a el siguiente modulo</h2> -->
+        <img src="../../assets/images/modal/bienHecho.jpg" alt="bienHecho.jpg">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <dd>
+                <strong>Ahora podemos </strong>
+                <a routerLink="/datos-blank" (click)="modal.dismiss('Cross click')">
+                    <strong>Continuar</strong>
+                </a>
+                <strong> con el siguien modulo.</strong>
+            </dd>
+        </ol>
+    </div>
+</ng-template>
+
+<ng-template #reloadModal let-modal>
+    <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <dd>
+                <p>Aun te falta para poder seguir al otro modulo</p>
+                <a routerLink="/datos-blank" (click)="modal.dismiss('Cross click')">
+                    <img id="modalIncorrect" src="../../assets/images/modal/cross.png   " alt="bienHecho.jpg">
+                    <strong>Reintentar</strong>
+                </a>
+            </dd>
+        </ol>
+    </div>
+</ng-template>
