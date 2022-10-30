@@ -1,0 +1,58 @@
+<!-- <app-ejemplos></app-ejemplos> -->
+<div class="row mx-auto container">
+
+    <div class="col-lg-6">
+        <div class="content-after" id="solution">
+            <h2 class="text-center">Solución</h2>
+            <div class="content-before">
+                <!--codigo  -->
+                <pre class="language-language-markup line-numbers">
+                <code class="language-c ">
+                    {{ code }}
+                </code>
+                <span *ngIf="run_code" id="line_paint" [style.top]="top_style"> </span>
+            </pre>
+            </div>
+        </div>
+
+        <a class="btn btn-outline-primary my-4" *ngIf='!run_code && !reload' (click)="start()">Ejecutar</a>
+        <!-- <a class="btn btn-outline-success my-4" *ngIf='run_code' (click)="back()">Anterior</a> -->
+        <a class="btn btn-outline-success my-4" *ngIf='run_code && !reload' (click)="next()">Siguiente</a>
+        <a class="btn btn-outline-danger my-4" *ngIf='reload' (click)="refresh()" >Volver a ejecutar</a>
+    </div>
+
+    <div class="col-lg-6 my-4" id="show_content">
+        <div class="row mx-auto">
+            <div class=" content-after col-lg-12 my-4">
+                <span *ngIf="run_code" id="lne-current">Linea {{ current_line }}</span>
+                <h3>Paso a paso</h3>
+                <p class="explain_pass">
+                    {{ explain_pass }}
+                </p>
+            </div>
+            <div class=" content-after col-lg-12 my-4">
+                <h3>Valor variables</h3>
+                <p class="explain_pass" [innerHTML]="value_vars">
+                    <!-- {{ value_vars }} -->
+                </p>
+            </div>
+            <div class="content-after col-lg-12 text-center my-4">
+                <h3>Salidas</h3>
+                <p *ngIf="!is_form; else formOutput" class="explain_pass text-left">
+                    {{ value_out }}
+                </p>
+                <ng-template #formOutput>
+                    <div class="form-group">
+                        <input 
+                          [(ngModel)]="numero" 
+                          type="text"
+                          class="form-control" 
+                          id="inputfield"
+                          placeholder="Ingresar valor"
+                        >
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

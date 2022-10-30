@@ -14,7 +14,6 @@ export class Ejemplo2Component implements OnInit {
 
   lines_to_input = [8]
   lines_to_validate = [9]
-  lines_to_add_dinamic = [11]
   current_line = 1;
   max_line = 20;
   run_code = false;
@@ -153,6 +152,7 @@ export class Ejemplo2Component implements OnInit {
       'line_explain':'Fin del programa',
     },
   ]
+  
   
 
   constructor(
