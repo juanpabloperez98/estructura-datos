@@ -106,7 +106,7 @@ export class Ejemplo1Component implements OnInit {
   refresh = () => {
     window.location.reload();
   }
-
+  
   loop_jump = (to_jump:number, num_jump:number ) => {
     this.current_line = to_jump;
     for(let i = 0; i < num_jump; i++){
