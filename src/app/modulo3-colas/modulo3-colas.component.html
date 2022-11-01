@@ -1,0 +1,91 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+
+        <h1 class="d-inline-block" id="tit">Colas </h1>
+        <a [routerLink]="['/modulo2-especificacion']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">¿Qué es una cola?</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Una cola es un grupo ordenado de elementos del mismo tipo, en la cual dichos elementos se añaden por un extremo (Final) y se quitan por el otro extremo (Frente). Esto significa que los elementos se sacan en el mismo orden en el que fueron insertados o
+                    introducidos en la cola, siendo por ello considerada como una estructura de datos FIFO (First In First Out), es decir, que el primer elemento en entrar es el primer elemento en salir.
+                </p>
+                <img class="card-img-top" src="../../assets/images/colas/Ilus1.png">
+                <p class=" card-text mx-auto my-4 ">
+                    A modo de ejemplo, una estructura FIFO funciona exactamente igual que una cola en un establecimiento, cuando llegas lo primero que debes hacer es pedir la vez, en ese momento te sitúas detrás del último que llegó, esto es, al final de la cola. A la hora
+                    de atender, el dependiente atiende a quién ocupa la primera posición de la cola, y así sucesivamente hasta que te toque a ti.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Otros ejemplos del uso de colas pueden ser una cola para la impresión de documentos, o en un videojuego la animación de varios elementos en movimiento dentro de la pantalla, así se crea una cola para ir animando uno a uno los personajes del juego, de
+                    forma que cuando avanzamos alguno una posición se manda otra vez al final de la cola, lo que da la sensación de que se están moviendo todos simultáneamente.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 30rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Operaciones sobre una cola</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Para manejar una estructura de datos de tipo cola, un programador debe definir un conjunto de operaciones que permitan al usuario acceder y manipular los elementos almacenados en ella. La terminología más común utilizada para referenciar este conjunto
+                    de operaciones es la mostrada a continuación:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li><span id="special-text">InicializarCola: </span>nos permite dejar inicialmente vacía la cola una vez creada.</li>
+                    <li><span id="special-text">Encolar: </span>permite añadir un elemento al final de la cola.</li>
+                    <li><span id="special-text">Desencolar: </span>se usará para sacar un elemento de la cola.</li>
+                    <li><span id="special-text">ColaVacia: </span>devolverá cierto si la cola está vacía antes de sacar un elemento de la misma.</li>
+                    <li><span id="special-text">ColaLlena: </span>sólo en aquellos casos en los que sea necesario determinar si la cola se encuentra llena antes de añadir un nuevo elemento debido a la implementación utilizada (sólo en el caso de implementación
+                        con tablas), emplearemos esta operación de tipo lógico.</li>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-4" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Implementación</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Una cola, al igual que una pila, no está incorporada en la mayoría de los lenguajes de programación y puede ser implementada de dos formas diferentes:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">1. </span>Utilizando una tabla unidimensional (estructura de datos estática).
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">2. </span>Mediante el uso de punteros (estructura de datos dinámica).
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    En el caso de la implementación con punteros, se representa por medio de una lista enlazada, y para controlar la inserción o eliminación de elementos utilizamos dos punteros externos denominados Frente (que apunta al primer elemento introducido en la
+                    cola) y Final (que apunta al último elemento introducido en la cola).
+                </p>
+
+                <img class="card-img-top" id="card-img-tam" src="../../assets/images/colas/Ilus2.png">
+
+                <p class=" card-text mx-auto my-4 ">
+                    Cuando la cola se crea, los punteros Frente y Final tienen valor Nulo, ya que inicialmente la cola debe encontrarse vacía.
+                </p>
+
+                <img class="card-img-top" id="card-img-tam2" src="../../assets/images/colas/Ilus3.png">
+
+                <p class=" card-text mx-auto my-4 ">
+                    Conforme vayamos añadiendo elementos a la cola, Frente tomará el valor correspondiente a la dirección del primer elemento de la cola y Final tomará el valor correspondiente a la dirección del último elemento de la cola. De esta manera podemos determinar
+                    en todo momento el comienzo y final de la misma.
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

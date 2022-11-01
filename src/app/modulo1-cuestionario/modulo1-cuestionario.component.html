@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <form class="mid-form" #userForm="ngForm" (ngSubmit)="onsubmit()">
+                        <form class="mid-form" #userForm="ngForm" name="formulario" (ngSubmit)="onsubmit()">
                             <p id="color">Pregunta#1</p>
                             <p><strong>¿Un tipo de dato se considera un espacio de memoria con restricciones según el tipo de dato que se esté hablando?</strong></p>
                             <ol type="A">
@@ -62,7 +62,7 @@
                                 <dd><input type="radio" value="p63" name="pregunt6" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6 "> Es la definición de un tipo de dato</dd>
                                 <dd><input type="radio" value="p64" name="pregunt6" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6 "> Es un complemento de librerías utilizadas en en lenguaje C para poder manejar estructuras de datos</dd>
                             </ol>
-                            <button type="submit" class="btn btn-primary "> <img src="../../../assets/images/icons/marca-de-verificacion.png" class="card-img-top" alt="introducion.jpg"> RESPONDER</button>
+                            <button type="submit" class="btn btn-primary " onclick="resultado()"> <img src="../../../assets/images/icons/marca-de-verificacion.png" class="card-img-top" alt="introducion.jpg" > RESPONDER</button>
                         </form>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
         <ol>
             <dd>
                 <p>Aun te falta para poder seguir al otro modulo</p>
-                <a routerLink="/datos-blank" (click)="modal.dismiss('Cross click')">
+                <a routerlink="/modulo1-cuestionario" (click)="modal.dismiss('Cross click')">
                     <img id="modalIncorrect" src="../../assets/images/modal/cross.png   " alt="bienHecho.jpg">
                     <strong>Reintentar</strong>
                 </a>

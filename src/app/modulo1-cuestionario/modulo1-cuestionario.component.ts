@@ -8,10 +8,10 @@ import { HighlightService } from '../services/highlight.service';
   styleUrls: ['./modulo1-cuestionario.component.css']
 })
 export class Modulo1CuestionarioComponent implements OnInit {
-  fragebogen:any;
-  listResp:string[]=['p11','p22','p31','p41','p53','p64'];
+  fragebogen: any;
+  listResp: string[] = ['p11', 'p23', 'p34', 'p44', 'p52', 'p62'];
   numAnswer = 0;
-
+  /* form: formulario; */
   @ViewChild('continueModal') continueModal: any;
   @ViewChild('reloadModal') reloadModal: any;
 
@@ -19,59 +19,72 @@ export class Modulo1CuestionarioComponent implements OnInit {
     private modalService: NgbModal,
     private highlightService: HighlightService
   ) {
-   
+
     this.fragebogen = {
-      pregunt1:'',
-      pregunt2:'',
-      pregunt3:'',
-      pregunt4:'',
-      pregunt5:'',
-      pregunt6:''
+      pregunt1: '',
+      pregunt2: '',
+      pregunt3: '',
+      pregunt4: '',
+      pregunt5: '',
+      pregunt6: ''
     };
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  onsubmit(){
-    this.listResp.map( (data) => {
-      switch(data){
-        case 'p11':{
+  onsubmit() {
+    this.listResp.map((data) => {
+      switch (data) {
+        case 'p11': {
           this.fragebogen.pregunt1 === 'p11' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p22':{
-          this.fragebogen.pregunt2 === 'p22' ? this.numAnswer += 1 : null;
+        case 'p23': {
+          this.fragebogen.pregunt2 === 'p23' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p31':{
-          this.fragebogen.pregunt3 === 'p31' ? this.numAnswer += 1 : null;
+        case 'p34': {
+          this.fragebogen.pregunt3 === 'p34' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p41':{
-          this.fragebogen.pregunt4 === 'p41' ? this.numAnswer += 1 : null;
+        case 'p44': {
+          this.fragebogen.pregunt4 === 'p44' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p53':{
-          this.fragebogen.pregunt5 === 'p53' ? this.numAnswer += 1 : null;
+        case 'p52': {
+          this.fragebogen.pregunt5 === 'p52' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p64':{
-          this.fragebogen.pregunt6 === 'p64' ? this.numAnswer += 1 : null;
+        case 'p62': {
+          this.fragebogen.pregunt6 === 'p62' ? this.numAnswer += 1 : null;
           break;
         }
       };
     })
-    if( this.numAnswer == 6){
+    if (this.numAnswer == 6) {
       this.modalService.open(this.continueModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });
-    }else if(this.numAnswer == 1 || this.numAnswer == 2 ||this.numAnswer == 3 || this.numAnswer == 4 || this.numAnswer == 5){
+    } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3 || this.numAnswer == 4 || this.numAnswer == 5) {
       this.modalService.open(this.reloadModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });
     }
 
   }
-  
+
+  /* limpiarFormulario() {
+    this.form.patchValue({
+
+    })
+  } */
+
 }
+/* 
+11
+23
+34
+44
+52
+62 */

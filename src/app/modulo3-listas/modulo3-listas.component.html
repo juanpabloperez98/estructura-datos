@@ -1,0 +1,459 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+
+        <h1 class="d-inline-block" id="tit">Listas enlazadas </h1>
+        <a [routerLink]="['/modulo2-especificacion']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 32rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">¿Qué es una lista enlazada?</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Una lista enlazada o estructura ligada, es una estructura lineal que almacena una colección de elementos generalmente llamados nodos, en donde cada nodo puede almacenar datos y ligas a otros nodos. De esta manera los nodos pueden localizarse en cualquier
+                    parte de la memoria, utilizando la referencia que lo relaciona con otro nodo dentro de la estructura.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Las listas enlazadas son estructuras dinámicas que se utilizan para almacenar datos que están cambiando constante mente. A diferencia de los vectores, las estructuras dinámicas se expanden y se contraen haciéndolas más flexibles a la hora de añadir o
+                    eliminar información.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Las listas enlazadas permiten almacenar información en posiciones de memoria que no sean contiguas; para almacenar la información contienen elementos llamados nodos. Estos nodos poseen dos campos uno para almacenar la información o valor del elemento
+                    y otro para el enlace que determina la posición del siguiente elemento o nodo de la lista.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Lo más recomendable y flexible para la creación de un nodo es utilizar un objeto por cada nodo, para ello debe comprender cuatro conceptos fundamentales que son:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li><span id="special-text">Clase auto-referenciada</span></li>
+                    <li><span id="special-text">Nodo</span></li>
+                    <li><span id="special-text">Campo de enlace</span></li>
+                    <li><span id="special-text">Enlace</span></li>
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Una clase auto-referenciada es una clase con al menos un campo cuyo tipo de referencia es el nombre de la misma clase.
+                </p>
+
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        public clase Nodo{{'{'}}
+
+                            Object elemento;
+                            
+                            Nodo siguiente;
+                            
+                            //métodos
+                            
+                    {{'}'}}
+                    </code>
+                </pre>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-1" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    El código anterior es una clase auto-referenciada porque su campo siguiente tiene el tipo Nodo.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    El nodo es un objeto creado a partir de una clase auto-referenciada.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    El campo de enlace es la variable de instancia que contiene el tipo que corresponde con el nombre de la clase (para el caso anterior variable siguiente).
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    El enlace es el contenido del campo de enlace, que hace referencia (guarda la dirección) a otro nodo.
+                </p>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-5" id="espacio" style="width: 37rem;height: 17rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Operaciones sobre una lista enlazada</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Las operaciones que se pueden hacer con una lista son:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li><span id="special-text">Inserción de un elemento</span></li>
+                    <li><span id="special-text">Borrado de un elemento</span></li>
+                    <li><span id="special-text">Recorrido de la lista</span></li>
+                    <li><span id="special-text">Búsqueda de un elemento</span></li>
+                </p>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="card mx-auto my-4 text-center col-10" id=principal style="width: 35rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center">Simples</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Una lista enlazada simple es una colección de nodos que tienen una sola dirección y que en conjunto forman una estructura de datos lineal. Cada nodo es un objeto compuesto que guarda una referencia a un elemento (dato) y una referencia a otro nodo (dirección).
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    La referencia que guarda un nodo a otro nodo se puede considerar un enlace o un puntero hacia el segundo nodo y el salto que los relaciona recibe el nombre de salto de enlace o salto de puntero. El primer nodo de una lista recibe el nombre de cabeza,
+                    cabecera o primero y el último es llamado final, cola o último (es el único nodo con la referencia a otro objeto como nula).
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Un nodo de una lista enlazada simple puede determinar quien se encuentra después de él, pero no puede determinar quien se encuentra antes, ya que solo cuenta con la dirección del nodo siguiente pero no del anterior.
+                </p>
+
+                <img class="card-img-top" id="card-img-tam" src="../../assets/images/listasEnlazadas/Ilus1.png">
+
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Los elementos cabeza y final de la figura son referencias creadas a partir de la clase que se crean los nodos.
+                </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        struct nodo{{'{'}}
+                            tipoelemento elemento;
+                            struct nodo *sgte;
+                        {{'}'}};
+                        
+                        typedef struct nodo *Tlista;
+                    </code>
+                </pre>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="card mx-auto my-4 text-center " style="width: 45rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center">Operaciones en listas enlazadas simples</h1>
+
+            <div class="">
+                <p class="card-text mx-auto my-4 " id="subtitle">
+                    Inserción de elementos al final de la lista
+                </p>
+
+                <p class="card-text mx-auto my-3">
+                    Si está <span id="special-text">vacía</span> la lista es decir inicio <span id="special-text">==</span> null
+                </p>
+                <p class="card-text mx-auto my-1">
+                    <li>Se crea un nuevo nodo o se asigna un nuevo nodo al inicio</li>
+                    <li>Final se hace que apunte también al inicio ya que es el único nodo.</li>
+                </p>
+                <p class="card-text mx-auto my-3">
+                    Si ya existe <span id="special-text">por lo menos</span> un nodo
+                </p>
+                <p class="card-text mx-auto my-1">
+                    <li>Se crea o se asigna un nuevo nodo a fin. sig <span id="special-text">=</span> nuevo;</li>
+                    <li>Final se hace que apunte al nuevo nodo ya que ahora será el final.</li>
+                </p>
+                <p class="card-text mx-auto my-4 " id="subtitle">
+                    Inserción de elementos al inicio de la lista
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Verificar si la lista está vacía.
+                </p>
+                <p class="card-text mx-auto my-3">
+                    Si está <span id="special-text">vacía</span> la lista es decir inicio <span id="special-text">==</span> null
+                </p>
+                <p class="card-text mx-auto my-1">
+                    <li>Se crea un nuevo nodo o se asigna un nuevo nodo al inicio</li>
+                    <li>Final se hace que apunte también al inicio ya que es el único nodo.</li>
+                </p>
+                <p class="card-text mx-auto my-3">
+                    Si ya existe <span id="special-text">por lo menos</span> un nodo
+                </p>
+                <p class="card-text mx-auto my-1">
+                    <li>Se crea un nodo que se hace que apunte al inicio nuevo. sig<span id="special-text">=</span> inicio;</li>
+                    <li>Se hace que inicio ahora apunte al primer elemento que es nuevo inicio <span id="special-text">=</span> nuevo</li>
+                </p>
+                <p class="card-text mx-auto my-4 " id="subtitle">
+                    Inserción en alguna posición especifica
+                </p>
+                <p class="card-text mx-auto my-4">
+                    Verificar si la lista está vacía.
+                </p>
+                <p class="card-text mx-auto my-3">
+                    Si está <span id="special-text">vacía</span> la lista es decir inicio <span id="special-text">==</span> null
+                </p>
+                <p class="card-text mx-auto my-1">
+                    <li>Se crea un nuevo nodo o se asigna un nuevo nodo al inicio</li>
+                    <li>Final se hace que apunte también al inicio ya que es el único nodo.</li>
+                </p>
+                <p class="card-text mx-auto my-3">
+                    Si ya existe <span id="special-text">por lo menos</span> un nodo
+                </p>
+                <p class="card-text mx-auto my-1">
+                    <li>Se recorre la lista contando las posiciones de los elementos dentro de la lista (pos++), además se debe de recorrer conociendo el nodo anterior y el siguiente con el fin de reorganizar la lista al insertar un nuevo elemento.</li>
+                    <br/>
+                    <li>Si se localiza la posición buscada y siguiente es diferente de null. if(cont==posi && sig!=null)</li><br/>
+                    <li>Se crea un nuevo nodo y se hace que apunte al siguiente nodo y además que el nodo anterior apunte al nuevo nodo. nuevo.sig=sig y ant.sig=nuevo.</li><br/>
+                    <li>Si no se localiza la posición (indica que se dio una posición mayor a la cantidad de elementos, entonces se agrega el elemento al final de la lista.</li><br/>
+                </p>
+
+                <div class="card mx-auto my-2 text-center " style="width: 35rem; height:10rem">
+                    <div class="card-body">
+                        <h1 class="card-title text-center my-0">Ejemplos</h1>
+                        <a id="btn-module" class="btn btn-primary my-5 " style="width: 25rem; ">IR</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card mx-auto my-4 text-center col-10" id=principal style="width: 35rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center">Dobles</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Una lista doblemente enlazada es una colección de nodos que cuentan con dos direcciones en cada uno de sus nodos y que en conjunto forman una estructura de datos lineal. Cada nodo es un objeto
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    compuesto que guarda una referencia a un elemento (dato), una referencia al nodo anterior (dirección predecesora) y una referencia al nodo siguiente (dirección sucesora).
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Un nodo de una lista enlazada doble puede determinar quien se encuentra después de él y quien se encuentra antes de él, ya que cuenta con las direcciones de los nodos siguiente y anterior.
+                </p>
+
+                <img class="card-img-top" id="card-img-tam" src="../../assets/images/listasEnlazadas/Ilus2.png">
+
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Una ventaja de las listas doblemente enlazadas es que podemos usar un puntero a la celda que contiene el i-ésimo elemento de una lista para representar la posición i, mejor que usar el puntero a la celda anterior, aunque lógicamente, también es posible
+                    la implementación similar a la expuesta en las listas simples haciendo uso de la cabecera. El único precio que pagamos por estas características es la presencia de un puntero adicional en cada celda y consecuentemente procedimientos
+                    algo más largos para algunas de las operaciones básicas de listas. Si usamos punteros (mejor que cursores) podemos declarar celdas que consisten en un elemento y dos punteros a través de:
+                </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        typedef struct celda{{'{'}}
+
+                            tipoelemento elemento;
+                            
+                            struct celda *siguiente,*anterior;
+                            
+                        {{'}'}}tipocelda;
+                            
+                        typedef tipocelda *posicion;
+                    </code>
+                </pre>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    El procedimiento anterior se expresa de la siguiente manera:
+                </p>
+
+                <img class="card-img-top" id="card-img-tam" src="../../assets/images/listasEnlazadas/Ilus3.png">
+
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Donde los trazos continuos denotan la situación inicial y los punteados la final. El ejemplo visto se ajusta a la supresión de un elemento o celda de una lista situada en medio de la misma. Para obviar los problemas derivados de los elementos extremos
+                    (primero y último) es práctica común hacer que la cabecera de la lista doblemente enlazada sea una celda que efectivamente complete el círculo, es decir, el anterior a la celda de cabecera sea la última celda de la lista y la siguiente
+                    la primera. De esta manera no necesitamos chequear para NULL en el anterior procedimiento borrar.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Por consiguiente, podemos realizar una implementación de listas doblemente enlazadas con cabecera tal que tenga una estructura circular en el sentido de que dado un nodo y por medio de los punteros podemos volver hasta él como se puede observar en la
+                    figura (de forma análoga para anterior).
+                </p>
+
+                <img class="card-img-top" id="card-img-tam" src="../../assets/images/listasEnlazadas/Ilus4.png">
+
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Es importante notar que, aunque la estructura física de la lista puede hacer pensar que mediante la operación siguiente podemos alcanzar de nuevo un nodo de la lista, la estructura lógica es la de una lista y por lo tanto habrá una posición primero y
+                    una posición fin de forma que al aplicar una operación anterior o siguiente respectivamente sobre estas posiciones el resultado será un error.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Respecto a la forma en que trabajarán las funciones de la implementación que proponemos hay que hacer constar los siguientes puntos:
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    <li>La función de creación debe alojar memoria para la cabecera y hacer que los punteros siguiente y anterior apunten a ella, devolviendo un puntero a dicha cabecera.</li><br />
+                    <li>La función primero(l) devolverá un puntero al nodo siguiente a la cabecera.</li><br />
+                    <li>La función fin(l) devolverá un puntero al nodo cabecera.</li><br />
+                    <li>Trabajar con varias posiciones simultáneamente tendrá un comportamiento idéntico al de las listas enlazadas excepto respecto al problema referente al borrado cuando se utilizan posiciones consecutivas. Es posible implementar la función
+                        de borrado de tal forma que borrar un elemento de una posición p invalida el valor de dicha posición p y no afecta a ninguna otra posición. Nosotros en nuestra implementación final optaremos por pasar un puntero a la posición para
+                        el borrado de forma que la posición usada quede apuntando al elemento siguente que se va a borrar al igual que ocurría en el caso de las listas simples. Otra posible solución puede ser que la función devuelva la posición del elemento
+                        siguiente a ser borrado.</li><br />
+                    <li>La inserción se debe hacer a la izquierda del nodo apuntado por la posición ofrecida a la función insertar. Esto implica que al contrario que en las listas simples, al insertar un nodo, el puntero utilizado sigue apuntando al mismo
+                        elemento al que apuntaba y no al nuevo elemento insertado. Si se desea, es posible modificar la función de forma que se pase un puntero a la posición de inserción para poder modificarla y hacer que apunte al nuevo elemento insertado.
+                        En cualquier caso, el comportamiento final de la función deberá quedar reflejado en el conjunto de especificaciones del TDA.</li><br />
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mx-auto my-2 text-center " style="width: 45rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center">Operaciones en listas enlazadas dobles</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4 ">
+                    Dentro del tipo abstracto de listas doblemente enlazadas podemos proponer las siguientes primitivas:
+                </p>
+
+                <p class="card-text mx-auto my-4">
+                    <li>tLista <span id="special-text">crear ()</span></li>
+                    <li>void <span id="special-text">destruir (tLista l)</span></li>
+                    <li>tPosicion <span id="special-text">primero (tLista l)</span></li>
+                    <li>tPosicion <span id="special-text">fin (tLista l)</span></li>
+                    <li>void insertar <span id="special-text">(tElemento x, tPosicion p, tLista l)</span></li>
+                    <li>void <span id="special-text">borrar (tPosicion *p, tLista l)</span></li>
+                    <li>tElemento <span id="special-text">elemento(tPosicion p, tLista l)</span></li>
+                    <li>tPosicion <span id="special-text">siguiente (tPosicion p, tLista l)</span></li>
+                    <li>tPosicion <span id="special-text">anterior (tPosicion p, tLista l)</span></li>
+                    <li>tPosicion <span id="special-text">posicion (tElemento x, tLista l)</span></li>
+                </p>
+
+                <p class="card-text mx-auto my-4 ">
+                    <strong>tLista crear ()</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span> Ninguno.
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> (Constructor primitivo). Crea un objeto del tipo tLista.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>void destruir (tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span> Una lista.
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Destruye el objeto l liberando los recursos que empleaba. Para volver a usarlo habrá que crearlo de nuevo.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>tPosicion primero (tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span> Una lista.
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Devuelve la posición del primer elemento de la lista.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>tPosicion fin (tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span> Una lista.
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Devuelve la posición posterior al último elemento de la lista.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>void insertar (tElemento x, tPosicion p, tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">l:</span> Es modificada.
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">p:</span> Es una posición válida para la lista l.
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">x:</span> Dirección válida de un elemento del tipo T con que se instancia la lista, distinta de NULL.
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Inserta elemento x en la posición p de la lista l desplazando todos los demás elementos en una posición.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>void borrar (tPosicion *p, tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">l: Es modificada.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">p: Es una posición válida para la lista l.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Elimina el elemento de la posición p de la lista l desplazando todos los demás elementos una posición.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>void borrar (tPosicion *p, tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">l: Una lista.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">p: Es una posición válida para la lista l.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Devuelve el elemento que se encuentra en la posición p de la lista l.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>void borrar (tPosicion *p, tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">l: Una lista.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">p: Es una posición válida para la lista l, distinta de fin(l).</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Devuelve la posición siguiente a p en l.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>void borrar (tPosicion *p, tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">l: Una lista.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">p: Es una posición válida para la lista l, distinta de primero(l).</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Devuelve la posición que precede a p en l.
+                </p>
+                <p class="card-text mx-auto my-4 ">
+                    <strong>tPosicion posicion (tElemento x, tLista l)</strong>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Argumentos:</span>
+                </p>
+                <p class="card-text mx-auto my-1">
+                    <span id="special-text">l: Una lista.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">x: Dirección válida de un elemento del tipo T con que se instancia la lista, distinta de NULL.</span>
+                </p>
+                <p class="card-text mx-auto my-1 ">
+                    <span id="special-text">Efecto:</span> Si x se encuentra entre los elementos de la lista l, devuelve la posición de su primera ocurrencia. En otro caso, devuelve la posición fin(l).
+                </p>
+                <div class="card mx-auto my-2 text-center " style="width: 35rem; height:10rem">
+                    <div class="card-body">
+                        <h1 class="card-title text-center my-0">Ejemplos</h1>
+                        <a id="btn-module" class="btn btn-primary my-5 " style="width: 25rem; ">IR</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

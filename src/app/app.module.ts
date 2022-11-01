@@ -39,6 +39,9 @@ import { ComponentsModule } from './components/components.module';
 
 //My service
 import { HighlightService } from './services/highlight.service';
+import { Modulo3ColasComponent } from './modulo3-colas/modulo3-colas.component';
+import { Modulo3ColasPrioridadesComponent } from './modulo3-colas-prioridades/modulo3-colas-prioridades.component';
+import { Modulo3ListasComponent } from './modulo3-listas/modulo3-listas.component';
 
 
 @NgModule({
@@ -64,6 +67,9 @@ import { HighlightService } from './services/highlight.service';
     Modulo2EspecificacionComponent,
     Modulo2CuestionarioComponent,
     Modulo3PilasComponent,
+    Modulo3ColasComponent,
+    Modulo3ColasPrioridadesComponent,
+    Modulo3ListasComponent,
   ],
   imports: [
     RouterModule.forRoot(Approutes),
