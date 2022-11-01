@@ -1,0 +1,32 @@
+#color {
+    color: rgb(41, 181, 181);
+    font-weight: bold;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.card {
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2)
+}
+
+.modal-header img {
+    width: 400px;
+    height: 400px;
+}
+
+.modal {
+    border: 2px solid gray;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    display: none;
+}
+
+#modalIncorrect {
+    width: 200px;
+    height: 200px;
+}

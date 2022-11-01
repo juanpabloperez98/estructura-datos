@@ -24,6 +24,7 @@ import { Modulo3ColasComponent } from './modulo3-colas/modulo3-colas.component';
 import { Modulo3ColasPrioridadesComponent } from './modulo3-colas-prioridades/modulo3-colas-prioridades.component';
 import { Modulo3ListasComponent } from './modulo3-listas/modulo3-listas.component';
 import { Modulo3TablasComponent } from './modulo3-tablas/modulo3-tablas.component';
+import { Modulo3CuestionarioComponent } from './modulo3-cuestionario/modulo3-cuestionario.component';
 
 
 export const Approutes: Routes = [
@@ -169,6 +170,11 @@ export const Approutes: Routes = [
   {
     path: 'modulo3-tablas',
     component: Modulo3TablasComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo3-cuestionario',
+    component: Modulo3CuestionarioComponent,
     pathMatch: 'full'
   },
   {

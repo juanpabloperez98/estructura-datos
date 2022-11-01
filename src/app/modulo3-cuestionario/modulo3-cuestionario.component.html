@@ -1,0 +1,87 @@
+<div class="row mx-auto mb-5 ">
+
+    <div class="card mx-auto col-lg-10 my-5" style="width: 70rem;">
+        <div class="card-body">
+
+            <!--  <div class="">
+                <p class="card-text mx-auto my-4">
+
+                </p> -->
+
+            <!--Preguntas-->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <form class="mid-form" #userForm="ngForm" name="formulario" (ngSubmit)="onsubmit()">
+                            <p id="color">Pregunta#1</p>
+                            <p><strong>¿Un tipo de dato se considera un espacio de memoria con restricciones según el tipo de dato que se esté hablando?</strong></p>
+                            <ol type="A">
+                                <dd><input type="radio" value="p11" name="pregunt1" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1 " required> Verdadero </dd>
+                                <dd><input type="radio" value="p12" name="pregunt1" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1 "> Falso</dd>
+                            </ol>
+                            <p id="color">Pregunta#2</p>
+                            <p><strong>¿Cuáles son los tipos de datos elementales que se manejan ?</strong></p>
+                            <ol type="A">
+                                <dd><input type="radio" value="p21" name="pregunt2" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2 " required> Reales - Flotantes - Strings</dd>
+                                <dd><input type="radio" value="p22" name="pregunt2" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2 "> Booleanos - Flotantes - Numéricos - Tupla</dd>
+                                <dd><input type="radio" value="p23" name="pregunt2" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2 "> Caracteres - Numéricos - Booleanos - Arreglo</dd>
+                            </ol>
+                            <p id="color">Pregunta#3</p>
+                            <p><strong>¿Que es una función?</strong></p>
+                            <ol type="A">
+                                <dd><input type="radio" value="p31" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 " required> Una función es un conjunto de variables que son utilizadas a lo largo de la ejecución de un programa</dd>
+                                <dd><input type="radio" value="p32" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 "> Son códigos predefinidos por el lenguaje de programación el cual permiten realizar tareas específicas</dd>
+                                <dd><input type="radio" value="p33" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 "> Una función es una implementación en un lenguaje de programación que me permite recibir datos del usuario mediante
+                                    métodos de entrada</dd>
+                                <dd><input type="radio" value="p34" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 "> Es un concepto de abstracción de código que permite ser reutilizable en el flujo y construcción de un programa, el
+                                    cual puede o no tener un valor de retorno</dd>
+                            </ol>
+
+                            <button type="submit" class="btn btn-primary " onclick="resultado()"> <img src="../../../assets/images/icons/marca-de-verificacion.png" class="card-img-top" alt="introducion.jpg" > RESPONDER</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #continueModal let-modal>
+    <div class="modal-header">
+        <!-- <h2 class="modal-title" id="modal-basic-title">Bien hecho ya podemos pasar a el siguiente modulo</h2> -->
+        <img src="../../assets/images/modal/bienHecho.jpg" alt="bienHecho.jpg">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <dd>
+                <strong>Ahora podemos </strong>
+                <a routerLink="/datos-blank" (click)="modal.dismiss('Cross click')">
+                    <strong>Continuar</strong>
+                </a>
+                <strong> con el siguien modulo.</strong>
+            </dd>
+        </ol>
+    </div>
+</ng-template>
+
+<ng-template #reloadModal let-modal>
+    <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <dd>
+                <p>Aun te falta para poder seguir al otro modulo</p>
+                <a routerlink="/modulo1-cuestionario" (click)="modal.dismiss('Cross click')">
+                    <img id="modalIncorrect" src="../../assets/images/modal/cross.png   " alt="bienHecho.jpg">
+                    <strong>Reintentar</strong>
+                </a>
+            </dd>
+        </ol>
+    </div>
+</ng-template>
