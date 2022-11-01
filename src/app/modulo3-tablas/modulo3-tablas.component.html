@@ -1,0 +1,417 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+
+        <h1 class="d-inline-block" id="tit">Tablas hash </h1>
+        <a [routerLink]="['/modulo2-especificacion']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 32rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">¿Qué es una tabla hash?</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Una tabla hash es una estructura de datos que asocia llaves o claves con valores. La operación principal que soporta de manera eficiente es la búsqueda: permite el acceso a los elementos (teléfono y dirección, por ejemplo) almacenados a partir de una
+                    clave generada (usando el nombre o número de cuenta, por ejemplo). Funciona transformando la clave con una función hash en un hash, un número que identifica la posición (casilla o cubeta) donde la tabla hash localiza el valor deseado.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Cada posición de la tabla no almacena un único elemento sino la cabeza de una lista encadenada que a su vez contiene todos aquellos elementos cuya función de hash ha devuelto idéntico resultado. Una posición de la tabla en la que no se haya insertado
+                    ningún elemento, contiene un puntero a NULL. La siguiente figura muestra una tabla de tamaño n y los elementos almacenados en las posiciones 0, 1, 2, n-2 y n-1.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="tam-img" class="col-lg-5 me-auto">
+        <img class="card-img-top" src="../../assets/images/tablas/Ilus1.png">
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 32rem;">
+        <div class="card-body">
+
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    En diferentes posiciones de la tabla pueden tener listas de diferente longitud, o incluso vacías. Dada una clave, el proceso de búsqueda consiste en calcular primero su índice mediante la función de hash, y a continuación buscar esa clave en la lista
+                    de colisiones.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    la ganancia en eficiencia de una tabla hash con respecto a una lista encadenada que contenga todos los elementos se basa en que la longitud de las listas de colisiones es sensiblemente menor que el número total de elementos. Si una tabla tiene todas sus
+                    cadenas de colisión de igual longitud, el tiempo de búsqueda se reduce sensiblemente. Sin embargo, en el caso extremo en el que todos los elementos están en una única cadena de colisión, la tabla tiene la misma eficiencia que una lista
+                    encadenada.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Consideremos una función hash h(x) que mapea el valor ' x ' a ' x%10 ”En la matriz. Para los datos dados, podemos construir una tabla hash que contenga claves o códigos hash o hash como se muestra en el siguiente diagrama.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="tam-img" class="col-lg-5 me-auto">
+        <img class="card-img-top" src="../../assets/images/tablas/Ilus2.png">
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 38rem;">
+        <div class="card-body">
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    podemos ver que las entradas de la matriz se asignan a sus posiciones en la tabla hash mediante una función hash.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Por lo tanto, podemos decir que el hash se implementa mediante dos pasos como se menciona a continuación:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Consideremos una función hash h(x) que mapea el valor ' x ' a ' x%10 ”En la matriz. Para los datos dados, podemos construir una tabla hash que contenga claves o códigos hash o hash como se muestra en el siguiente diagrama.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">1. </span>El valor se convierte en una clave entera única o hash mediante una función hash. Se utiliza como índice para almacenar el elemento original, que cae en la tabla hash. En el diagrama anterior, el valor
+                    1 en la tabla hash es la clave única para almacenar el elemento 1 de la matriz de datos dada en el lado izquierdo del diagrama.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">2. </span>El elemento de la matriz de datos se almacena en la tabla hash, donde se puede recuperar rápidamente utilizando el clave hash. En el diagrama anterior, vimos que hemos almacenado todos los elementos
+                    en la tabla hash después de calcular sus respectivas ubicaciones usando una función hash. Podemos usar las siguientes expresiones para recuperar valores hash e index.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 38rem;">
+        <div class="card-body">
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    La eficiencia del mapeo depende de la eficiencia de la función hash que usamos.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Una función hash básicamente debe cumplir los siguientes requisitos:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li><span id="special-text">Fácil de calcular: </span>Una función hash debería ser fácil de calcular las claves únicas.</li>
+                    <li><span id="special-text">Menos colisión: </span>Cuando los elementos equivalen a los mismos valores clave, se produce una colisión. Debe haber un mínimo de colisiones en la medida de lo posible en la función hash que se utiliza. Como
+                        es probable que se produzcan colisiones, tenemos que utilizar técnicas de resolución de colisiones adecuadas para solucionar las colisiones.</li>
+                    <li><span id="special-text">Distribución uniforme: </span>La función hash debería dar como resultado una distribución uniforme de los datos en la tabla hash y, por lo tanto, evitar la agrupación.</li>
+                </p>
+                <div class="card mx-auto my-2 text-center " style="width: 25rem; height:10rem">
+                    <div class="card-body">
+                        <h1 class="card-title text-center my-0">Ejemplos</h1>
+                        <a id="btn-module" class="btn btn-primary my-5 " style="width: 20rem; ">IR</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="card mx-auto my-4 text-center col-10" id=principal style="width: 35rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center">Tablas hash en c++</h1>
+            <div class="">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    La tabla hash o un mapa hash es una estructura de datos que almacena punteros a los elementos de la matriz de datos original.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    En nuestro ejemplo de biblioteca, la tabla hash de la biblioteca contendrá punteros a cada uno de los libros de la biblioteca.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Tener entradas en la tabla hash facilita la búsqueda de un elemento particular en la matriz.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Como ya se vio, la tabla hash usa una función hash para calcular el índice en la matriz de cubos o ranuras con las que se puede encontrar el valor deseado.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Considere otro ejemplo con la siguiente matriz de datos:
+                </p>
+                <img class="card-img-top" id="card-img-tam-1" src="../../assets/images/tablas/Ilus3.png">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Supongamos que tenemos una tabla hash de tamaño 10 como se muestra a continuación:
+                </p>
+                <img class="card-img-top" id="card-img-tam-2" src="../../assets/images/tablas/Ilus4.png">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Ahora usemos la función hash que se proporciona a continuación.
+                </p>
+                <pre class="language-language-markup line-numbers">
+                    <code class="language-c ">
+                        int hash_code = Value % 10;
+                    </code>
+                </pre>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Usando esto, asignamos los valores clave a las ubicaciones de la tabla hash como se muestra a continuación.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div id="tabla" class="my-5">
+        <table class=" table ">
+            <tr>
+                <th>Valor</th>
+                <th>Función hash</th>
+                <th>Código hash</th>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>22%10=2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>25%10=5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>27%10=2</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>46</td>
+                <td>46%10=2</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>70%10=2</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>89</td>
+                <td>89%10=2</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>31%10=2</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+    <div class="card mx-auto my-4 text-center col-6" id=principal style="width: 35rem; ">
+        <div class="card-body">
+            <div class="">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Usando la tabla anterior, podemos representar la tabla hash de la siguiente manera.
+                </p>
+                <img class="card-img-top" id="card-img-tam-3" src="../../assets/images/tablas/Ilus5.png">
+
+            </div>
+        </div>
+    </div>
+    <div class="card mx-auto my-4 text-center col-7" id=principal style="width: 26rem; ">
+        <div class="card-body">
+            <div class="">
+                <h1 class="card-title text-center">colisión</h1>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Por lo general, calculamos el código hash utilizando la función hash para poder asignar el valor de la clave al código hash en la tabla hash. En el ejemplo anterior de la matriz de datos, insertemos un valor 12. En ese caso, el código hash para el valor
+                    clave 12 será 2. (12% 10 = 2).
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Pero en la tabla hash, ya tenemos una asignación al valor clave 22 para hash_code 2 como se muestra a continuación:
+                </p>
+                <img class="card-img-top" id="card-img-tam-4" src="../../assets/images/tablas/Ilus6.png">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Como se muestra arriba, tenemos el mismo código hash para dos valores, 12 y 22, es decir, 2. Cuando uno o más valores clave equivalen a la misma ubicación, se produce una colisión. Por lo tanto, la ubicación del código hash ya está ocupada por un valor
+                    clave y hay otro valor clave que debe colocarse en la misma ubicación.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    En el caso del hash, incluso si tenemos una tabla hash de un tamaño muy grande, es probable que haya una colisión. Esto se debe a que encontramos un valor único pequeño para una clave grande en general, por lo que es completamente posible que uno o más
+                    valores tengan el mismo código hash en cualquier momento.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Dado que una colisión es inevitable en el hash, siempre debemos buscar formas de prevenir o resolver la colisión. Existen varias técnicas de resolución de colisiones que podemos emplear para resolver la colisión que ocurre durante el hash.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="card mx-auto my-4 text-center col-8" id=principal style="width: 35rem; ">
+        <div class="card-body">
+            <div class="">
+                <h1 class="card-title text-center">Solución de colisiones</h1>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Las siguientes son las técnicas que podemos emplear para resolver la colisión en la tabla hash.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    <li>
+                        <span id="special-text">ENCADENAMIENTO SEPARADO (HASH ABIERTO): </span>Ésta es la técnica de resolución de colisiones más común. Esto también se conoce como hash abierto y se implementa mediante una lista vinculada.
+                    </li>
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    En la técnica de encadenamiento independiente, cada entrada en la tabla hash es una lista enlazada. Cuando la clave coincide con el código hash, se ingresa en una lista correspondiente a ese código hash en particular. Por lo tanto, cuando dos claves tienen
+                    el mismo código hash, ambas entradas se ingresan en la lista vinculada.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Para el ejemplo anterior, el encadenamiento separado se representa a continuación.
+                </p>
+                <img class="card-img-top" id="card-img-tam-5" src="../../assets/images/tablas/Ilus7.png">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    El diagrama anterior representa el encadenamiento. Aquí usamos la función mod (%). Vemos que cuando dos valores clave equivalen al mismo código hash, vinculamos estos elementos a ese código hash mediante una lista vinculada.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Si las claves se distribuyen uniformemente en la tabla hash, el costo promedio de buscar la clave en particular depende del número promedio de claves en esa lista vinculada. Por lo tanto, el encadenamiento separado sigue siendo efectivo incluso cuando
+                    hay un aumento en el número de entradas que las ranuras.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    El peor de los casos para el encadenamiento por separado es cuando todas las claves equivalen al mismo código hash y, por lo tanto, se insertan en una sola lista vinculada. Por lo tanto, necesitamos buscar todas las entradas en la tabla hash y el costo
+                    que son proporcionales al número de claves en la tabla.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    <li>
+                        <span id="special-text">PALPADO LINEAL (DIRECCIONAMIENTO ABIERTO / HASH CERRADO): </span>En la técnica de sondeo lineal o direccionamiento abierto, todos los registros de entrada se almacenan en la propia tabla hash. Cuando el
+                        valor clave se asigna a un código hash y la posición a la que apunta el código hash no está ocupada, el valor clave se inserta en esa ubicación.
+                    </li>
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Si la posición ya está ocupada, utilizando una secuencia de sondeo, el valor clave se inserta en la siguiente posición que está desocupada en la tabla hash.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Para el sondeo lineal, la función hash puede cambiar como se muestra a continuación:
+                </p>
+                <p class="card-text mx-auto my-1" id="ancho">
+                    hash = hash% hashTableSize
+                </p>
+                <p class="card-text mx-auto my-1" id="ancho">
+                    hash = (hash + 1)% hashTableSize
+                </p>
+                <p class="card-text mx-auto my-1" id="ancho">
+                    hash = (hash + 2)% hashTableSize
+                </p>
+                <p class="card-text mx-auto my-1" id="ancho">
+                    hash = (hash + 3)% hashTableSize
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Vemos que, en caso de sondeo lineal, el intervalo entre ranuras o sondas sucesivas es constante, es decir, 1.
+                </p>
+                <img class="card-img-top" id="card-img-tam-6" src="../../assets/images/tablas/Ilus8.png">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    En el diagrama anterior, vemos que en el 0thubicación ingresamos 10 usando la función hash 'hash = hash% hash_tableSize'.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Ahora, el elemento 70 también equivale a la ubicación 0 en la tabla hash. Pero esa ubicación ya está ocupada. Por lo tanto, usando el palpado lineal encontraremos la siguiente ubicación que es 1. Como esta ubicación está desocupada, colocamos la llave
+                    70 en esta ubicación como se muestra con una flecha.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    La tabla hash resultante se muestra a continuación.
+                </p>
+                <img class="card-img-top" id="card-img-tam-7" src="../../assets/images/tablas/Ilus9.png">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    El sondeo lineal puede sufrir el problema de la “agrupación primaria” en el que existe la posibilidad de que las celdas continuas se ocupen y la probabilidad de insertar un nuevo elemento se reduzca.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    Además, si dos elementos obtienen el mismo valor en la primera función hash, ambos elementos seguirán la misma secuencia de sondeo.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    <li>
+                        <span id="special-text">PALPADO CUADRÁTICO: </span>El palpado cuadrático es el mismo que el palpado lineal, con la única diferencia del intervalo utilizado para el palpado. Como sugiere el nombre, esta técnica utiliza una distancia
+                        no lineal o cuadrática para ocupar espacios cuando se produce una colisión en lugar de una distancia lineal.
+                    </li>
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    En el sondeo cuadrático, el intervalo entre las ranuras se calcula agregando un valor polinomial arbitrario al índice ya hash. Esta técnica reduce la agrupación primaria en un grado significativo, pero no mejora la agrupación secundaria.
+                </p>
+                <p class="card-text mx-auto my-4" id="ancho">
+                    <Li> <span id="special-text">HASH DOBLE: </span>La técnica de doble hash es similar al sondeo lineal. La única diferencia entre el doble hash y el sondeo lineal es que, en la técnica de doble hash, el intervalo utilizado para el sondeo
+                        se calcula mediante dos funciones hash. Dado que aplicamos la función hash a la clave una tras otra, elimina la agrupación primaria y secundaria.
+                    </Li>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="my-5 col-lg-12 text-center title-content">
+
+        <h2 class="d-inline-block" id="tit">DIFERENCIA ENTRE ENCADENAMIENTO Y SONDEO LINEAL </h2>
+
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 20rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Encadenamiento (hash abierto)</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        Los valores clave se pueden almacenar fuera de la tabla utilizando una lista vinculada separada.
+                    </li>
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        El número de elementos de la tabla hash puede exceder el tamaño de la tabla hash.
+                    </li>
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        La supresión es eficaz en la técnica de encadenamiento.
+                    </li>
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        Dado que se mantiene una lista vinculada separada para cada ubicación, el espacio ocupado es grande.
+                    </li>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 22rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Palpación lineal (direccionamiento abierto)</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        Los valores clave solo deben almacenarse dentro de la tabla.
+                    </li>
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        El número de elementos presentes en la tabla hash no excederá el número de índices en la tabla hash.
+                    </li>
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        La eliminación puede resultar engorrosa. Puede evitarse si no es necesario.
+                    </li>
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <li>
+                        Dado que todas las entradas se acomodan en la misma tabla, el espacio ocupado es menor.
+                    </li>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 28rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Implementación en c++</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Podemos implementar hash mediante el uso de matrices o listas vinculadas para programar las tablas hash. En C ++ también tenemos una función llamada 'mapa hash' que es una estructura similar a una tabla hash, pero cada entrada es un par clave-valor. En
+                    C ++ se llama mapa hash o simplemente mapa. El mapa hash en C ++ generalmente no está ordenado.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Hay un encabezado definido en la biblioteca de plantillas estándar (STL) de C ++ que implementa la funcionalidad de los mapas. Nosotros hemos cubierto Mapas STL en detalle en nuestro tutorial sobre STL.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    La siguiente implementación es para hash utilizando las listas enlazadas como estructura de datos para la tabla hash. También utilizamos el 'encadenamiento' como técnica de resolución de colisiones en esta implementación.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="tam-img" class="col-lg-5 me-auto">
+        <img class="card-img-top" src="../../assets/images/tablas/Ilus10.png">
+    </div>
+    <div class="card mx-auto my-4 text-center col-9" id=principal style="width: 35rem; ">
+        <div class="card-body">
+            <div class="">
+                <p class="card-text mx-auto my-4" id="ancho">
+                    La salida muestra una tabla hash que se crea de tamaño 7. Usamos encadenamiento para resolver la colisión. Mostramos la tabla hash después de eliminar una de las claves.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mx-auto my-2 text-center " style="width: 25rem; height:10rem">
+        <div class="card-body">
+            <h1 class="card-title text-center my-0">Ejemplo 1</h1>
+            <a id="btn-module" class="btn btn-primary my-5 " style="width: 20rem; ">IR</a>
+        </div>
+    </div>
+    <div class="card mx-auto my-2 text-center " style="width: 25rem; height:10rem">
+        <div class="card-body">
+            <h1 class="card-title text-center my-0">Ejemplo 2</h1>
+            <a id="btn-module" class="btn btn-primary my-5 " style="width: 20rem; ">IR</a>
+        </div>
+    </div>
+</div>
