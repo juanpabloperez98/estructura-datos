@@ -6,11 +6,11 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-ejemplo2',
-  templateUrl: './ejemplo2.component.html',
-  styleUrls: ['./ejemplo2.component.css']
+  selector: 'app-ejemplo1',
+  templateUrl: './ejemplo1.component.html',
+  styleUrls: ['./ejemplo1.component.css']
 })
-export class Ejemplo2Component implements OnInit {
+export class Ejemplo1Component implements OnInit {
 
   lines_to_input = [8]
   lines_to_validate = [9]
@@ -33,27 +33,26 @@ export class Ejemplo2Component implements OnInit {
   password = '';
   equal = true;
   i = 0;
+  inputfield = '';
 
 
   code = `
   #include <cstdio>
-  #include <string.h>
-  int main (){ 
-    char password_user[] = "MinuevaClave";
-    int size = strlen(password_user);
-    char password[size]; 
-    printf("Ingrese contrasena: ");
-    gets(password);
-    bool equal = true;
-    for(int i = 0; i < size; i++){ 
-      if(password[i]!=password_user[i]){
-        equal=false;
-      }
+  #include <math.h>
+  int main(){
+    int number;
+    printf("Ingrese un numero: ");
+    scanf("%d",&number);
+    int size_array = (int)log2(number)+1;
+    char binary[size_array];
+    int i = size_array-1;
+    while(number != 0){
+      binary[i] = (number % 2 == 0 ? '0' : '1');
+      number = number/2;
+      i--;
     }
-    if(equal == true){
-      printf("Claves iguales");
-    }else{
-      printf("Claves no iguales");
+    for(int index = 0; index < size_array; index++){
+      printf("%c",binary[index]);
     }
   }
   `
@@ -63,51 +62,51 @@ export class Ejemplo2Component implements OnInit {
       'line_explain':'Se incluye la libreria <cstdio> la cual permite manejar funciones de entrada y salida',
     },
     {
-      'line_explain':'Se incluye la libreria <string.h> la cual contiene la definición de macros, constantes, funciones y tipos y algunas operaciones de manipulación de memoria.',
+      'line_explain':'Se incluye la libreria <math.h> la cual permite manejar funciones matematicas',
     },
     {
       'line_explain':'Se declara la función principal con la que arranca el programa',
     },
     {
-      'line_explain':'Se inicializa un arreglo llamado password_user[] con el valor de "MinuevaClave"',
+      'line_explain':'Definimos la variable number de tipo entero',
       'var_values':{
         'password_user':'MinuevaClave'
       },
     },
     {
-      'line_explain':'Se declara una variable size y se iguala al valor que devuelva la función strlen',
+      'line_explain':'Pedimos al usuario que ingrese un numero',
       'var_values':{
         'size':12
       },
     },
     {
-      'line_explain':'Se define un nuevo arreglo con la misma longitud que la variable password_user',
+      'line_explain':'Se guarda el valor ingresado en la variable number',
       'var_values':{
         'size':12
       },
     },
     {
-      'line_explain':'Se le pide al usuario que ingrese una contraseña',
+      'line_explain':'Obtenemos la cantidad de bits que se necesitan para representar el numero ingresado por el usuario',
       'output':'Ingrese contraseña',
     },
     {
       'line_explain':'Se captura lo ingresado por el usuario',
     },
     {
-      'line_explain':'Se declara un condicional y se iguala a true, esto con la intensión de validar si todos los caractaeres de las cadenas de caracteres',
+      'line_explain':'Definimos un arreglo de caracteres con una longitud de la cantidad de bits obtenidos anteriormente',
       'var_values':{
         'equal':"true"
       },
     },
     {
-      'line_explain':'Se define un ciclo for que empieza en i = 0 y va hasta el valor de la variable size',
+      'line_explain':'Definimos el iterador que va a recorrer el arreglo de caracteres',
       'var_values':{
         'i':this.i,
         'size':"12"
       },
     },
     {
-      'line_explain':'Se valida si el caracter en la posición i de la cadena password es diferente del caracter i en la cadena password_user',
+      'line_explain':'Iteramos hasta que el valor de number sea diferente de cero',
       'var_values':{
         'i':this.i,
         'password':'',
@@ -117,43 +116,35 @@ export class Ejemplo2Component implements OnInit {
       }
     },
     {
-      'line_explain':'Dado el caso que la condición se cumpla entonces la variable equal se iguala a false',
+      'line_explain':'validamos con una condición ternaria si el modulo de number entre 2 es igual a cero o no, de ser así entonces se añade al array de caracteres el caracter "0" de lo contario el caracter "1"',
       'var_values':{
         'equal':'',
       }
     },
     {
-      'line_explain':'Se cierra el condicional',
+      'line_explain':'luego se divide el valor de number entre 2 (de esta manera por cada ciclo se ira disminuyendo el valor)',
     },
     {
-      'line_explain':'Se cierra el ciclo for',
+      'line_explain':'Se disminuye el valor del iterador',
     },
     {
-      'line_explain':'Se valida si el valor de la variable equal es igual a true',
+      'line_explain':'Se finaliza el ciclo anterior',
       'var_values':{
         'equal':this.equal,
       }
     },
     {
-      'line_explain':'Si la condición anterior se cumple entonces se imprime que las claves son iguales',
+      'line_explain':'Se define un ciclo for que ira desde 0 hasta el valor de size_array',
       'output':'Claves iguales',
     },
     {
-      'line_explain':'Si la condición no se cumple',
+      'line_explain':'Se imprime el caracter en la posición index',
     },
     {
       'line_explain':'Se imprime que las claves no son iguales',
       'output':'Claves no iguales',
-    },
-    {
-      'line_explain':'Se cierra el condicional',
-    },
-    {
-      'line_explain':'Fin del programa',
-    },
+    }
   ]
-  
-  
 
   constructor(
     private highlightService: HighlightService,
@@ -166,7 +157,8 @@ export class Ejemplo2Component implements OnInit {
     this.modalService.dismissAll();
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   // Functions to run program
   refresh = () => {
@@ -186,35 +178,7 @@ export class Ejemplo2Component implements OnInit {
     }
   }
 
-  jump = () => {
-    switch(this.current_line){
-      case 12:{
-        if( this.password[this.i] === this.password_user[this.i] ){
-          this.loop_jump(13,1);
-        }else{
-          this.equal = false;
-        }
-        break;
-      }
-      case 15:{
-        if ( this.i < 11 )
-        this.loop_jump(10,5,2);
-        this.i += 1;
-        break;
-      }
-      case 16:{
-        if ( !this.equal )
-        this.loop_jump(17,1);
-        break
-      }
-      case 17:{        
-        if ( this.equal )
-        this.loop_jump(19,2);
-        break;
-      }
-    }
-   
-  }
+  jump = () => {}
 
   validate_input = () => {
     if ( this.lines_to_validate.includes(this.current_line) ){
@@ -312,4 +276,5 @@ export class Ejemplo2Component implements OnInit {
       this.reload = true; 
     }
   }
+
 }

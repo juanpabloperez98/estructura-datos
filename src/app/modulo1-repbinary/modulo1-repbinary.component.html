@@ -1,5 +1,4 @@
 <div class="row mx-auto mb-5 " id="main-content">
-
     <div class="my-5 col-lg-12 text-center title-content">
         <a class="d-inline-block mr-4">
             <img class="d-inline-block mb-3" src="../../assets/images/icons/left-row.png" alt="left-row.png">
@@ -138,5 +137,28 @@
 
 
     </div>
-    <a class="btn btn-primary col-lg-3 mx-auto  "> VER EJEMPLOS </a>
+    <a class="btn btn-primary col-lg-3 mx-auto" (click)="open(examplemodal)"> VER EJEMPLOS </a>
 </div>
+
+<ng-template #examplemodal let-modal>
+    <div class="modal-header">
+        <h2 class="modal-title" id="modal-basic-title">Ejemplos</h2>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <li>
+                <a routerLink="/module2/ejemplo1">
+                    Con el objetivo de entender un poco mejor el manejo y a representación binaria, se le pide realizar un programa que permita al usuario ingresar un número decimal por pantalla y de como resultado su representación en número binario
+                </a>
+            </li>
+            <li>
+                <a >
+                    Escribir un programa que almacene la cadena de caracteres contraseña en una variable, pregunte al usuario por la contraseña e imprima por pantalla si la contraseña introducida por el usuario coincide con la guardada en la variable sin tener en cuenta mayúsculas y minúsculas.
+                </a>
+            </li>
+        </ol>
+    </div>
+</ng-template>

@@ -33,6 +33,7 @@ import { Modulo2ClasesComponent } from './modulo2-clases/modulo2-clases.componen
 import { Modulo2EspecificacionComponent } from './modulo2-especificacion/modulo2-especificacion.component';
 import { Modulo2CuestionarioComponent } from './modulo2-cuestionario/modulo2-cuestionario.component';
 import { Modulo3PilasComponent } from './modulo3-pilas/modulo3-pilas.component';
+import { Modulo1RepbinaryComponent } from './modulo1-repbinary/modulo1-repbinary.component';
 
 //My modules
 import { ComponentsModule } from './components/components.module';
@@ -64,6 +65,7 @@ import { HighlightService } from './services/highlight.service';
     Modulo2EspecificacionComponent,
     Modulo2CuestionarioComponent,
     Modulo3PilasComponent,
+    Modulo1RepbinaryComponent,
   ],
   imports: [
     RouterModule.forRoot(Approutes),

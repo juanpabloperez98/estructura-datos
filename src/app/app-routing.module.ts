@@ -6,8 +6,8 @@ import { Modulo1IntroduccionComponent } from './modulo1-introduccion/modulo1-int
 import { ModulosComponent } from './modulos/modulos.component';
 import { NoLinealesBlankComponent } from './no-lineales-blank/no-lineales-blank.component';
 import { TiposBlankComponent } from './tipos-blank/tipos-blank.component';
-import { Modulo1RepresentacionComponent } from './modulo1-representacion/modulo1-representacion.component';
 import { Modulo1TipoComponent } from './modulo1-tipo/modulo1-tipo.component';
+import { Modulo1RepbinaryComponent } from './modulo1-repbinary/modulo1-repbinary.component';
 import { Modulo1AbstraccionComponent } from './modulo1-abstraccion/modulo1-abstraccion.component';
 import { Modulo1FuncionComponent } from './modulo1-funcion/modulo1-funcion.component';
 import { Modulo1AlgoritmosComponent } from './modulo1-algoritmos/modulo1-algoritmos.component';
@@ -72,6 +72,15 @@ export const Approutes: Routes = [
     ]
   },
   {
+    path: 'module2',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-representacion-binaria/ejemplos-representacion-binaria.module').then(x => x.EjemplosRepresentacionBinariaModule )
+      }
+    ]
+  },
+  {
     path:'modulo1-introduccion',
     component:Modulo1IntroduccionComponent,
     pathMatch: 'full'
@@ -83,7 +92,7 @@ export const Approutes: Routes = [
   },
   {
     path:'modulo1-representacion',
-    component:Modulo1RepresentacionComponent,
+    component:  Modulo1RepbinaryComponent,
     pathMatch: 'full'
   },
   {
