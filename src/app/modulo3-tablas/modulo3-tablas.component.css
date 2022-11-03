@@ -1,0 +1,97 @@
+.title-content h1 {
+    font-size: 50px;
+    font-family: initial;
+}
+
+.title-content a {
+    cursor: pointer;
+}
+
+.title-content img {
+    width: 40px;
+}
+
+.title-content a:hover>img {
+    width: 45px;
+}
+
+.card-text {
+    font-size: 120%;
+    text-align: justify;
+}
+
+.card-title {
+    font-size: 250%;
+}
+
+.card {
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2)
+}
+
+#special-text {
+    color: rgb(0, 195, 255);
+}
+
+#tabla {
+    margin: 150px;
+    width: 1000px;
+}
+
+table {
+    text-align: center;
+    width: 60rem;
+    cursor: default;
+}
+
+table th {
+    background: black;
+    color: white;
+}
+
+th,
+td {
+    padding: 20px
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(244, 243, 243);
+}
+
+.title-content h2 {
+    font-size: 40px;
+}
+
+#card-img-tam-1 {
+    width: 315px;
+    height: 60px;
+}
+
+#card-img-tam-2 {
+    width: 345px;
+    height: 60px;
+}
+
+#card-img-tam-3 {
+    width: 345px;
+    height: 80px;
+}
+
+#card-img-tam-4 {
+    width: 360px;
+    height: 140px;
+}
+
+#card-img-tam-5 {
+    width: 400px;
+    height: 280px;
+}
+
+#card-img-tam-6 {
+    width: 225px;
+    height: 265px;
+}
+
+#card-img-tam-7 {
+    width: 55px;
+    height: 260px;
+}

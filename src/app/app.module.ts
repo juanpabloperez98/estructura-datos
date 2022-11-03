@@ -40,6 +40,11 @@ import { ComponentsModule } from './components/components.module';
 
 //My service
 import { HighlightService } from './services/highlight.service';
+import { Modulo3ColasComponent } from './modulo3-colas/modulo3-colas.component';
+import { Modulo3ColasPrioridadesComponent } from './modulo3-colas-prioridades/modulo3-colas-prioridades.component';
+import { Modulo3ListasComponent } from './modulo3-listas/modulo3-listas.component';
+import { Modulo3TablasComponent } from './modulo3-tablas/modulo3-tablas.component';
+import { Modulo3CuestionarioComponent } from './modulo3-cuestionario/modulo3-cuestionario.component';
 
 
 @NgModule({
@@ -66,6 +71,11 @@ import { HighlightService } from './services/highlight.service';
     Modulo2CuestionarioComponent,
     Modulo3PilasComponent,
     Modulo1RepbinaryComponent,
+    Modulo3ColasComponent,
+    Modulo3ColasPrioridadesComponent,
+    Modulo3ListasComponent,
+    Modulo3TablasComponent,
+    Modulo3CuestionarioComponent,
   ],
   imports: [
     RouterModule.forRoot(Approutes),

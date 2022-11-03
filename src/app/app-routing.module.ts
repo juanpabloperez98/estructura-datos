@@ -20,6 +20,11 @@ import { Modulo2ClasesComponent } from './modulo2-clases/modulo2-clases.componen
 import { Modulo2EspecificacionComponent } from './modulo2-especificacion/modulo2-especificacion.component';
 import { Modulo2CuestionarioComponent } from './modulo2-cuestionario/modulo2-cuestionario.component';
 import { Modulo3PilasComponent } from './modulo3-pilas/modulo3-pilas.component';
+import { Modulo3ColasComponent } from './modulo3-colas/modulo3-colas.component';
+import { Modulo3ColasPrioridadesComponent } from './modulo3-colas-prioridades/modulo3-colas-prioridades.component';
+import { Modulo3ListasComponent } from './modulo3-listas/modulo3-listas.component';
+import { Modulo3TablasComponent } from './modulo3-tablas/modulo3-tablas.component';
+import { Modulo3CuestionarioComponent } from './modulo3-cuestionario/modulo3-cuestionario.component';
 
 
 export const Approutes: Routes = [
@@ -30,35 +35,35 @@ export const Approutes: Routes = [
   },
   // Modulos
   {
-    path:'modules',
-    component:ModulosComponent,
+    path: 'modules',
+    component: ModulosComponent,
     pathMatch: 'full'
   },
   //Introducción
   {
-    path:'introduccion-blank',
-    component:IntroBlankComponent,
+    path: 'introduccion-blank',
+    component: IntroBlankComponent,
     pathMatch: 'full'
   },
   {
-    path:'datos-blank',
-    component:TiposBlankComponent,
+    path: 'datos-blank',
+    component: TiposBlankComponent,
     pathMatch: 'full'
   },
   {
-    path:'lineales-blank',
-    component:LinealesBlankComponent,
+    path: 'lineales-blank',
+    component: LinealesBlankComponent,
     pathMatch: 'full'
   },
   {
-    path:'no-lineales-blank',
-    component:NoLinealesBlankComponent,
+    path: 'no-lineales-blank',
+    component: NoLinealesBlankComponent,
     pathMatch: 'full'
   },
   //Introducción
   {
-    path:'module1/introduccion',
-    component:Modulo1IntroduccionComponent,
+    path: 'module1/introduccion',
+    component: Modulo1IntroduccionComponent,
     pathMatch: 'full'
   },
   //Ejemplos
@@ -86,8 +91,8 @@ export const Approutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path:'modulo1-tipo',
-    component:Modulo1TipoComponent,
+    path: 'modulo1-tipo',
+    component: Modulo1TipoComponent,
     pathMatch: 'full'
   },
   {
@@ -96,69 +101,94 @@ export const Approutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path:'modulo1-abstraccion',
-    component:Modulo1AbstraccionComponent,
+    path: 'modulo1-abstraccion',
+    component: Modulo1AbstraccionComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo1-funcion',
-    component:Modulo1FuncionComponent,
+    path: 'modulo1-funcion',
+    component: Modulo1FuncionComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo1-algoritmos',
-    component:Modulo1AlgoritmosComponent,
+    path: 'modulo1-algoritmos',
+    component: Modulo1AlgoritmosComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo1-arreglos',
-    component:Modulo1ArreglosComponent,
+    path: 'modulo1-arreglos',
+    component: Modulo1ArreglosComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo1-punteros',
-    component:Modulo1PunterosComponent,
+    path: 'modulo1-punteros',
+    component: Modulo1PunterosComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo1-cuestionario',
-    component:Modulo1CuestionarioComponent,
+    path: 'modulo1-cuestionario',
+    component: Modulo1CuestionarioComponent,
     pathMatch: 'full'
   },
- //datos abstractos
+  //datos abstractos
   {
-    path:'modulo2-abstraccion',
-    component:Modulo2AbstraccionComponent,
-    pathMatch: 'full'
-  },
-  {
-    path:'modulo2-tipo',
-    component:Modulo2TipoComponent,
+    path: 'modulo2-abstraccion',
+    component: Modulo2AbstraccionComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo2-clases',
-    component:Modulo2ClasesComponent,
+    path: 'modulo2-tipo',
+    component: Modulo2TipoComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo2-especificacion',
-    component:Modulo2EspecificacionComponent,
+    path: 'modulo2-clases',
+    component: Modulo2ClasesComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo2-cuestionario',
-    component:Modulo2CuestionarioComponent,
+    path: 'modulo2-especificacion',
+    component: Modulo2EspecificacionComponent,
     pathMatch: 'full'
   },
   {
-    path:'modulo3-pilas',
-    component:Modulo3PilasComponent,
+    path: 'modulo2-cuestionario',
+    component: Modulo2CuestionarioComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo3-pilas',
+    component: Modulo3PilasComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo3-colas',
+    component: Modulo3ColasComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo3-colas-prioridad',
+    component: Modulo3ColasPrioridadesComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo3-listas',
+    component: Modulo3ListasComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo3-tablas',
+    component: Modulo3TablasComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo3-cuestionario',
+    component: Modulo3CuestionarioComponent,
     pathMatch: 'full'
   },
   {
     path: '**',
     redirectTo: '/auth'
   }
-  
+
 ];
