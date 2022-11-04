@@ -15,7 +15,9 @@
                     Una cola es un grupo ordenado de elementos del mismo tipo, en la cual dichos elementos se añaden por un extremo (Final) y se quitan por el otro extremo (Frente). Esto significa que los elementos se sacan en el mismo orden en el que fueron insertados o
                     introducidos en la cola, siendo por ello considerada como una estructura de datos FIFO (First In First Out), es decir, que el primer elemento en entrar es el primer elemento en salir.
                 </p>
-                <img class="card-img-top" src="../../assets/images/colas/Ilus1.png">
+                <p id="text-align-img">
+                    <img class="card-img-top" src="../../assets/images/colas/Ilus1.png">
+                </p>
                 <p class=" card-text mx-auto my-4 ">
                     A modo de ejemplo, una estructura FIFO funciona exactamente igual que una cola en un establecimiento, cuando llegas lo primero que debes hacer es pedir la vez, en ese momento te sitúas detrás del último que llegó, esto es, al final de la cola. A la hora
                     de atender, el dependiente atiende a quién ocupa la primera posición de la cola, y así sucesivamente hasta que te toque a ti.
@@ -68,15 +70,16 @@
                     En el caso de la implementación con punteros, se representa por medio de una lista enlazada, y para controlar la inserción o eliminación de elementos utilizamos dos punteros externos denominados Frente (que apunta al primer elemento introducido en la
                     cola) y Final (que apunta al último elemento introducido en la cola).
                 </p>
-
-                <img class="card-img-top" id="card-img-tam" src="../../assets/images/colas/Ilus2.png">
+                <p id="text-align-img">
+                    <img class="card-img-top" id="card-img-tam" src="../../assets/images/colas/Ilus2.png">
+                </p>
 
                 <p class=" card-text mx-auto my-4 ">
                     Cuando la cola se crea, los punteros Frente y Final tienen valor Nulo, ya que inicialmente la cola debe encontrarse vacía.
                 </p>
-
-                <img class="card-img-top" id="card-img-tam2" src="../../assets/images/colas/Ilus3.png">
-
+                <p id="text-align-img">
+                    <img class="card-img-top" id="card-img-tam2" src="../../assets/images/colas/Ilus3.png">
+                </p>
                 <p class=" card-text mx-auto my-4 ">
                     Conforme vayamos añadiendo elementos a la cola, Frente tomará el valor correspondiente a la dirección del primer elemento de la cola y Final tomará el valor correspondiente a la dirección del último elemento de la cola. De esta manera podemos determinar
                     en todo momento el comienzo y final de la misma.

@@ -44,6 +44,9 @@ import { Modulo3ColasPrioridadesComponent } from './modulo3-colas-prioridades/mo
 import { Modulo3ListasComponent } from './modulo3-listas/modulo3-listas.component';
 import { Modulo3TablasComponent } from './modulo3-tablas/modulo3-tablas.component';
 import { Modulo3CuestionarioComponent } from './modulo3-cuestionario/modulo3-cuestionario.component';
+import { Modulo4RecursividadComponent } from './modulo4-recursividad/modulo4-recursividad.component';
+import { Modulo4BinariosComponent } from './modulo4-binarios/modulo4-binarios.component';
+import { Modulo4EquilibradoComponent } from './modulo4-equilibrado/modulo4-equilibrado.component';
 
 
 @NgModule({
@@ -74,6 +77,9 @@ import { Modulo3CuestionarioComponent } from './modulo3-cuestionario/modulo3-cue
     Modulo3ListasComponent,
     Modulo3TablasComponent,
     Modulo3CuestionarioComponent,
+    Modulo4RecursividadComponent,
+    Modulo4BinariosComponent,
+    Modulo4EquilibradoComponent,
   ],
   imports: [
     RouterModule.forRoot(Approutes),
