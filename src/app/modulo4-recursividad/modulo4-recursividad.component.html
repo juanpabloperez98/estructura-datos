@@ -1,0 +1,97 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+        <h1 class="d-inline-block" id="tit">Recursividad </h1>
+        <a [routerLink]="['/modulo2-especificacion']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+    </div>
+
+    <div class=" card col-lg-7 mx-auto my-4" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Recursividad no es una estructura de datos, sino que es una técnica de programación que nos permite que un bloque de instrucciones se ejecute n veces. Remplaza en ocasiones a estructuras repetitivas.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Este concepto será de gran utilidad para la utilización de las estructuras de datos tipo árbol.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Si dentro de un método existe la llamada a sí mismo decimos que el método es recursivo.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    Cuando un método se llama a sí mismo, se asigna espacio en la pila para las nuevas variables locales y parámetros. Al volver de una llamada recursiva, se recuperan de la pila las variables locales y los parámetros antiguos y la ejecución se reanuda en
+                    el punto de la llamada al método.
+                </p>
+                <div class="card mx-auto my-2 text-center " style="width: 35rem; height:10rem">
+                    <div class="card-body">
+                        <h1 class="card-title text-center my-0">Ejemplos</h1>
+                        <a id="btn-module" class="btn btn-primary my-5 " style="width: 25rem; ">IR</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-8 mx-auto my-2" id="espacio" style="width: 37rem;">
+        <div class="card-body">
+
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Todo procedimiento recursivo debe contener necesariamente una instrucción condicional para que su ejecución pueda terminar. La terminación del proceso debe corresponder con la cardinalidad finita.
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    La facultad de las estructuras recursivas es la facilidad de variar su tamaño a diferencia de las estructuras fundamentales como los arrays, registros, conjuntos. De esto se desprende que no es posible asignarle una cantidad fija de memoria y como consecuencia
+                    un compilador no puede asociar direcciones explicitas con los componentes de tales variables. Para resolver este problema es realizar una asignación dinámica de memoria, que quiere decir asignar memoria para los componentes individuales
+                    al tiempo al tiempo que estos son creados durante la ejecución del programa en vez del momento de la compilación
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 15rem;">
+        <div class="card-body">
+            <h1 class="card-title text-center">Recursividad directa e indirecta</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Existen dos tipos de recursividad la recursividad directa y la recursividad indirecta. La recursividad directa es cuando la función se llama a si mismo directamente. La recursividad indirecta es cuando una cadena de dos o más funciones llama a la función
+                    que origino a la cadena.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; height: 18rem">
+        <div class="card-body">
+            <h1 class="card-title text-center">Backtracking</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    El backtracking es un método que intenta completar una búsqueda para solucionar un problema construyendo una solución parcial, siempre asegurando que la solución sea consistente con los requerimientos del problema. El algoritmo intenta extender una solución
+                    parcial hacia la completitud, pero cuando una inconsistencia ocurre con los requerimientos del problema, el algoritmo se regresa removiendo la parte más recientemente construida y trata con otra posibilidad.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mx-auto my-2 text-center " style="width: 28rem; height:10rem">
+        <div class="card-body">
+            <h1 class="card-title text-center my-0">Ejemplo 1</h1>
+            <a id="btn-module" class="btn btn-primary my-5 " style="width: 25rem; ">IR</a>
+
+        </div>
+    </div>
+    <div class="card mx-auto my-2 text-center " style="width: 28rem; height:10rem">
+        <div class="card-body">
+            <h1 class="card-title text-center my-0">Ejemplo 2</h1>
+            <a id="btn-module" class="btn btn-primary my-5 " style="width: 25rem; ">IR</a>
+
+        </div>
+    </div>
+</div>

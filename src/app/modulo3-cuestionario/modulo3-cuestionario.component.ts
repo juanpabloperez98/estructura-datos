@@ -50,7 +50,7 @@ export class Modulo3CuestionarioComponent implements OnInit {
       this.modalService.open(this.continueModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });
-    } else if (this.numAnswer == 1 || this.numAnswer == 2) {
+    } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3) {
       this.modalService.open(this.reloadModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });

@@ -1,0 +1,65 @@
+<div class="row mx-auto mb-5" id="main-content">
+    <div class="my-5 col-lg-12 text-center title-content">
+
+        <h1 class="d-inline-block" id="tit">Listas enlazadas </h1>
+        <a [routerLink]="['/modulo2-especificacion']" class="d-inline-block ml-4">
+            <img class="d-inline-block mb-3" src="../../assets/images/icons/right-row.png" alt="right-row.png">
+        </a>
+
+    </div>
+
+    <div class=" card col-lg-5 mx-auto my-2" id="espacio" style="width: 37rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center">¿Qué es una lista enlazada?</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Un árbol binario es una estructura de datos en la cual cada nodo siempre tiene cero hijos, un hijo o un hijo izquierdo y un hijo derecho. No pueden tener más de dos hijos (de ahí el nombre ‘Binario’). Si algún hijo tiene como referencia a null, es decir
+                    que no almacena ningún dato, entonces este es llamado un nodo externo. En el caso contrario el hijo es llamado un nodo interno.
+                </p>
+                <p id="text-align-img">
+                    <img class="card-img-top " id="card-img-tam" src="../../assets/images/binarios/Ilus1.png">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class=" card col-lg-8 mx-auto my-2" id="espacio" style="width: 37rem; ">
+        <div class="card-body">
+            <h1 class="card-title text-center">Recorrido de un Árbol</h1>
+            <div class="">
+                <p class=" card-text mx-auto my-4 ">
+                    Los recorridos se clasifican de acuerdo al momento en que se visita la raíz del árbol y los subárboles izquierdoyderecho. Existen tres recorridos:
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">Recorrido en Preorden: </span>consiste en primer lugar, examinar el dato del nodo raíz, posteriormente se recorrer el subárbol izquierdo en preorden y finalmente se recorre el subárbol derecho en preorden. Esto
+                    significa que para cada subárbol se debe conservar el recorrido en preorden, primero la raíz, luego la parte izquierda y posteriormente la parte derecha.
+                </p>
+                <p id="text-align-img">
+                    <img class="card-img-top " id="card-img-tam-2" src="../../assets/images/binarios/Ilus2.png">
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">Recorrido: </span>A, B, D, E, C, F, G
+                </p>
+
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">Recorrido en Inorder: </span>consiste en primer lugar en recorrer el subárbol izquierdo en Inorden, luego se examina el dato del nodo raíz, y finalmente se recorre el subárbol derecho en Inorden. Esto significa
+                    que para cada subárbol se debe conservar el recorrido en Inorden, es decir, primero se visita la parte izquierda, luego la raíz y posteriormente la parte derecha.
+                </p>
+                <p id="text-align-img">
+                    <img class="card-img-top " id="card-img-tam-2" src="../../assets/images/binarios/Ilus2.png">
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">Recorrido en Postorden: </span>consiste en primer lugar en recorrer el subárbol izquierdo en Postorden, luego serecorre el subárbol derecho en Postorden y finalmente se visita el nodo raíz. Esto significa que
+                    para cada subárbol se debe conservar el recorrido en Postorden, es decir, primero se visita la parte izquierda, luego la parte derecha y por último la raíz.
+                </p>
+                <p id="text-align-img">
+                    <img class="card-img-top" id="card-img-tam-2" src="../../assets/images/binarios/Ilus2.png">
+                </p>
+                <p class=" card-text mx-auto my-4 ">
+                    <span id="special-text">Recorrido: </span>D, E, B, F, G, C, A
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

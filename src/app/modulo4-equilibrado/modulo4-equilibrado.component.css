@@ -16,17 +16,8 @@
 }
 
 .card-text {
-    font-size: 100%;
+    font-size: 120%;
     text-align: justify;
-}
-
-#special-text {
-    color: rgb(0, 187, 255);
-}
-
-.card img {
-    width: 220px;
-    height: 200px;
 }
 
 .card-title {
@@ -37,13 +28,14 @@
     box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2)
 }
 
-#nota {
-    color: rgb(133, 130, 130);
-    font-size: 90%;
+#special-text {
+    color: rgb(0, 195, 255);
 }
 
-.card {
-    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2)
+#card-img-tam {
+    width: 280px;
+    height: 201px;
+    margin: auto;
 }
 
 #text-align-img {
