@@ -28,6 +28,7 @@ import { Modulo3CuestionarioComponent } from './modulo3-cuestionario/modulo3-cue
 import { Modulo4RecursividadComponent } from './modulo4-recursividad/modulo4-recursividad.component';
 import { Modulo4BinariosComponent } from './modulo4-binarios/modulo4-binarios.component';
 import { Modulo4EquilibradoComponent } from './modulo4-equilibrado/modulo4-equilibrado.component';
+import { Modulo4CuestionarioComponent } from './modulo4-cuestionario/modulo4-cuestionario.component';
 
 
 export const Approutes: Routes = [
@@ -84,13 +85,13 @@ export const Approutes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./ejemplos-representacion-binaria/ejemplos-representacion-binaria.module').then(x => x.EjemplosRepresentacionBinariaModule )
+        loadChildren: () => import('./ejemplos-representacion-binaria/ejemplos-representacion-binaria.module').then(x => x.EjemplosRepresentacionBinariaModule)
       }
     ]
   },
   {
-    path:'modulo1-introduccion',
-    component:Modulo1IntroduccionComponent,
+    path: 'modulo1-introduccion',
+    component: Modulo1IntroduccionComponent,
     pathMatch: 'full'
   },
   {
@@ -99,8 +100,8 @@ export const Approutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path:'modulo1-representacion',
-    component:  Modulo1RepbinaryComponent,
+    path: 'modulo1-representacion',
+    component: Modulo1RepbinaryComponent,
     pathMatch: 'full'
   },
   {
@@ -202,6 +203,11 @@ export const Approutes: Routes = [
   {
     path: 'modulo4-equilibrado',
     component: Modulo4EquilibradoComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'modulo4-cuestionario',
+    component: Modulo4CuestionarioComponent,
     pathMatch: 'full'
   },
   {
