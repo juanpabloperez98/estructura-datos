@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HighlightService } from 'src/app/services/highlight.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
-
-import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr'; 
 
 @Component({
   selector: 'app-ejemplo1',

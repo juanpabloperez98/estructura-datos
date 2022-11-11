@@ -5,10 +5,12 @@ import { RouterModule } from '@angular/router';
 import { EjemplosRepresentacionRoutes } from './ejemplos-representacion-binaria-routing.routing';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
+import { Ejemplo2Component } from './ejemplo2/ejemplo2.component';
 
 @NgModule({
   declarations: [
-    Ejemplo1Component
+    Ejemplo1Component,
+    Ejemplo2Component
   ],
   imports: [
     CommonModule,
