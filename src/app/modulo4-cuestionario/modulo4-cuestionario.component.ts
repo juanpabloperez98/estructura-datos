@@ -3,18 +3,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightService } from '../services/highlight.service';
 
 @Component({
-  selector: 'app-modulo3-cuestionario',
-  templateUrl: './modulo3-cuestionario.component.html',
-  styleUrls: ['./modulo3-cuestionario.component.css']
+  selector: 'app-modulo4-cuestionario',
+  templateUrl: './modulo4-cuestionario.component.html',
+  styleUrls: ['./modulo4-cuestionario.component.css']
 })
-export class Modulo3CuestionarioComponent implements OnInit {
+export class Modulo4CuestionarioComponent implements OnInit {
   fragebogen: any;
-  listResp: string[] = ['p11', 'p23', 'p31', 'p42', 'p52'];
+  listResp: string[] = ['p12', 'p22', 'p31', '41'];
   numAnswer = 0;
-
   @ViewChild('continueModal') continueModal: any;
   @ViewChild('reloadModal') reloadModal: any;
-
   constructor(
     private modalService: NgbModal,
     private highlightService: HighlightService
@@ -23,8 +21,7 @@ export class Modulo3CuestionarioComponent implements OnInit {
       pregunt1: '',
       pregunt2: '',
       pregunt3: '',
-      pregunt4: '',
-      pregunt5: ''
+      pregun4: ''
     };
   }
 
@@ -33,38 +30,34 @@ export class Modulo3CuestionarioComponent implements OnInit {
   onsubmit() {
     this.listResp.map((data) => {
       switch (data) {
-        case 'p11': {
-          this.fragebogen.pregunt1 === 'p11' ? this.numAnswer += 1 : null;
+        case 'p12': {
+          this.fragebogen.pregunt1 === 'p12' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p23': {
-          this.fragebogen.pregunt2 === 'p23' ? this.numAnswer += 1 : null;
+        case 'p22': {
+          this.fragebogen.pregunt2 === 'p22' ? this.numAnswer += 1 : null;
           break;
         }
         case 'p31': {
           this.fragebogen.pregunt3 === 'p31' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p42': {
-          this.fragebogen.pregunt4 === 'p42' ? this.numAnswer += 1 : null;
+        case 'p41': {
+          this.fragebogen.pregunt3 === 'p41' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p52': {
-          this.fragebogen.pregunt5 === 'p52' ? this.numAnswer += 1 : null;
-          break;
-        }
+
       };
     })
-    if (this.numAnswer == 5) {
+    if (this.numAnswer == 3) {
       this.modalService.open(this.continueModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });
-    } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3 || this.numAnswer == 4) {
+    } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3) {
       this.modalService.open(this.reloadModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });
     }
 
   }
-
 }

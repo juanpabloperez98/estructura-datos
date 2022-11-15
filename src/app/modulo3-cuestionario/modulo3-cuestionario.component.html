@@ -3,41 +3,165 @@
     <div class="card mx-auto col-lg-10 my-5" style="width: 70rem;">
         <div class="card-body">
 
-            <!--  <div class="">
-                <p class="card-text mx-auto my-4">
-
-                </p> -->
-
             <!--Preguntas-->
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <form class="mid-form" #userForm="ngForm" name="formulario" (ngSubmit)="onsubmit()">
-                            <p id="color">Pregunta#1</p>
-                            <p><strong>¿Un tipo de dato se considera un espacio de memoria con restricciones según el tipo de dato que se esté hablando?</strong></p>
-                            <ol type="A">
-                                <dd><input type="radio" value="p11" name="pregunt1" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1 " required> Verdadero </dd>
-                                <dd><input type="radio" value="p12" name="pregunt1" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1 "> Falso</dd>
-                            </ol>
-                            <p id="color">Pregunta#2</p>
-                            <p><strong>¿Cuáles son los tipos de datos elementales que se manejan ?</strong></p>
-                            <ol type="A">
-                                <dd><input type="radio" value="p21" name="pregunt2" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2 " required> Reales - Flotantes - Strings</dd>
-                                <dd><input type="radio" value="p22" name="pregunt2" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2 "> Booleanos - Flotantes - Numéricos - Tupla</dd>
-                                <dd><input type="radio" value="p23" name="pregunt2" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2 "> Caracteres - Numéricos - Booleanos - Arreglo</dd>
-                            </ol>
-                            <p id="color">Pregunta#3</p>
-                            <p><strong>¿Que es una función?</strong></p>
-                            <ol type="A">
-                                <dd><input type="radio" value="p31" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 " required> Una función es un conjunto de variables que son utilizadas a lo largo de la ejecución de un programa</dd>
-                                <dd><input type="radio" value="p32" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 "> Son códigos predefinidos por el lenguaje de programación el cual permiten realizar tareas específicas</dd>
-                                <dd><input type="radio" value="p33" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 "> Una función es una implementación en un lenguaje de programación que me permite recibir datos del usuario mediante
-                                    métodos de entrada</dd>
-                                <dd><input type="radio" value="p34" name="pregunt3" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3 "> Es un concepto de abstracción de código que permite ser reutilizable en el flujo y construcción de un programa, el
-                                    cual puede o no tener un valor de retorno</dd>
-                            </ol>
+                            <!-- Pregunta 1 -->
+                            <div class="mb-3">
+                                <label class="form-label" id="color">Pregunta#1</label>
+                                <p>
+                                    <strong>
+                                        ¿A las pilas por qué se les considera una estructura de datos LIFO?
+                                    </strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt1" id="p11" value="p11" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <label class="form-check-label" for="p11">
+                                        Last In First Out
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt1" id="p12" value="p12" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <label class="form-check-label" for="p12">
+                                        First In First Out
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt1" id="p13" value="p13" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <label class="form-check-label" for="p13">
+                                        Last In Last Out
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Pregunta 2 -->
+                            <div class="mb-3">
+                                <label class="form-label" id="color">Pregunta#2</label>
+                                <p>
+                                    <strong>
+                                    En colas existe una terminalogia que es la mas utilizada y dentro de ellas existe una que es "Encolar" la cual consiste en:
+                                    </strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p21" value="p21" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <label class="form-check-label" for="p21">
+                                       Nos permite dejar inicialmente vacia la cola una vez creada.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p22" value="p22" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <label class="form-check-label" for="p22">
+                                        Se usa para sacar un elemento de la cola. 
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p23" value="p23" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <label class="form-check-label" for="p23">
+                                        Permite añadir un elemento al final de la cola
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p24" value="p24" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <label class="form-check-label" for="p24">
+                                        Ninguna de las anteriores
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Pregunta 3 -->
+                            <div class="mb-3">
+                                <label class="form-label" id="color">Pregunta#3</label>
+                                <p>
+                                    <strong>
+                                        ¿Las colas de prioridad son un tipo datos abstracto?
+                                    </strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt3" id="p31" value="p31" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <label class="form-check-label" for="p31">
+                                       Verdadero 
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt3" id="p32" value="p32" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <label class="form-check-label" for="p32">
+                                        Falso
+                                    </label>
+                                </div>
 
-                            <button type="submit" class="btn btn-primary " onclick="resultado()"> <img src="../../../assets/images/icons/marca-de-verificacion.png" class="card-img-top" alt="introducion.jpg" > RESPONDER</button>
+                            </div>
+                            <!-- Pregunta 4 -->
+                            <div class="mb-3">
+                                <label class="form-label" id="color">Pregunta#4</label>
+                                <p>
+                                    <strong>
+                                        Las listas enlazadas permiten almacenar información en posiciones de memoria que no sean contiguas; para almacenar la información contienen elementos llamados:
+                                    </strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt4" id="p41" value="p41" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <label class="form-check-label" for="p41">
+                                     Enlace 
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt4" id="p42" value="p42" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <label class="form-check-label" for="p42">
+                                        Nodos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt4" id="p43" value="p43" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <label class="form-check-label" for="p43">
+                                        Valor
+                                    </label>
+                                </div>
+
+                            </div>
+                            <!-- Pregunta 5 -->
+                            <div class="mb-3">
+                                <label class="form-label" id="color">Pregunta#5</label>
+                                <p>
+                                    <strong>
+                                       Si una tabla hash tiene todas sus cadenas de colision de igual longitud 
+                                    </strong>
+                                </p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt5" id="p51" value="p51" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <label class="form-check-label" for="p51">
+                                       El tiempo de busqueda se vuelve cero.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt5" id="p52" value="p52" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <label class="form-check-label" for="p52">
+                                        El tiempo de busqueda se reduce sensiblemente 
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt5" id="p53" value="p53" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <label class="form-check-label" for="p53">
+                                        El tiempo de busqueda se duplica 
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt5" id="p54" value="p54" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <label class="form-check-label" for="p54">
+                                        Ninguna de las anteriores
+                                    </label>
+                                </div>
+                            </div>
+
+                            <p class="text-center">
+                                <button type="submit" class="btn btn-primary " onclick="resultado()"> 
+                                <img
+                                src="../../../assets/images/icons/marca-de-verificacion.png" 
+                                class="card-img-top"
+                                alt="introducion.jpg"
+                                >
+                                    RESPONDER
+                            </button>
+                            </p>
                         </form>
                     </div>
                 </div>
@@ -58,7 +182,7 @@
         <ol>
             <dd>
                 <strong>Ahora podemos </strong>
-                <a routerLink="/datos-blank" (click)="modal.dismiss('Cross click')">
+                <a routerLink="/no-lineales-blank" (click)="modal.dismiss('Cross click')">
                     <strong>Continuar</strong>
                 </a>
                 <strong> con el siguien modulo.</strong>

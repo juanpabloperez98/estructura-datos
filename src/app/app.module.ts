@@ -48,6 +48,7 @@ import { Modulo3CuestionarioComponent } from './modulo3-cuestionario/modulo3-cue
 import { Modulo4RecursividadComponent } from './modulo4-recursividad/modulo4-recursividad.component';
 import { Modulo4BinariosComponent } from './modulo4-binarios/modulo4-binarios.component';
 import { Modulo4EquilibradoComponent } from './modulo4-equilibrado/modulo4-equilibrado.component';
+import { Modulo4CuestionarioComponent } from './modulo4-cuestionario/modulo4-cuestionario.component';
 
 
 @NgModule({
@@ -82,6 +83,7 @@ import { Modulo4EquilibradoComponent } from './modulo4-equilibrado/modulo4-equil
     Modulo4RecursividadComponent,
     Modulo4BinariosComponent,
     Modulo4EquilibradoComponent,
+    Modulo4CuestionarioComponent,
   ],
   imports: [
     RouterModule.forRoot(Approutes),
