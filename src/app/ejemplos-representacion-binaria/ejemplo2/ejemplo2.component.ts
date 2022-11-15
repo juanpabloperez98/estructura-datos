@@ -13,9 +13,9 @@ export class Ejemplo2Component implements OnInit {
 
 
   lines_to_input = [6,8]
-  lines_to_modify_vars = [11,14,15];
+  lines_to_modify_vars = [9,11,14,15];
   current_line = 1;
-  max_line = 18;
+  max_line = 31;
   run_code = false;
   explain_pass = '';
   value_vars = '';
@@ -30,10 +30,13 @@ export class Ejemplo2Component implements OnInit {
   inputfield = '';
 
   // Variables del ejemplo
-  a = 0;
-  b = 0;
-  size_array = 0;
-  i = 0;
+  a:number = 0;
+  b:number = 0;
+  size_array:number = 0;
+  i:number = 0;
+  binary:string[] = [];
+  lon_new_array:number = 0;
+  scrolling_array:string[] = [];
 
   code = `
   #include <cstdio>
@@ -127,22 +130,37 @@ export class Ejemplo2Component implements OnInit {
       'var_values':{
         'a':'',
         'i':'',
+        'binary[i]':'',
       },
     },//13
     {
       'line_explain':'Se disminuye el valor del iterador',
+      'var_values':{
+        'a':'',
+      },
     },//14
     {
       'line_explain':'Se finaliza el ciclo anterior',
+      'var_values':{
+        'i':'',
+      },
     },//15
     {
       'line_explain':'Se define una nueva variable lon_new_array que sera igual al numero de bits sumado con el desplazamiento que esta almacenado en la variable b',
     },//16
     {
       'line_explain':'Se define un nuevo arreglo llamado scrolling_array el cual tiene como tamaño el valor de lon_new_array',
+      'var_values':{
+        'lon_new_array':'',
+        'size_array':'',
+        'b':'',
+      },
     },//17
     {
       'line_explain':'Se crea un ciclo for para agregar los valores del array binary al nuevo array scrolling_array',
+      'var_values':{
+        'lon_new_array':'',
+      },
     },//18
     {
       'line_explain':'Se asigna el valor que haya en binary en la posición index a scrolling_array en la posición index',
@@ -197,13 +215,29 @@ export class Ejemplo2Component implements OnInit {
   modify_vars = () => {
     if ( this.lines_to_modify_vars.includes(this.current_line) ){
       switch(this.current_line){
+        case 9:
+          console.log(this.a);
+          this.size_array = Math.floor(Math.log2(this.a) + 1);
+          break;
         case 11:
+          for (let i = 0; i < this.size_array; i++) {
+            this.binary.push('0');
+          }
           var value = this.size_array -1;
           this.i = value;
           break;
         case 13:
-          var value = this.i
-          this.i = value;
+          var binary_ = this.a % 2 == 0 ? '0' : '1';
+          this.binary[this.i] = binary_;
+          break;
+        case 14:
+          this.a = Math.floor(this.a / 2);
+          break;
+        case 15:
+          this.i --;
+          break;
+        case 18:
+          this.i --;
           break;
       }
     }
@@ -228,7 +262,11 @@ export class Ejemplo2Component implements OnInit {
 
   jump = () => {
     switch(this.current_line){
-      
+      case 16:
+        if( this.a != 0 ){
+          this.loop_jump(12,4,2);
+        }
+        break;
     }
   }
 
@@ -276,14 +314,21 @@ export class Ejemplo2Component implements OnInit {
             this.value_vars += `<strong>${key}</strong> = ${this.a}<br/>`
             break;   
           case 'size_array':
-            this.size_array = Math.floor(Math.log2(this.a) + 1);
             this.value_vars += `<strong>${key}</strong> = ${this.size_array}<br/>`
             break;   
           case 'i':
             this.value_vars += `<strong>${key}</strong> = ${this.i}<br/>`
             break;   
-          case 'a':
-            this.value_vars += `<strong>${key}</strong> = ${this.a}<br/>`
+          case 'b':
+            this.value_vars += `<strong>${key}</strong> = ${this.b}<br/>`
+            break;   
+          case 'binary[i]':
+            var value = this.a % 2 == 0 ? '0' : '1';
+            this.value_vars += `<strong>${key}</strong> = ${value}<br/>`
+            break;   
+          case 'lon_new_array':
+            var lon_new_array_ = this.size_array + this.b;
+            this.value_vars += `<strong>${key}</strong> = ${lon_new_array_}<br/>`
             break;   
           default:
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
