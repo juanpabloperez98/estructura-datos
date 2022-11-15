@@ -13,32 +13,25 @@
                                 <label class="form-label" id="color">Pregunta#1</label>
                                 <p>
                                     <strong>
-                                        La abstracción de datos es un término considerado como:
+                                        ¿A las pilas por qué se les considera una estructura de datos LIFO?
                                     </strong>
                                 </p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt1" id="p11" value="p11" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p11">
-                                        La operación de los datos que se intentan manejar dentro de un programa
+                                        Last In First Out
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt1" id="p12" value="p12" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p12">
-                                        Definición de los tipos de variables que se declaran a la hora de realizar un programa
+                                        First In First Out
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt1" id="p13" value="p13" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p13">
-                                        Es la representación de los datos con los cuales se va a manejar un programa, dejando de lado el cómo son tratados
-                                        por la máquina
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p14" value="p14" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
-                                    <label class="form-check-label" for="p14">
-                                        Es el desempeño que tienen los datos sobre el rendimiento de un programa
+                                        Last In Last Out
                                     </label>
                                 </div>
                             </div>
@@ -47,29 +40,29 @@
                                 <label class="form-label" id="color">Pregunta#2</label>
                                 <p>
                                     <strong>
-                                        ¿A que se le considera modelo cuando se habla de abstracción de datos?
+                                    En colas existe una terminalogia que es la mas utilizada y dentro de ellas existe una que es "Encolar" la cual consiste en:
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p21" value="p21" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p21" value="p21" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p21">
-                                        Es un prototipo que permite estructurar los componentes de un programa
+                                       Nos permite dejar inicialmente vacia la cola una vez creada.
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p22" value="p22" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p22" value="p22" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p22">
-                                        Define la perspectiva abstracta del problema, enfocándose en los aspectos relacionados al problema
+                                        Se usa para sacar un elemento de la cola. 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p23" value="p23" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p23" value="p23" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p23">
-                                        Se considera a la representación de la cantidad de datos que se va a manejar en un programa
+                                        Permite añadir un elemento al final de la cola
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p24" value="p24" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input class="form-check-input" type="radio" name="pregunt2" id="p24" value="p24" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p24">
                                         Ninguna de las anteriores
                                     </label>
@@ -80,54 +73,47 @@
                                 <label class="form-label" id="color">Pregunta#3</label>
                                 <p>
                                     <strong>
-                                        Cuando se habla de operaciones dentro de los modelos se hace referencia a:
+                                        ¿Las colas de prioridad son un tipo datos abstracto?
                                     </strong>
                                 </p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt3" id="p31" value="p31" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p31">
-                                        Conjunto de variables que operan entre sí, con el objetivo de poder realizar una tarea en el programa
+                                       Verdadero 
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt3" id="p32" value="p32" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p32">
-                                        Son las operaciones aritméticas básicas que se le pueden aplicar a un conjunto de datos como los la suma, resta, multiplicación
-                                    y división
+                                        Falso
                                     </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p33" value="p33" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
-                                    <label class="form-check-label" for="p33">
-                                        Son un conjunto de métodos que van a permitir realizar definidas acciones utilizando los datos abstraídos del modelo
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p34" value="p34" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
-                                    <label class="form-check-label" for="p34">
-                                        Es la manera más práctica de poder obtener los datos abstraídos del modelo para poder ser representados por el usuario
-                                    del programa
-                                    </label>
-                                </div>
+
                             </div>
                             <!-- Pregunta 4 -->
                             <div class="mb-3">
                                 <label class="form-label" id="color">Pregunta#4</label>
                                 <p>
                                     <strong>
-                                        ¿Los datos de un módelo son de alcance global si no se define su alcance? (es decir, desde cualquier parte de un programa se podrían obtener los datos de un determinado modelo)
+                                        Las listas enlazadas permiten almacenar información en posiciones de memoria que no sean contiguas; para almacenar la información contienen elementos llamados:
                                     </strong>
                                 </p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt4" id="p41" value="p41" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
                                     <label class="form-check-label" for="p41">
-                                        Verdadero
+                                     Enlace 
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt4" id="p42" value="p42" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
                                     <label class="form-check-label" for="p42">
-                                        Falso
+                                        Nodos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="pregunt4" id="p43" value="p43" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <label class="form-check-label" for="p43">
+                                        Valor
                                     </label>
                                 </div>
 
@@ -137,25 +123,25 @@
                                 <label class="form-label" id="color">Pregunta#5</label>
                                 <p>
                                     <strong>
-                                        ¿Cómo se le denomina a la variables y funciones que conforman una clase?
+                                       Si una tabla hash tiene todas sus cadenas de colision de igual longitud 
                                     </strong>
                                 </p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt5" id="p51" value="p51" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p51">
-                                        Atributos
+                                       El tiempo de busqueda se vuelve cero.
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt5" id="p52" value="p52" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p52">
-                                        Métodos
+                                        El tiempo de busqueda se reduce sensiblemente 
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="pregunt5" id="p53" value="p53" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p53">
-                                        Funciones abstractas
+                                        El tiempo de busqueda se duplica 
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -165,39 +151,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <!-- Pregunta 6 -->
-                            <div class="mb-3">
-                                <label class="form-label" id="color">Pregunta#6</label>
-                                <p>
-                                    <strong>
-                                        ¿Cuando un elemento de una clase es de tipo private significa que?
-                                    </strong>
-                                </p>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p61" value="p61" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
-                                    <label class="form-check-label" for="p61">
-                                        No hay NINGUNA forma de poder acceder a ese elemento
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p62" value="p62" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
-                                    <label class="form-check-label" for="p62">
-                                        La única forma de acceder a ese elemento es creando un objeto de esa clase y hacer el llamada a ese elemento privado
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p63" value="p63" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
-                                    <label class="form-check-label" for="p63">
-                                        Ese elemento es accesible solamente desde otros elementos o el constructor de esa misma clase
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p64" value="p64" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
-                                    <label class="form-check-label" for="p64">
-                                        Ninguna de las anteriores
-                                    </label>
-                                </div>
-                            </div>
+
                             <p class="text-center">
                                 <button type="submit" class="btn btn-primary " onclick="resultado()"> 
                                 <img
@@ -228,7 +182,7 @@
         <ol>
             <dd>
                 <strong>Ahora podemos </strong>
-                <a routerLink="/datos-blank" (click)="modal.dismiss('Cross click')">
+                <a routerLink="/no-lineales-blank" (click)="modal.dismiss('Cross click')">
                     <strong>Continuar</strong>
                 </a>
                 <strong> con el siguien modulo.</strong>

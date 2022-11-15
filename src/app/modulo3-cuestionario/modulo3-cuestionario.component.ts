@@ -9,7 +9,7 @@ import { HighlightService } from '../services/highlight.service';
 })
 export class Modulo3CuestionarioComponent implements OnInit {
   fragebogen: any;
-  listResp: string[] = ['p11', 'p23', 'p34'];
+  listResp: string[] = ['p11', 'p23', 'p31', 'p42', 'p52'];
   numAnswer = 0;
 
   @ViewChild('continueModal') continueModal: any;
@@ -22,7 +22,9 @@ export class Modulo3CuestionarioComponent implements OnInit {
     this.fragebogen = {
       pregunt1: '',
       pregunt2: '',
-      pregunt3: ''
+      pregunt3: '',
+      pregunt4: '',
+      pregunt5: ''
     };
   }
 
@@ -39,18 +41,25 @@ export class Modulo3CuestionarioComponent implements OnInit {
           this.fragebogen.pregunt2 === 'p23' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p34': {
-          this.fragebogen.pregunt3 === 'p34' ? this.numAnswer += 1 : null;
+        case 'p31': {
+          this.fragebogen.pregunt3 === 'p31' ? this.numAnswer += 1 : null;
           break;
         }
-
+        case 'p42': {
+          this.fragebogen.pregunt4 === 'p42' ? this.numAnswer += 1 : null;
+          break;
+        }
+        case 'p52': {
+          this.fragebogen.pregunt5 === 'p52' ? this.numAnswer += 1 : null;
+          break;
+        }
       };
     })
-    if (this.numAnswer == 3) {
+    if (this.numAnswer == 5) {
       this.modalService.open(this.continueModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });
-    } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3) {
+    } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3 || this.numAnswer == 4) {
       this.modalService.open(this.reloadModal, { backdrop: false }).result.then((result) => {
       }, (reason) => {
       });

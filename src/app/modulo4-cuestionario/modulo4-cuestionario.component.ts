@@ -9,7 +9,7 @@ import { HighlightService } from '../services/highlight.service';
 })
 export class Modulo4CuestionarioComponent implements OnInit {
   fragebogen: any;
-  listResp: string[] = ['p11', 'p23', 'p34'];
+  listResp: string[] = ['p12', 'p22', 'p31', '41'];
   numAnswer = 0;
   @ViewChild('continueModal') continueModal: any;
   @ViewChild('reloadModal') reloadModal: any;
@@ -20,7 +20,8 @@ export class Modulo4CuestionarioComponent implements OnInit {
     this.fragebogen = {
       pregunt1: '',
       pregunt2: '',
-      pregunt3: ''
+      pregunt3: '',
+      pregun4: ''
     };
   }
 
@@ -29,16 +30,20 @@ export class Modulo4CuestionarioComponent implements OnInit {
   onsubmit() {
     this.listResp.map((data) => {
       switch (data) {
-        case 'p11': {
-          this.fragebogen.pregunt1 === 'p11' ? this.numAnswer += 1 : null;
+        case 'p12': {
+          this.fragebogen.pregunt1 === 'p12' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p23': {
-          this.fragebogen.pregunt2 === 'p23' ? this.numAnswer += 1 : null;
+        case 'p22': {
+          this.fragebogen.pregunt2 === 'p22' ? this.numAnswer += 1 : null;
           break;
         }
-        case 'p34': {
-          this.fragebogen.pregunt3 === 'p34' ? this.numAnswer += 1 : null;
+        case 'p31': {
+          this.fragebogen.pregunt3 === 'p31' ? this.numAnswer += 1 : null;
+          break;
+        }
+        case 'p41': {
+          this.fragebogen.pregunt3 === 'p41' ? this.numAnswer += 1 : null;
           break;
         }
 
