@@ -13,7 +13,6 @@ export class Ejemplo2Component implements OnInit {
 
 
   lines_to_input = [6,8]
-  lines_to_modify_vars = [9,11,14,15];
   current_line = 1;
   max_line = 31;
   run_code = false;
@@ -37,6 +36,9 @@ export class Ejemplo2Component implements OnInit {
   binary:string[] = [];
   lon_new_array:number = 0;
   scrolling_array:string[] = [];
+  index = 0;
+  aux_iter:number = 0;
+  aux_finish:number = 0;
 
   code = `
   #include <cstdio>
@@ -97,36 +99,36 @@ export class Ejemplo2Component implements OnInit {
       'output':'Ingrese el valor de desplazamiento'
     },//7
     {
-      'line_explain':'Se obtiene el numero de bits que se necesita para representar el valor de a en binario',
+      'line_explain':'Guardamos el numero ingresado por el usuario en la variable a',
     },//8
     {
-      'line_explain':'Se crea un arreglo con el tamaño de numeros de bits definido anteriormente',
+      'line_explain':'Se obtiene el numero de bits que se necesita para representar el valor de a en binario',
       'var_values':{
         'a':'',
         'size_array':''
       },
     },//9
     {
-      'line_explain':'Luego se crea un iterador i el cual tendra como valor el número de bits - 1 (ejemplo si el número de bits son 3 entonces el valor de i sería 2)',
+      'line_explain':'Se crea un arreglo con el tamaño de numeros de bits definido anteriormente',
       'var_values':{
         'size_array':''
       },
     },//10
     {
-      'line_explain':'Declaramos un ciclo while el cual valida que mientras a sea diferente de cero',
+      'line_explain':'Luego se crea un iterador i el cual tendra como valor el número de bits - 1 (ejemplo si el número de bits son 3 entonces el valor de i sería 2)',
       'var_values':{
         'i':'',
         'size_array':''
       },
     },//11
     {
-      'line_explain':'validamos con una condición ternaria si el modulo de a entre 2 es igual a cero o no, de ser así entonces se añade al array de caracteres el caracter "0" de lo contario el caracter "1"',
+      'line_explain':'Declaramos un ciclo while el cual valida que mientras a sea diferente de cero',
       'var_values':{
         'a':'',
       },
     },//12
     {
-      'line_explain':'luego se divide el valor de a entre 2 (de esta manera por cada ciclo se ira disminuyendo el valor)',
+      'line_explain':'validamos con una condición ternaria si el modulo de a entre 2 es igual a cero o no, de ser así entonces se añade al array de caracteres el caracter "0" de lo contario el caracter "1"',
       'var_values':{
         'a':'',
         'i':'',
@@ -134,22 +136,22 @@ export class Ejemplo2Component implements OnInit {
       },
     },//13
     {
-      'line_explain':'Se disminuye el valor del iterador',
+      'line_explain':'luego se divide el valor de a entre 2 (de esta manera por cada ciclo se ira disminuyendo el valor)',
       'var_values':{
         'a':'',
       },
     },//14
     {
-      'line_explain':'Se finaliza el ciclo anterior',
+      'line_explain':'Se disminuye el valor del iterador',
       'var_values':{
         'i':'',
       },
     },//15
     {
-      'line_explain':'Se define una nueva variable lon_new_array que sera igual al numero de bits sumado con el desplazamiento que esta almacenado en la variable b',
+      'line_explain':'Se finaliza el ciclo anterior',
     },//16
     {
-      'line_explain':'Se define un nuevo arreglo llamado scrolling_array el cual tiene como tamaño el valor de lon_new_array',
+      'line_explain':'Se define una nueva variable lon_new_array que sera igual al numero de bits sumado con el desplazamiento que esta almacenado en la variable b',
       'var_values':{
         'lon_new_array':'',
         'size_array':'',
@@ -157,44 +159,87 @@ export class Ejemplo2Component implements OnInit {
       },
     },//17
     {
-      'line_explain':'Se crea un ciclo for para agregar los valores del array binary al nuevo array scrolling_array',
+      'line_explain':'Se define un nuevo arreglo llamado scrolling_array el cual tiene como tamaño el valor de lon_new_array',
       'var_values':{
         'lon_new_array':'',
       },
     },//18
     {
-      'line_explain':'Se asigna el valor que haya en binary en la posición index a scrolling_array en la posición index',
+      'line_explain':'Se crea un ciclo for para agregar los valores del array binary al nuevo array scrolling_array',
+      'var_values':{
+        'index':'',
+        'size_array':''
+      },
     },//19
     {
-      'line_explain':'Se cierra el ciclo for',
+      'line_explain':'Se asigna el valor que haya en binary en la posición index a scrolling_array en la posición index',
+      'var_values':{
+        'scrolling_array[index]':'',
+        'index':'',
+        'binary[index]':''
+      },
     },//20
     {
-      'line_explain':'Se declara una variable auxiliar la cual va a contener el valor de el número de bits que se necesita para representar el valor de a',
+      'line_explain':'Se cierra el ciclo for',
     },//21
     {
-      'line_explain':'Se declara la variable aux_finish la cual va a tener la longitud maxima necesaria para el desplazamiento (por ejemplo si para el numero 5 se necesitan 3 bits y el valor de b es de 2 entonces el valor de aux_finish sería igual a 5)',
+      'line_explain':'Se declara una variable auxiliar la cual va a contener el valor de el número de bits que se necesita para representar el valor de a',
+      'var_values':{
+        'aux_iter':'',
+        'size_array':''
+      },
     },//22
     {
-      'line_explain':'Se declara un ciclo while que itera hasta que aux_iter sea diferente de aux_finish',
+      'line_explain':'Se declara la variable aux_finish la cual va a tener la longitud maxima necesaria para el desplazamiento (por ejemplo si para el numero 5 se necesitan 3 bits y el valor de b es de 2 entonces el valor de aux_finish sería igual a 5)',
+      'var_values':{
+        'aux_finish':'',
+        'size_array':'',
+        'b':'',
+      },
     },//23
     {
-      'line_explain':'Se agrega al arreglo los ceros del desplazamiento',
+      'line_explain':'Se declara un ciclo while que itera hasta que aux_iter sea diferente de aux_finish',
+      'var_values':{
+        'aux_iter':'',
+        'aux_finish':''
+      },
     },//24
     {
-      'line_explain':'Se aumenta el valor de la variable aux_iter',
+      'line_explain':'Se agrega al arreglo los ceros del desplazamiento',
+      'var_values':{
+        'aux_iter':'',
+        'scrolling_array[aux_iter]':'0'
+      },
     },//25
     {
-      'line_explain':'Se cierra el ciclo while',
+      'line_explain':'Se aumenta el valor de la variable aux_iter',
+      'var_values':{
+        'aux_iter':'',
+      },
     },//26
     {
-      'line_explain':'Se crea un ciclo for para imprimir el arreglo resultante con el desplazamiento',
+      'line_explain':'Se cierra el ciclo while',
     },//27
     {
-      'line_explain':'Se imprime el valor que haya en la posición index',
+      'line_explain':'Se crea un ciclo for para imprimir el arreglo resultante con el desplazamiento',
+      'var_values':{
+        'index':'',
+        'aux_finish':'',
+      },
     },//28
     {
-      'line_explain':'Se cierra el ciclo for',
+      'line_explain':'Se imprime el valor que haya en la posición index',
+      'var_values':{
+        'index':'',
+        'scrolling_array[index]':'',
+      },
     },//29
+    {
+      'line_explain':'Se cierra el ciclo for',
+    },//30
+    {
+      'line_explain':'Fin del programa',
+    },//31
   ]
 
   constructor(
@@ -213,10 +258,8 @@ export class Ejemplo2Component implements OnInit {
 
   // Functions to run program
   modify_vars = () => {
-    if ( this.lines_to_modify_vars.includes(this.current_line) ){
       switch(this.current_line){
         case 9:
-          console.log(this.a);
           this.size_array = Math.floor(Math.log2(this.a) + 1);
           break;
         case 11:
@@ -236,10 +279,34 @@ export class Ejemplo2Component implements OnInit {
         case 15:
           this.i --;
           break;
+        case 17:
+          this.lon_new_array = this.size_array + this.b;
+          break;
         case 18:
           this.i --;
+          for(let index_ = 0; index_ < this.lon_new_array; index_ ++){
+            this.scrolling_array.push('0');
+          }
+          console.log(this.scrolling_array);
           break;
-      }
+        case 20:
+          this.scrolling_array[this.index] = this.binary[this.index]; 
+          break;
+        case 22:
+          this.aux_iter = this.size_array;
+          break;
+        case 23:
+          this.aux_finish = this.size_array + this.b;
+          break;
+        case 25:
+          this.scrolling_array[this.aux_iter] = '0';
+          break;
+        case 26:
+          this.aux_iter ++;
+          break;
+        case 27:
+          this.index = 0;
+          break;
     }
   }
 
@@ -267,6 +334,38 @@ export class Ejemplo2Component implements OnInit {
           this.loop_jump(12,4,2);
         }
         break;
+      case 20:
+        if(this.index >= this.size_array){
+          this.loop_jump(21,1,1);
+        }
+        break
+      case 21:
+        if(this.index < this.size_array){
+          this.index ++
+          this.loop_jump(19,2,2);
+        }
+        break
+      case 25:
+        if(this.aux_iter === this.aux_finish){
+          this.loop_jump(27,2);
+        }
+        break
+      case 27:
+        if(this.aux_iter != this.size_array){
+          this.loop_jump(24,3,2);
+        }
+        break
+      case 29:
+        if(this.index >= this.aux_finish){
+          this.loop_jump(30,1);
+        }
+        break
+      case 30:
+        if(this.index < this.aux_finish){
+          this.loop_jump(28,2,2);
+          this.index ++;
+        }
+        break
     }
   }
 
@@ -327,8 +426,22 @@ export class Ejemplo2Component implements OnInit {
             this.value_vars += `<strong>${key}</strong> = ${value}<br/>`
             break;   
           case 'lon_new_array':
-            var lon_new_array_ = this.size_array + this.b;
-            this.value_vars += `<strong>${key}</strong> = ${lon_new_array_}<br/>`
+            this.value_vars += `<strong>${key}</strong> = ${this.lon_new_array}<br/>`
+            break;   
+          case 'scrolling_array[index]':
+            this.value_vars += `<strong>${key}</strong> = ${this.scrolling_array[this.index]}<br/>`
+            break;   
+          case 'index':
+            this.value_vars += `<strong>${key}</strong> = ${this.index}<br/>`
+            break;   
+          case 'binary[index]':
+            this.value_vars += `<strong>${key}</strong> = ${this.binary[this.index]}<br/>`
+            break;   
+          case 'aux_iter':
+            this.value_vars += `<strong>${key}</strong> = ${this.aux_iter}<br/>`
+            break;   
+          case 'aux_finish':
+            this.value_vars += `<strong>${key}</strong> = ${this.aux_finish}<br/>`
             break;   
           default:
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
