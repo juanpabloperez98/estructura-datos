@@ -38,6 +38,8 @@ import { Modulo1RepbinaryComponent } from './modulo1-repbinary/modulo1-repbinary
 //My modules
 import { ComponentsModule } from './components/components.module';
 
+
+
 //My service
 import { HighlightService } from './services/highlight.service';
 import { Modulo3ColasComponent } from './modulo3-colas/modulo3-colas.component';
