@@ -90,6 +90,15 @@ export const Approutes: Routes = [
     ]
   },
   {
+    path: 'module3',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-abstraccion-de-datos/ejemplos-abstraccion-de-datos.module').then(x => x.EjemplosAbstraccionDeDatosModule)
+      }
+    ]
+  },
+  {
     path: 'modulo1-introduccion',
     component: Modulo1IntroduccionComponent,
     pathMatch: 'full'
