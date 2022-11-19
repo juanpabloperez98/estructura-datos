@@ -134,6 +134,42 @@ export const Approutes: Routes = [
       }
     ]
   },
+  /* {
+    path: 'module8',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-datos-abstractos/ejemplos-datos-abstractos.module').then(x => x.EjemplosDatosAbstractosModule)
+      }
+    ]
+  }, */
+  {
+    path: 'module9',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-datos-abstractos/ejemplos-datos-abstractos.module').then(x => x.EjemplosDatosAbstractosModule)
+      }
+    ]
+  },
+  {
+    path: 'module10',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-clases/ejemplos-clases.module').then(x => x.EjemplosClasesModule)
+      }
+    ]
+  },
+  {
+    path: 'module11',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-tad/ejemplos-tad.module').then(x => x.EjemplosTadModule)
+      }
+    ]
+  },
   {
     path: 'modulo1-introduccion',
     component: Modulo1IntroduccionComponent,
