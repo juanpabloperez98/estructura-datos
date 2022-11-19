@@ -77,5 +77,44 @@ grupo[2] = 0;
         </div>
     </div>
 
-    <a id="btn-module" class="btn btn-primary my-5 ">VER EJEMPLOS</a>
+    <a id="btn-module" class="btn btn-primary my-5 " (click)="open(examplemodal)">VER EJEMPLOS</a>
 </div>
+
+
+<ng-template #examplemodal let-modal>
+    <div class="modal-header">
+        <h2 class="modal-title" id="modal-basic-title">Ejemplos</h2>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <li>
+                <a routerLink="/module5/ejemplo1">
+                    Ejemplo1
+                </a>
+            </li>
+            <li>
+                <a routerLink="/module5/ejemplo2">
+                    Ejemplo 2
+                </a>
+            </li>
+            <li>
+                <a routerLink="/module5/ejemplo3">
+                    Ejemplo 3
+                </a>
+            </li>
+            <li>
+                <a routerLink="/module5/ejemplo4">
+                    Ejemplo 4
+                </a>
+            </li>
+            <li>
+                <a routerLink="/module5/ejemplo5">
+                    Ejemplo 5
+                </a>
+            </li>
+        </ol>
+    </div>
+</ng-template>

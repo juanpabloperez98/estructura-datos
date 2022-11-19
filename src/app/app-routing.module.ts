@@ -103,7 +103,34 @@ export const Approutes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./ejemplos-concepto-funcion/ejemplos-concepto-funcion.module').then(x => x.EjemplosConceptoFuncionModule )
+        loadChildren: () => import('./ejemplos-concepto-funcion/ejemplos-concepto-funcion.module').then(x => x.EjemplosConceptoFuncionModule)
+      }
+    ]
+  },
+  {
+    path: 'module5',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-intro-arreglos/ejemplos-intro-arreglos.module').then(x => x.EjemplosIntroArreglosModule)
+      }
+    ]
+  },
+  {
+    path: 'module6',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-intro-punteros/ejemplos-intro-punteros.module').then(x => x.EjemplosIntroPunterosModule)
+      }
+    ]
+  },
+  {
+    path: 'module7',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-datos-abstractos/ejemplos-datos-abstractos.module').then(x => x.EjemplosDatosAbstractosModule)
       }
     ]
   },
