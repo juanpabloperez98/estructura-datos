@@ -99,6 +99,15 @@ export const Approutes: Routes = [
     ]
   },
   {
+    path: 'module4',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./ejemplos-concepto-funcion/ejemplos-concepto-funcion.module').then(x => x.EjemplosConceptoFuncionModule )
+      }
+    ]
+  },
+  {
     path: 'modulo1-introduccion',
     component: Modulo1IntroduccionComponent,
     pathMatch: 'full'

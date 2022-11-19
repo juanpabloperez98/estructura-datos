@@ -140,5 +140,23 @@
             </div>
         </div>
     </div>
-    <a class="btn btn-primary col-lg-3 mx-auto  "> VER EJEMPLOS </a>
+    <a class="btn btn-primary col-lg-3 mx-auto" (click)="open(examplemodal)"> VER EJEMPLOS </a>
 </div>
+
+<ng-template #examplemodal let-modal>
+    <div class="modal-header">
+        <h2 class="modal-title" id="modal-basic-title">Ejemplos</h2>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <li>
+                <a routerLink="/module4/ejemplo1">
+                    Hola
+                </a>
+            </li>
+        </ol>
+    </div>
+</ng-template>
