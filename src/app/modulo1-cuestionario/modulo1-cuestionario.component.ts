@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightService } from '../services/highlight.service';
-/* import fx from 'fireworks'; */
+import fx from 'fireworks';
 
 @Component({
   selector: 'app-modulo1-cuestionario',
@@ -43,11 +43,11 @@ export class Modulo1CuestionarioComponent implements OnInit {
         x_param = Math.random() * (max_int_x - min_int_x) + min_int_x;
       // y_param = Math.random() * (max_int_y - min_int_y) + min_int_y;
 
-      /*  fx({
+      fx({
          x: x_param,
          y: window.scrollY + 200,
          colors: ['#FFFFFF', '#FF0000', '#FF8104', '#FFF707']
-       }) */
+       })
     }
   }
 
