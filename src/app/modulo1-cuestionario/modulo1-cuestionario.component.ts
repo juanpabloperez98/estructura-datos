@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightService } from '../services/highlight.service';
 import fx from 'fireworks';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-modulo1-cuestionario',
@@ -18,7 +19,8 @@ export class Modulo1CuestionarioComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private highlightService: HighlightService
+    private highlightService: HighlightService,
+    private toastr: ToastrService
   ) {
 
     this.fragebogen = {
@@ -31,6 +33,13 @@ export class Modulo1CuestionarioComponent implements OnInit {
     };
   }
 
+  styleP1 = false;
+  styleP2 = false;
+  styleP3 = false;
+  styleP4 = false;
+  styleP5 = false;
+  styleP6 = false;
+
   ngOnInit(): void { }
 
   fireworks() {
@@ -38,10 +47,7 @@ export class Modulo1CuestionarioComponent implements OnInit {
     for (let index = 0; index < 10; index++) {
       let max_int_x = (window.innerWidth / 2) + 300,
         min_int_x = (window.innerWidth / 2) - 300,
-        // max_int_y = (window.scrollY / 2),
-        // min_int_y = (window.scrollY / 2),
         x_param = Math.random() * (max_int_x - min_int_x) + min_int_x;
-      // y_param = Math.random() * (max_int_y - min_int_y) + min_int_y;
 
       fx({
          x: x_param,
@@ -52,34 +58,66 @@ export class Modulo1CuestionarioComponent implements OnInit {
   }
 
   onsubmit() {
+    if( 
+      this.fragebogen.pregunt1 == '' ||
+      this.fragebogen.pregunt2 == '' ||
+      this.fragebogen.pregunt3 == '' ||
+      this.fragebogen.pregunt4 == '' ||
+      this.fragebogen.pregunt5 == '' ||
+      this.fragebogen.pregunt6 == ''
+    ){
+      this.toastr.error('Debe responder todas las preguntas');
+      return
+    }
+
     this.listResp.map((data) => {
+      
       switch (data) {
         case 'p11': {
-          this.fragebogen.pregunt1 === 'p11' ? this.numAnswer += 1 : null;
+          if( this.fragebogen.pregunt1 === 'p11' && !this.styleP1){
+            this.styleP1 = true;
+            this.numAnswer += 1;
+          }
           break;
         }
         case 'p23': {
-          this.fragebogen.pregunt2 === 'p23' ? this.numAnswer += 1 : null;
+          if( this.fragebogen.pregunt2 === 'p23' && !this.styleP2){
+            this.styleP2 = true;
+            this.numAnswer += 1;
+          }
           break;
         }
         case 'p34': {
-          this.fragebogen.pregunt3 === 'p34' ? this.numAnswer += 1 : null;
+          if( this.fragebogen.pregunt3 === 'p34' && !this.styleP3){
+            this.styleP3 = true;
+            this.numAnswer += 1;
+          }
           break;
         }
         case 'p44': {
-          this.fragebogen.pregunt4 === 'p44' ? this.numAnswer += 1 : null;
+          if( this.fragebogen.pregunt4 === 'p44' && !this.styleP4){
+            this.styleP4 = true;
+            this.numAnswer += 1;
+          }
           break;
         }
         case 'p52': {
-          this.fragebogen.pregunt5 === 'p52' ? this.numAnswer += 1 : null;
+          if( this.fragebogen.pregunt5 === 'p52' && !this.styleP5){
+            this.styleP5 = true;
+            this.numAnswer += 1;
+          }
           break;
         }
         case 'p62': {
-          this.fragebogen.pregunt6 === 'p62' ? this.numAnswer += 1 : null;
+          if( this.fragebogen.pregunt6 === 'p62' && !this.styleP6){
+            this.styleP6 = true;
+            this.numAnswer += 1;
+          }
           break;
         }
       };
     })
+
     if (this.numAnswer == 6) {
       this.fireworks();
       setTimeout(() => {
@@ -89,9 +127,10 @@ export class Modulo1CuestionarioComponent implements OnInit {
       }, 500);
     } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3 || this.numAnswer == 4 || this.numAnswer == 5) {
       this.modalService.open(this.reloadModal, { backdrop: false }).result.then((result) => {
+        this.numAnswer = 6- this.numAnswer;
       }, (reason) => {
       });
     }
-
+    console.log(this.numAnswer);
   }
 }
