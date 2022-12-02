@@ -131,6 +131,5 @@ export class Modulo1CuestionarioComponent implements OnInit {
       }, (reason) => {
       });
     }
-    console.log(this.numAnswer);
   }
 }

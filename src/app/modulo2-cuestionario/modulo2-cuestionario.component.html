@@ -9,7 +9,7 @@
                     <div class="col">
                         <form class="mid-form" #userForm="ngForm" name="formulario" (ngSubmit)="onsubmit()">
                             <!-- Pregunta 1 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP1) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#1</label>
                                 <p>
                                     <strong>
@@ -17,33 +17,33 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p11" value="p11" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <input [attr.disabled]="styleP1 ? true : null" class="form-check-input" type="radio" name="pregunt1" id="p11" value="p11" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p11">
                                         La operación de los datos que se intentan manejar dentro de un programa
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p12" value="p12" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <input [attr.disabled]="styleP1 ? true : null" class="form-check-input" type="radio" name="pregunt1" id="p12" value="p12" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p12">
                                         Definición de los tipos de variables que se declaran a la hora de realizar un programa
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p13" value="p13" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <input [attr.disabled]="styleP1 ? true : null" class="form-check-input" type="radio" name="pregunt1" id="p13" value="p13" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p13">
                                         Es la representación de los datos con los cuales se va a manejar un programa, dejando de lado el cómo son tratados
                                         por la máquina
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p14" value="p14" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <input [attr.disabled]="styleP1 ? true : null" class="form-check-input" type="radio" name="pregunt1" id="p14" value="p14" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p14">
                                         Es el desempeño que tienen los datos sobre el rendimiento de un programa
                                     </label>
                                 </div>
                             </div>
                             <!-- Pregunta 2 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP2) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#2</label>
                                 <p>
                                     <strong>
@@ -51,32 +51,32 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p21" value="p21" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p21" value="p21" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p21">
                                         Es un prototipo que permite estructurar los componentes de un programa
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p22" value="p22" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p22" value="p22" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p22">
                                         Define la perspectiva abstracta del problema, enfocándose en los aspectos relacionados al problema
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p23" value="p23" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p23" value="p23" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p23">
                                         Se considera a la representación de la cantidad de datos que se va a manejar en un programa
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p24" value="p24" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p24" value="p24" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p24">
                                         Ninguna de las anteriores
                                     </label>
                                 </div>
                             </div>
                             <!-- Pregunta 3 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP3) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#3</label>
                                 <p>
                                     <strong>
@@ -84,26 +84,26 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p31" value="p31" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <input [attr.disabled]="styleP3 ? true : null" class="form-check-input" type="radio" name="pregunt3" id="p31" value="p31" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p31">
                                         Conjunto de variables que operan entre sí, con el objetivo de poder realizar una tarea en el programa
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p32" value="p32" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <input [attr.disabled]="styleP3 ? true : null" class="form-check-input" type="radio" name="pregunt3" id="p32" value="p32" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p32">
                                         Son las operaciones aritméticas básicas que se le pueden aplicar a un conjunto de datos como los la suma, resta, multiplicación
                                     y división
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p33" value="p33" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <input [attr.disabled]="styleP3 ? true : null" class="form-check-input" type="radio" name="pregunt3" id="p33" value="p33" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p33">
                                         Son un conjunto de métodos que van a permitir realizar definidas acciones utilizando los datos abstraídos del modelo
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p34" value="p34" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <input [attr.disabled]="styleP3 ? true : null" class="form-check-input" type="radio" name="pregunt3" id="p34" value="p34" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p34">
                                         Es la manera más práctica de poder obtener los datos abstraídos del modelo para poder ser representados por el usuario
                                     del programa
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <!-- Pregunta 4 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP4) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#4</label>
                                 <p>
                                     <strong>
@@ -119,13 +119,13 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt4" id="p41" value="p41" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <input [attr.disabled]="styleP4 ? true : null" class="form-check-input" type="radio" name="pregunt4" id="p41" value="p41" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
                                     <label class="form-check-label" for="p41">
                                         Verdadero
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt4" id="p42" value="p42" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <input [attr.disabled]="styleP4 ? true : null" class="form-check-input" type="radio" name="pregunt4" id="p42" value="p42" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
                                     <label class="form-check-label" for="p42">
                                         Falso
                                     </label>
@@ -133,7 +133,7 @@
 
                             </div>
                             <!-- Pregunta 5 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP5) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#5</label>
                                 <p>
                                     <strong>
@@ -141,32 +141,32 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p51" value="p51" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p51" value="p51" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p51">
                                         Atributos
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p52" value="p52" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p52" value="p52" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p52">
                                         Métodos
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p53" value="p53" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p53" value="p53" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p53">
                                         Funciones abstractas
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p54" value="p54" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p54" value="p54" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p54">
                                         Ninguna de las anteriores
                                     </label>
                                 </div>
                             </div>
                             <!-- Pregunta 6 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP6) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#6</label>
                                 <p>
                                     <strong>
@@ -174,25 +174,25 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p61" value="p61" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
+                                    <input [attr.disabled]="styleP6 ? true : null" class="form-check-input" type="radio" name="pregunt6" id="p61" value="p61" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
                                     <label class="form-check-label" for="p61">
                                         No hay NINGUNA forma de poder acceder a ese elemento
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p62" value="p62" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
+                                    <input [attr.disabled]="styleP6 ? true : null" class="form-check-input" type="radio" name="pregunt6" id="p62" value="p62" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
                                     <label class="form-check-label" for="p62">
                                         La única forma de acceder a ese elemento es creando un objeto de esa clase y hacer el llamada a ese elemento privado
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p63" value="p63" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
+                                    <input [attr.disabled]="styleP6 ? true : null" class="form-check-input" type="radio" name="pregunt6" id="p63" value="p63" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
                                     <label class="form-check-label" for="p63">
                                         Ese elemento es accesible solamente desde otros elementos o el constructor de esa misma clase
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt6" id="p64" value="p64" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
+                                    <input [attr.disabled]="styleP6 ? true : null" class="form-check-input" type="radio" name="pregunt6" id="p64" value="p64" #pregunt6="ngModel" [(ngModel)]="fragebogen.pregunt6">
                                     <label class="form-check-label" for="p64">
                                         Ninguna de las anteriores
                                     </label>
@@ -221,10 +221,10 @@
 <ng-template #continueModal let-modal>
     <div class="modal-header">
         <!-- <h2 class="modal-title" id="modal-basic-title">Bien hecho ya podemos pasar a el siguiente modulo</h2> -->
-        <img src="../../assets/images/modal/bienHecho.jpg" alt="bienHecho.jpg">
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <img src="../../assets/images/modal/bienHecho.jpeg" style="margin-left: auto;" alt="bienHecho.jpg">
+        <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">×</span>
-        </button>
+        </button> -->
     </div>
     <div class="modal-body">
         <ol>
