@@ -44,10 +44,10 @@ export class Modulo1CuestionarioComponent implements OnInit {
       // y_param = Math.random() * (max_int_y - min_int_y) + min_int_y;
 
       fx({
-         x: x_param,
-         y: window.scrollY + 200,
-         colors: ['#FFFFFF', '#FF0000', '#FF8104', '#FFF707']
-       })
+        x: x_param,
+        y: window.scrollY + 200,
+        colors: ['#FFFFFF', '#FF0000', '#FF8104', '#FFF707']
+      })
     }
   }
 
@@ -92,6 +92,5 @@ export class Modulo1CuestionarioComponent implements OnInit {
       }, (reason) => {
       });
     }
-
   }
 }
