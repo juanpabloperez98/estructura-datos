@@ -289,10 +289,10 @@ export class Ejemplo1Component implements OnInit {
         this.less_top();
         return;
       }
-      this.n1 = parseInt(this.inputfield)
+      this.n1 = parseInt(this.inputfield);
 
       this.numeros.push(this.n1);
-      console.log(this.numeros)
+      console.log(this.numeros);
 
       this.inputfield = '';
 
