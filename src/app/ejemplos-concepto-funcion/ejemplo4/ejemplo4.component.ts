@@ -57,24 +57,24 @@ export class Ejemplo4Component implements OnInit {
     {
       'line_explain':'Se define la función serie, la cual recibe por parametro dos valores x, n',
       'var_values':{
-        'x ':'',
-        'n ':'',
+        'x':'',
+        'n':'',
       },
     },//2
     {
       'line_explain':'Se declara una variable llamada init_value la cual va a ser igual al valor de x',
       'var_values':{
-        'x ':'',
-        'init_value':'',
+        'x':'',
       },
     },//3
     {
       'line_explain':'Se imprime el número 1 como inicializador de la serie',
+      'output':'1',
     },//4
     {
       'line_explain':'Se hace un ciclo while el cual valida que el valor de la variable init_value sea menor o igual a n esto para asegurar que no se ha llegado al maximo de la serie',
       'var_values':{
-        'n ':'',
+        'n':'',
         'init_value':'',
       },
     },//5
@@ -87,8 +87,8 @@ export class Ejemplo4Component implements OnInit {
     {
       'line_explain':'Luego, el valor de init_value va aumentar a la razón de cambio x',
       'var_values':{
-        'x':'',
         'init_value':'',
+        'x':'',
       },
     },//7
     {
@@ -146,7 +146,14 @@ export class Ejemplo4Component implements OnInit {
 
   // Functions to run program
   modify_vars = () => {
-    switch (this.current_line) { }
+    switch (this.current_line) { 
+      case 3:
+        this.init_value = this.x;
+        break
+      case 7:
+        this.init_value += this.x;
+        break
+    }
   }
 
   refresh = () => {
@@ -170,6 +177,20 @@ export class Ejemplo4Component implements OnInit {
     switch (this.current_line) {
       case 2:{
         this.loop_jump(10,8);
+        break;
+      }
+      case 6:{
+        if( this.init_value > this.n ){
+          this.loop_jump(8,2);
+        }
+        break;
+      }
+      case 8:{
+        this.loop_jump(5,3,2);
+        break;
+      }
+      case 10:{
+        this.loop_jump(17,8);
         break;
       }
       case 17:{
@@ -224,6 +245,9 @@ export class Ejemplo4Component implements OnInit {
             break;
           case 'n':
             this.value_vars += `<strong>${key}</strong> = ${this.n}<br/>`
+            break;
+          case 'init_value':
+            this.value_vars += `<strong>${key}</strong> = ${this.init_value}<br/>`
             break;
           default:
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
