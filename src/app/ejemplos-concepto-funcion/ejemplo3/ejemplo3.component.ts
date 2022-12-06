@@ -26,7 +26,8 @@ export class Ejemplo3Component implements OnInit {
   reload = false;
   inputfield = '';
 
-  code = ``;
+  code = `
+`;
 
   code_obj = [];
 
