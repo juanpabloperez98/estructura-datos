@@ -245,7 +245,7 @@ export class Ejemplo3Component implements OnInit {
   jump = () => {
     switch (this.current_line) {
       case 8:
-        if (this.i >= 1) {
+        if (this.i >= 5) {
           this.loop_jump(11, 3);
           this.i = 0;
         }
@@ -255,7 +255,7 @@ export class Ejemplo3Component implements OnInit {
         this.i++;
         break;
       case 14:
-        if (this.i >= 1) {
+        if (this.i >= 5) {
           this.loop_jump(17, 3);
           this.i = 0;
         }
@@ -383,7 +383,7 @@ export class Ejemplo3Component implements OnInit {
         this.value_out = data;
       }
       if (this.current_line == 29) {
-        this.value_out = `El arreglo tres es : ${this.arr_3[this.i]} `
+        this.value_out = `Segundo arreglo multiplicado por 2: ${this.arr_3[this.i]} `
       }
     }
   }

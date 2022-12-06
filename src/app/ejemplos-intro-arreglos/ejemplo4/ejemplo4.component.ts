@@ -9,9 +9,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class Ejemplo4Component implements OnInit {
 
-  lines_to_input = [6, 8]
+  lines_to_input = [7]
   current_line = 1;
-  max_line = 31;
+  max_line = 17;
   run_code = false;
   explain_pass = '';
   value_vars = '';
@@ -25,9 +25,102 @@ export class Ejemplo4Component implements OnInit {
   reload = false;
   inputfield = '';
 
-  code = ``;
+  // Variables del ejemplo
+  i: number = 0;
+  arr_1: number[] = [];
+  arr_2: number[] = [];
+  aux1: number = 0;
 
-  code_obj = [];
+  code = `
+  #include <cstdio>
+  int main(){
+      int arr_1[5];
+      int arr_2[5];
+      for(int i = 0; i < 5; i++){
+          printf("\\nIngrese numero en la posicion [%d]: ",i);
+          scanf("%d",&arr_1[i]);
+          fflush(stdin);
+      }
+      for(int i = 0; i < 5; i++){
+          arr_2[i] = arr_1[i] * 2;
+      } 
+      printf("\\nLista resultante\\n");
+      for(int i = 0; i < 5; i++){
+          printf("%d ", arr_2[i]);
+      }
+  }
+`;
+
+  code_obj = [
+    {
+      'line_explain': 'Se incluye la libreria <cstdio> la cual permite manejar funciones de entrada y salida',
+    }, //1
+    {
+      'line_explain': 'Se declara la funci�n principal',
+    }, //2
+    {
+      'line_explain': 'Se declara el arrelgo 1 de enteros',
+    }, //3
+    {
+      'line_explain': 'Se declara el arreglo 2 de enteros (en este se van almacenar los otros)',
+    }, //4
+    {
+      'line_explain': 'Se declara un ciclo for que empieza i = 0 hasta 5, para poder pedirle al usuario los números del primer arreglo',
+      'var_values': {
+        'i': '',
+      }
+
+    }, //5
+    {
+      'line_explain': 'Se le pide al usuario que ingrese un número para el arreglo 1 en la posición i',
+    }, //6
+    {
+      'line_explain': 'Se almacena el valor ingresado por el usuario en la en arreglo 1 en la posición i',
+      'output': 'Ingrese numero:',
+    }, //7
+    {
+      'line_explain': 'Se borra el buffer para que no haya problema al volver a pedir datos',
+    },//8
+    {
+      'line_explain': 'Se cierra el ciclo for',
+    }, //9
+    {
+      'line_explain': 'Se declara un ciclo for que empieza i = 0 hasta 5, para poder meter los valores del arreglo1 en el arreglo 2 multiplicado por 2',
+      'var_values': {
+        'i': '',
+      },
+    }, //10
+    {
+      'line_explain': 'Se alamacena en el arreglo 2 en la posición i, el valor de multiplicar arr_1[i] * 2',
+      'var_values': {
+        'arr_2[i]': '',
+        'arr_1[i]': '',
+
+      },
+    }, //11
+    {
+      'line_explain': 'Se cierra el ciclo for',
+    }, //12
+    {
+      'line_explain': 'Mostrar el arreglo resultante',
+    }, //13
+    {
+      'line_explain': 'Se declara un ciclo for que empieza i = 0 hasta 5, para poder mostrar los elementos del arr_2',
+      'var_values': {
+        'i': '',
+      },
+    }, //14
+    {
+      'line_explain': 'Se imprime el elemento',
+    }, //15
+    {
+      'line_explain': 'se cierra el ciclo for',
+    },//16
+    {
+      'line_explain': 'Fin del programa',
+    },//17
+
+  ];
 
   constructor(
     private highlightService: HighlightService,
@@ -45,7 +138,12 @@ export class Ejemplo4Component implements OnInit {
 
   // Functions to run program
   modify_vars = () => {
-    switch (this.current_line) { }
+    switch (this.current_line) {
+      case 11:
+        this.arr_2[this.i] = this.arr_1[this.i] * 2;
+        break;
+
+    }
   }
 
   refresh = () => {
@@ -67,26 +165,51 @@ export class Ejemplo4Component implements OnInit {
 
   jump = () => {
     switch (this.current_line) {
+      case 6:
+        if (this.i >= 5) {
+          this.loop_jump(9, 3);
+          this.i = 0;
+        }
+        break;
+      case 9:
+        this.loop_jump(5, 4, 2)
+        this.i++;
+        break;
+
+      case 11:
+        if (this.i >= 5) {
+          this.loop_jump(12, 1);
+          this.i = 0;
+        }
+        break;
+      case 12:
+        this.loop_jump(10, 2, 2)
+        this.i++;
+        break;
+
+      case 15:
+        if (this.i >= 5) {
+          this.loop_jump(16, 1);
+          this.i = 0;
+        }
+        break;
+      case 16:
+        this.loop_jump(14, 2, 2)
+        this.i++;
+        break;
     }
   }
 
   validate_input = () => {
-    if (this.current_line === 7) {
+    if (this.current_line === 8) {
       if (this.inputfield === '' || isNaN(parseInt(this.inputfield))) {
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+        return;
       }
-      // this.a = parseInt(this.inputfield)
-      this.inputfield = '';
-    }
-    if (this.current_line === 9) {
-      if (this.inputfield === '' || isNaN(parseInt(this.inputfield))) {
-        this.toastr.error('Debe ingresar un valor para continuar');
-        this.current_line--;
-        this.less_top();
-      }
-      // this.b = parseInt(this.inputfield)
+      this.aux1 = parseInt(this.inputfield);
+      this.arr_1.push(this.aux1);
       this.inputfield = '';
     }
   }
@@ -110,6 +233,15 @@ export class Ejemplo4Component implements OnInit {
       let data = this.code_obj[this.current_line - 1]['var_values'];
       for (const key in data) {
         switch (key) {
+          case 'i':
+            this.value_vars += `<strong>${key}</strong> = ${this.i}<br/>`
+            break;
+          case 'arr_1[i]':
+            this.value_vars += `<strong>${key}</strong> = ${this.arr_1[this.i]}<br/>`
+            break;
+          case 'arr_2[i]':
+            this.value_vars += `<strong>${key}</strong> = ${this.arr_2[this.i]}<br/>`
+            break;
           default:
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
             break
@@ -127,6 +259,9 @@ export class Ejemplo4Component implements OnInit {
       let data = this.code_obj[this.current_line - 1]['output'];
       if (data) {
         this.value_out = data;
+      }
+      if (this.current_line == 15) {
+        this.value_out = `El arreglo tres es : ${this.arr_2[this.i]} `
       }
     }
   }
