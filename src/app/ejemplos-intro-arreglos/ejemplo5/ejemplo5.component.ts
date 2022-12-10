@@ -9,9 +9,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class Ejemplo5Component implements OnInit {
 
-  lines_to_input = [5]
+  lines_to_input = [6]
   current_line = 1;
-  max_line = 18;
+  max_line = 21;
   run_code = false;
   explain_pass = '';
   value_vars = '';
@@ -27,6 +27,7 @@ export class Ejemplo5Component implements OnInit {
 
   // Variables del ejemplo
   i: number = 1;
+  suma: number = 0;
   n: number = 0;
   index: number = 0;
   arr: number[] = [this.n];
@@ -35,20 +36,23 @@ export class Ejemplo5Component implements OnInit {
   #include <cstdio>
 int main(){
     int n;
+    int suma=0;
     printf("Ingrese el numero n: ");
     scanf("%d",&n);
     fflush(stdin);
-    int * arr = new int[n];
+   int* arr = new int[n];
     int index = 0;
     for(int i = 1; i <= n; i++){
         if(i % 2 == 0){
     	    arr[index] = i;
-            index ++;
+            suma += arr[index];
+			index ++;
         }
 	}
 	for(int i = 0; i < index; i++){
-    	printf(arr[i]);
-	}
+    	printf("%d ",arr[i]);
+	}	
+printf("%d total de la suma: ",suma);
 }
 `;
 
@@ -63,77 +67,89 @@ int main(){
       'line_explain': 'Se define la variable n de tipo entero',
     }, //3
     {
-      'line_explain': 'Se le pide al usuario que ingrese el número n',
+      'line_explain': 'Se define la variable suma para hacer la suma del total del arreglo',
     }, //4
+    {
+      'line_explain': 'Se le pide al usuario que ingrese el número n',
+    }, //5
     {
       'line_explain': 'Se almacena el valor igresado por el usuario',
       'output': 'Ingrese el numero n:'
-    }, //5
+    }, //6
     {
       'line_explain': 'Se borra el buffer para que no haya problema al volver a pedir datos',
-    }, //6
+    }, //7
     {
       'line_explain': 'Se define el arreglo arr el cual tiene como longitud el valor n que ha ingresado el usuario',
       'var_values': {
         'n': '',
       },
-    }, //7
+    }, //8
     {
       'line_explain': 'Se define la variable index la cual nos sirve para identificar el indíce del arreglo al cual vamos a almcenar los valores',
       'var_values': {
         'index': '',
       },
-    }, //8
+    }, //9
     {
       'line_explain': 'Se define un ciclo for que va desde i = 1 hasta n',
       'var_values': {
         'i': '',
         'n': '',
       },
-    }, //9
+    }, //10
     {
       'line_explain': 'Se valida si el módulo del valor de i entre 2 es igual a cero (Esto con la intención de validar si el valor de i es par)',
       'var_values': {
         'i': '',
       },
-    }, //10
+    }, //11
     {
       'line_explain': ' Se almacena en el arreglo arr en la posición [index] el valor de i (El cual debe ser un número par)',
       'var_values': {
         'arr[index]': '',
         'i': '',
       },
-    }, //11
+    }, //12
+    {
+      'line_explain': 'Se suma en la variable suma lo que tiene la posicion index del arreglo arr',
+      'var_values': {
+        'suma': '',
+      },
+    }, //13
     {
       'line_explain': 'Se aumenta en 1 el valor de index',
       'var_values': {
         'index': '',
       },
-    }, //12
+    }, //14
     {
       'line_explain': 'Se cierra el condicional',
-    }, //13
+    }, //15
     {
       'line_explain': 'Se cierra el ciclo for',
-    }, //14
+    }, //16
     {
       'line_explain': 'Se define un ciclo for que va desde i = 1 hasta index esto para mostrar los elementos encontrados en el arreglo',
       'var_values': {
+        'i': '',
         'index': '',
       },
-    }, //15
-    {
-      'line_explain': 'Se muestran todos los elementos de la lista',
-      'var_values': {
-        'arr[i]': '',
-      },
-    }, //16
-    {
-      'line_explain': 'Se cierra el ciclo for',
     }, //17
     {
-      'line_explain': 'Fin del programa',
+      'line_explain': 'Se muestran todos los elementos de la lista',
+
     }, //18
+    {
+      'line_explain': 'Se cierra el ciclo for',
+    }, //19
+    {
+      'line_explain': 'Se muestran la suma del arreglo arr',
+
+    },//20
+    {
+      'line_explain': 'Fin del programa',
+    }, //21
   ];
 
   constructor(
@@ -154,11 +170,14 @@ int main(){
   modify_vars = () => {
     switch (this.current_line) {
 
-      case 11:
+      case 12:
         this.arr[this.index] = this.i;
         console.log(this.arr[this.index]);
         break;
-      case 12:
+      case 13:
+        this.suma += this.arr[this.index];
+        break;
+      case 14:
         this.index++;
         break;
     }
@@ -185,41 +204,41 @@ int main(){
     switch (this.current_line) {
 
 
-      case 10:
+      case 11:
         if (this.i > this.n) {
-          this.loop_jump(14, 4);
+          this.loop_jump(16, 5);
           this.i = 0;
         }
         break;
 
-      case 11:
+      case 12:
         if ((this.i % 2) != 0) {
-          this.loop_jump(13, 2)
+          this.loop_jump(15, 3)
 
         }
         console.log(this.i % 2)
         break;
 
-      case 14:
-        this.loop_jump(9, 5, 2)
+      case 16:
+        this.loop_jump(10, 6, 2)
         this.i++;
         break;
-
-      case 16:
+      //ultimo for
+      case 18:
         if (this.i >= this.index) {
-          this.loop_jump(17, 1);
+          this.loop_jump(19, 1);
           this.i = 0;
         }
         break;
-      case 17:
-        this.loop_jump(15, 2, 2)
+      case 19:
+        this.loop_jump(17, 2, 2)
         this.i++;
         break;
     }
   }
 
   validate_input = () => {
-    if (this.current_line === 6) {
+    if (this.current_line === 7) {
       if (this.inputfield === '' || isNaN(parseInt(this.inputfield))) {
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
@@ -259,6 +278,9 @@ int main(){
           case 'n':
             this.value_vars += `<strong>${key}</strong> = ${this.n}<br/>`
             break;
+          case 'suma':
+            this.value_vars += `<strong>${key}</strong> = ${this.suma}<br/>`
+            break;
           case 'index':
             this.value_vars += `<strong>${key}</strong> = ${this.index}<br/>`
             break;
@@ -286,8 +308,11 @@ int main(){
       if (data) {
         this.value_out = data;
       }
-      if (this.current_line == 16) {
+      if (this.current_line == 18) {
         this.value_out = `El arreglo arr es : ${this.arr[this.i]} `
+      }
+      if (this.current_line == 20) {
+        this.value_out = `La suma del arreglo arr es : ${this.suma} `
       }
     }
   }
