@@ -9,10 +9,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class Ejemplo5Component implements OnInit {
 
-
-  lines_to_input = [6, 8]
+  lines_to_input = [5]
   current_line = 1;
-  max_line = 31;
+  max_line = 18;
   run_code = false;
   explain_pass = '';
   value_vars = '';
@@ -26,9 +25,116 @@ export class Ejemplo5Component implements OnInit {
   reload = false;
   inputfield = '';
 
-  code = ``;
+  // Variables del ejemplo
+  i: number = 1;
+  n: number = 0;
+  index: number = 0;
+  arr: number[] = [this.n];
 
-  code_obj = [];
+  code = `
+  #include <cstdio>
+int main(){
+    int n;
+    printf("Ingrese el numero n: ");
+    scanf("%d",&n);
+    fflush(stdin);
+    int * arr = new int[n];
+    int index = 0;
+    for(int i = 1; i <= n; i++){
+        if(i % 2 == 0){
+    	    arr[index] = i;
+            index ++;
+        }
+	}
+	for(int i = 0; i < index; i++){
+    	printf(arr[i]);
+	}
+}
+`;
+
+  code_obj = [
+    {
+      'line_explain': 'Se incluye la libreria <cstdio> la cual permite manejar funciones de entrada y salida',
+    }, //1
+    {
+      'line_explain': 'Se declara la funci�n principal',
+    }, //2
+    {
+      'line_explain': 'Se define la variable n de tipo entero',
+    }, //3
+    {
+      'line_explain': 'Se le pide al usuario que ingrese el número n',
+    }, //4
+    {
+      'line_explain': 'Se almacena el valor igresado por el usuario',
+      'output': 'Ingrese el numero n:'
+    }, //5
+    {
+      'line_explain': 'Se borra el buffer para que no haya problema al volver a pedir datos',
+    }, //6
+    {
+      'line_explain': 'Se define el arreglo arr el cual tiene como longitud el valor n que ha ingresado el usuario',
+      'var_values': {
+        'n': '',
+      },
+    }, //7
+    {
+      'line_explain': 'Se define la variable index la cual nos sirve para identificar el indíce del arreglo al cual vamos a almcenar los valores',
+      'var_values': {
+        'index': '',
+      },
+    }, //8
+    {
+      'line_explain': 'Se define un ciclo for que va desde i = 1 hasta n',
+      'var_values': {
+        'i': '',
+        'n': '',
+      },
+    }, //9
+    {
+      'line_explain': 'Se valida si el módulo del valor de i entre 2 es igual a cero (Esto con la intención de validar si el valor de i es par)',
+      'var_values': {
+        'i': '',
+      },
+    }, //10
+    {
+      'line_explain': ' Se almacena en el arreglo arr en la posición [index] el valor de i (El cual debe ser un número par)',
+      'var_values': {
+        'arr[index]': '',
+        'i': '',
+      },
+    }, //11
+    {
+      'line_explain': 'Se aumenta en 1 el valor de index',
+      'var_values': {
+        'index': '',
+      },
+    }, //12
+    {
+      'line_explain': 'Se cierra el condicional',
+    }, //13
+    {
+      'line_explain': 'Se cierra el ciclo for',
+    }, //14
+    {
+      'line_explain': 'Se define un ciclo for que va desde i = 1 hasta index esto para mostrar los elementos encontrados en el arreglo',
+      'var_values': {
+        'index': '',
+      },
+    }, //15
+    {
+      'line_explain': 'Se muestran todos los elementos de la lista',
+      'var_values': {
+        'arr[i]': '',
+      },
+    }, //16
+    {
+      'line_explain': 'Se cierra el ciclo for',
+    }, //17
+    {
+      'line_explain': 'Fin del programa',
+    }, //18
+  ];
 
   constructor(
     private highlightService: HighlightService,
@@ -46,7 +152,16 @@ export class Ejemplo5Component implements OnInit {
 
   // Functions to run program
   modify_vars = () => {
-    switch (this.current_line) { }
+    switch (this.current_line) {
+
+      case 11:
+        this.arr[this.index] = this.i;
+        console.log(this.arr[this.index]);
+        break;
+      case 12:
+        this.index++;
+        break;
+    }
   }
 
   refresh = () => {
@@ -68,28 +183,53 @@ export class Ejemplo5Component implements OnInit {
 
   jump = () => {
     switch (this.current_line) {
+
+
+      case 10:
+        if (this.i > this.n) {
+          this.loop_jump(14, 4);
+          this.i = 0;
+        }
+        break;
+
+      case 11:
+        if ((this.i % 2) != 0) {
+          this.loop_jump(13, 2)
+
+        }
+        console.log(this.i % 2)
+        break;
+
+      case 14:
+        this.loop_jump(9, 5, 2)
+        this.i++;
+        break;
+
+      case 16:
+        if (this.i >= this.index) {
+          this.loop_jump(17, 1);
+          this.i = 0;
+        }
+        break;
+      case 17:
+        this.loop_jump(15, 2, 2)
+        this.i++;
+        break;
     }
   }
 
   validate_input = () => {
-    if (this.current_line === 7) {
+    if (this.current_line === 6) {
       if (this.inputfield === '' || isNaN(parseInt(this.inputfield))) {
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+
       }
-      // this.a = parseInt(this.inputfield)
+      this.n = parseInt(this.inputfield);
       this.inputfield = '';
     }
-    if (this.current_line === 9) {
-      if (this.inputfield === '' || isNaN(parseInt(this.inputfield))) {
-        this.toastr.error('Debe ingresar un valor para continuar');
-        this.current_line--;
-        this.less_top();
-      }
-      // this.b = parseInt(this.inputfield)
-      this.inputfield = '';
-    }
+
   }
 
   add_top = () => {
@@ -111,6 +251,23 @@ export class Ejemplo5Component implements OnInit {
       let data = this.code_obj[this.current_line - 1]['var_values'];
       for (const key in data) {
         switch (key) {
+          case 'arr':
+            break
+          case 'i':
+            this.value_vars += `<strong>${key}</strong> = ${this.i}<br/>`
+            break;
+          case 'n':
+            this.value_vars += `<strong>${key}</strong> = ${this.n}<br/>`
+            break;
+          case 'index':
+            this.value_vars += `<strong>${key}</strong> = ${this.index}<br/>`
+            break;
+          case 'arr[i]':
+            this.value_vars += `<strong>${key}</strong> = ${this.arr[this.i]}<br/>`
+            break;
+          case 'arr[index]':
+            this.value_vars += `<strong>${key}</strong> = ${this.arr[this.index]}<br/>`
+            break;
           default:
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
             break
@@ -128,6 +285,9 @@ export class Ejemplo5Component implements OnInit {
       let data = this.code_obj[this.current_line - 1]['output'];
       if (data) {
         this.value_out = data;
+      }
+      if (this.current_line == 16) {
+        this.value_out = `El arreglo arr es : ${this.arr[this.i]} `
       }
     }
   }
