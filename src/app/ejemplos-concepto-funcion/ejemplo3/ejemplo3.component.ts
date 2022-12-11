@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class Ejemplo3Component implements OnInit {
 
-  lines_to_input = [11,13]
+  lines_to_input = [11, 13]
   current_line = 1;
   max_line = 16;
   run_code = false;
@@ -26,15 +26,11 @@ export class Ejemplo3Component implements OnInit {
   reload = false;
   inputfield = '';
 
-<<<<<<< HEAD
-  code = `
-`;
-=======
+
   // Variables del ejemplo
-  a:number=0;
-  b:number=1;
-  mult:number = 1;
->>>>>>> juanpablo/RM-1
+  a: number = 0;
+  b: number = 1;
+  mult: number = 1;
 
   code = `
   #include <cstdio>
@@ -56,74 +52,74 @@ export class Ejemplo3Component implements OnInit {
 
   code_obj = [
     {
-      'line_explain':'Se incluye la libreria <cstdio> la cual permite manejar funciones de entrada y salida',
+      'line_explain': 'Se incluye la libreria <cstdio> la cual permite manejar funciones de entrada y salida',
     },//1
     {
-      'line_explain':'Se define la función suma que se le pasa por parametro dos variables a y b de tipo entero',
-      'var_values':{
-        'a':'',
-        'b':'',
+      'line_explain': 'Se define la función suma que se le pasa por parametro dos variables a y b de tipo entero',
+      'var_values': {
+        'a': '',
+        'b': '',
       },
     },//2
     {
-      'line_explain':'Se suman la variables a y b y se retorna',
-      'var_values':{
-        'a':'',
-        'b':'',
+      'line_explain': 'Se suman la variables a y b y se retorna',
+      'var_values': {
+        'a': '',
+        'b': '',
       },
     },//3
     {
-      'line_explain':'Se cierra la función',
+      'line_explain': 'Se cierra la función',
     },//4
     {
-      'line_explain':'Se define la función resta que se le pasa por parametro dos variables a y b de tipo entero',
-      'var_values':{
-        'a':'',
-        'b':'',
+      'line_explain': 'Se define la función resta que se le pasa por parametro dos variables a y b de tipo entero',
+      'var_values': {
+        'a': '',
+        'b': '',
       },
     },//5
     {
-      'line_explain':'Se restan las variables a y b y se retorna',
-      'var_values':{
-        'a':'',
-        'b':'',
+      'line_explain': 'Se restan las variables a y b y se retorna',
+      'var_values': {
+        'a': '',
+        'b': '',
       },
     },//6
     {
-      'line_explain':'Se cierra la función',
+      'line_explain': 'Se cierra la función',
     },//7
     {
-      'line_explain':'Se declara la función main',
+      'line_explain': 'Se declara la función main',
     },//8
     {
-      'line_explain':'Se declaran las variables a,b, mult de tipo entero',
+      'line_explain': 'Se declaran las variables a,b, mult de tipo entero',
     },//9
     {
-      'line_explain':'Se le pide al usuario ingresar el valor de a',
-      'output':'Ingrese valor para a:'
+      'line_explain': 'Se le pide al usuario ingresar el valor de a',
+      'output': 'Ingrese valor para a:'
     },//10
     {
-      'line_explain':'Se almacena en la variable a el valor ingresado',
+      'line_explain': 'Se almacena en la variable a el valor ingresado',
     },//11
     {
-      'line_explain':'Se le pide al usuario ingresar el valor de b',
-      'output':'Ingrese valor para b:'
+      'line_explain': 'Se le pide al usuario ingresar el valor de b',
+      'output': 'Ingrese valor para b:'
     },//12
     {
-      'line_explain':'Se almacena en la variable b el valor ingresado',
+      'line_explain': 'Se almacena en la variable b el valor ingresado',
     },//13
     {
-      'line_explain':'Se hace la multiplicación entre el llamado a la función suma(a,b) multiplicado por el llamado (a,b)',
-      'var_values':{
-        'a':'',
-        'b':'',
+      'line_explain': 'Se hace la multiplicación entre el llamado a la función suma(a,b) multiplicado por el llamado (a,b)',
+      'var_values': {
+        'a': '',
+        'b': '',
       },
     },//14
     {
-      'line_explain':'Se imprime el resultado de la operación anterior',
+      'line_explain': 'Se imprime el resultado de la operación anterior',
     },//15
     {
-      'line_explain':'Fin del programa',
+      'line_explain': 'Fin del programa',
     },//16
   ];
 
@@ -143,7 +139,7 @@ export class Ejemplo3Component implements OnInit {
 
   // Functions to run program
   modify_vars = () => {
-    switch (this.current_line) { 
+    switch (this.current_line) {
       case 15:
         this.mult = (this.a + this.b) * (this.a - this.b);
         break
@@ -170,13 +166,13 @@ export class Ejemplo3Component implements OnInit {
   jump = () => {
     switch (this.current_line) {
       case 2:
-        this.loop_jump(8,6);
+        this.loop_jump(8, 6);
         break
       case 8:
-        this.loop_jump(15,7);
+        this.loop_jump(15, 7);
         break
       case 15:
-        this.loop_jump(2,13,2);
+        this.loop_jump(2, 13, 2);
         break
     }
   }
@@ -242,7 +238,7 @@ export class Ejemplo3Component implements OnInit {
     } else {
       this.is_form = false;
       let data = this.code_obj[this.current_line - 1]['output'];
-      if( this.current_line == 15 ){
+      if (this.current_line == 15) {
         this.value_out = `La multiplicación entre suma y resta es: ${this.mult}`;
       }
       if (data) {
