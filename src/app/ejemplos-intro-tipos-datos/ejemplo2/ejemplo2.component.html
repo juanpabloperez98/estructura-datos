@@ -1,7 +1,7 @@
 <!-- <app-ejemplos></app-ejemplos> -->
 <div class="row mx-auto container">
 
-    <div class="col-lg-6">
+    <div class="col-lg-6" style="top: -56px;">
         <div class="content-after" id="solution">
             <h2 class="text-center">Solución</h2>
             <div class="content-before">
@@ -18,10 +18,10 @@
         <a class="btn btn-outline-primary my-4" *ngIf='!run_code && !reload' (click)="start()">Ejecutar</a>
         <!-- <a class="btn btn-outline-success my-4" *ngIf='run_code' (click)="back()">Anterior</a> -->
         <a class="btn btn-outline-success my-4" *ngIf='run_code && !reload' (click)="next()">Siguiente</a>
-        <a class="btn btn-outline-danger my-4" *ngIf='reload' (click)="refresh()" >Volver a ejecutar</a>
+        <a class="btn btn-outline-danger my-4" *ngIf='reload' (click)="refresh()">Volver a ejecutar</a>
     </div>
 
-    <div class="col-lg-6 my-4" id="show_content">
+    <div class="col-lg-6 my-4" style="top: 30px;">
         <div class="row mx-auto">
             <div class=" content-after col-lg-12 my-4">
                 <span *ngIf="run_code" id="lne-current">Linea {{ current_line }}</span>
@@ -43,13 +43,7 @@
                 </p>
                 <ng-template #formOutput>
                     <div class="form-group">
-                        <input 
-                          [(ngModel)]="password" 
-                          type="text"
-                          class="form-control" 
-                          id="inputfield"
-                          placeholder="Ingresar valor"
-                        >
+                        <input [(ngModel)]="password" type="text" class="form-control" id="inputfield" placeholder="Ingresar valor">
                     </div>
                     <!-- <button (click)="getValueForm()" class="mt-auto mx-auto btn btn-success">Agregar</button> -->
                 </ng-template>
