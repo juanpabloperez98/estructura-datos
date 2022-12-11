@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HighlightService } from '../services/highlight.service';
 import fx from 'fireworks';
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-modulo4-cuestionario',
   templateUrl: './modulo4-cuestionario.component.html',
@@ -15,7 +17,8 @@ export class Modulo4CuestionarioComponent implements OnInit {
   @ViewChild('reloadModal') reloadModal: any;
   constructor(
     private modalService: NgbModal,
-    private highlightService: HighlightService
+    private highlightService: HighlightService,
+    private toastr: ToastrService
   ) {
     this.fragebogen = {
       pregunt1: '',
@@ -25,17 +28,22 @@ export class Modulo4CuestionarioComponent implements OnInit {
     };
   }
 
+  styleP1 = false;
+  styleP2 = false;
+  styleP3 = false;
+  styleP4 = false;
+  styleP5 = false;
+  styleP6 = false;
+
   ngOnInit(): void {
   }
+
   fireworks() {
 
     for (let index = 0; index < 10; index++) {
       let max_int_x = (window.innerWidth / 2) + 300,
         min_int_x = (window.innerWidth / 2) - 300,
-        // max_int_y = (window.scrollY / 2),
-        // min_int_y = (window.scrollY / 2),
         x_param = Math.random() * (max_int_x - min_int_x) + min_int_x;
-      // y_param = Math.random() * (max_int_y - min_int_y) + min_int_y;
 
       fx({
         x: x_param,
@@ -46,6 +54,18 @@ export class Modulo4CuestionarioComponent implements OnInit {
   }
 
   onsubmit() {
+    if (
+      this.fragebogen.pregunt1 == '' ||
+      this.fragebogen.pregunt2 == '' ||
+      this.fragebogen.pregunt3 == '' ||
+      this.fragebogen.pregunt4 == '' ||
+      this.fragebogen.pregunt5 == '' ||
+      this.fragebogen.pregunt6 == ''
+    ) {
+      this.toastr.error('Debe responder todas las preguntas');
+      return
+    }
+
     this.listResp.map((data) => {
       switch (data) {
         case 'p12': {
@@ -76,6 +96,7 @@ export class Modulo4CuestionarioComponent implements OnInit {
       }, 500);
     } else if (this.numAnswer == 1 || this.numAnswer == 2 || this.numAnswer == 3) {
       this.modalService.open(this.reloadModal, { backdrop: false }).result.then((result) => {
+        this.numAnswer = 6- this.numAnswer;
       }, (reason) => {
       });
     }

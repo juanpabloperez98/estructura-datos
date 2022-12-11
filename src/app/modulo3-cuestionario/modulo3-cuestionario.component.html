@@ -9,7 +9,7 @@
                     <div class="col">
                         <form class="mid-form" #userForm="ngForm" name="formulario" (ngSubmit)="onsubmit()">
                             <!-- Pregunta 1 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP1) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#1</label>
                                 <p>
                                     <strong>
@@ -17,26 +17,26 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p11" value="p11" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <input [attr.disabled]="styleP1 ? true : null" class="form-check-input" type="radio" name="pregunt1" id="p11" value="p11" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p11">
                                         Last In First Out
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p12" value="p12" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <input [attr.disabled]="styleP1 ? true : null" class="form-check-input" type="radio" name="pregunt1" id="p12" value="p12" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p12">
                                         First In First Out
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt1" id="p13" value="p13" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
+                                    <input [attr.disabled]="styleP1 ? true : null" class="form-check-input" type="radio" name="pregunt1" id="p13" value="p13" #pregunt1="ngModel" [(ngModel)]="fragebogen.pregunt1">
                                     <label class="form-check-label" for="p13">
                                         Last In Last Out
                                     </label>
                                 </div>
                             </div>
                             <!-- Pregunta 2 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP2) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#2</label>
                                 <p>
                                     <strong>
@@ -44,32 +44,32 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p21" value="p21" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p21" value="p21" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p21">
                                        Nos permite dejar inicialmente vacia la cola una vez creada.
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p22" value="p22" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p22" value="p22" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p22">
                                         Se usa para sacar un elemento de la cola. 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p23" value="p23" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p23" value="p23" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p23">
                                         Permite añadir un elemento al final de la cola
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt2" id="p24" value="p24" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
+                                    <input [attr.disabled]="styleP2 ? true : null" class="form-check-input" type="radio" name="pregunt2" id="p24" value="p24" #pregunt2="ngModel" [(ngModel)]="fragebogen.pregunt2">
                                     <label class="form-check-label" for="p24">
                                         Ninguna de las anteriores
                                     </label>
                                 </div>
                             </div>
                             <!-- Pregunta 3 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP3) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#3</label>
                                 <p>
                                     <strong>
@@ -77,13 +77,13 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p31" value="p31" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <input [attr.disabled]="styleP3 ? true : null" class="form-check-input" type="radio" name="pregunt3" id="p31" value="p31" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p31">
                                        Verdadero 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt3" id="p32" value="p32" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
+                                    <input [attr.disabled]="styleP3 ? true : null" class="form-check-input" type="radio" name="pregunt3" id="p32" value="p32" #pregunt3="ngModel" [(ngModel)]="fragebogen.pregunt3">
                                     <label class="form-check-label" for="p32">
                                         Falso
                                     </label>
@@ -91,7 +91,7 @@
 
                             </div>
                             <!-- Pregunta 4 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP4) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#4</label>
                                 <p>
                                     <strong>
@@ -99,19 +99,19 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt4" id="p41" value="p41" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <input [attr.disabled]="styleP4 ? true : null" class="form-check-input" type="radio" name="pregunt4" id="p41" value="p41" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
                                     <label class="form-check-label" for="p41">
                                      Enlace 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt4" id="p42" value="p42" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <input [attr.disabled]="styleP4 ? true : null" class="form-check-input" type="radio" name="pregunt4" id="p42" value="p42" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
                                     <label class="form-check-label" for="p42">
                                         Nodos
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt4" id="p43" value="p43" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
+                                    <input [attr.disabled]="styleP4 ? true : null" class="form-check-input" type="radio" name="pregunt4" id="p43" value="p43" #pregunt4="ngModel" [(ngModel)]="fragebogen.pregunt4">
                                     <label class="form-check-label" for="p43">
                                         Valor
                                     </label>
@@ -119,7 +119,7 @@
 
                             </div>
                             <!-- Pregunta 5 -->
-                            <div class="mb-3">
+                            <div class="mb-3 question" [ngStyle]="{'background-color': (styleP5) ? '#24f224ec' : ''}">
                                 <label class="form-label" id="color">Pregunta#5</label>
                                 <p>
                                     <strong>
@@ -127,25 +127,25 @@
                                     </strong>
                                 </p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p51" value="p51" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p51" value="p51" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p51">
                                        El tiempo de busqueda se vuelve cero.
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p52" value="p52" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p52" value="p52" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p52">
                                         El tiempo de busqueda se reduce sensiblemente 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p53" value="p53" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p53" value="p53" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p53">
                                         El tiempo de busqueda se duplica 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pregunt5" id="p54" value="p54" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
+                                    <input [attr.disabled]="styleP5 ? true : null" class="form-check-input" type="radio" name="pregunt5" id="p54" value="p54" #pregunt5="ngModel" [(ngModel)]="fragebogen.pregunt5">
                                     <label class="form-check-label" for="p54">
                                         Ninguna de las anteriores
                                     </label>
@@ -173,10 +173,10 @@
 <ng-template #continueModal let-modal>
     <div class="modal-header">
         <!-- <h2 class="modal-title" id="modal-basic-title">Bien hecho ya podemos pasar a el siguiente modulo</h2> -->
-        <img src="../../assets/images/modal/bienHecho.jpeg" alt="bienHecho.jpg">
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <img src="../../assets/images/modal/bienHecho.jpeg" style="margin-left: auto;" alt="bienHecho.jpg">
+        <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">×</span>
-        </button>
+        </button> -->
     </div>
     <div class="modal-body">
         <ol>
