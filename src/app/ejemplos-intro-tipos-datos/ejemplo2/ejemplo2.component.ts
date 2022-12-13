@@ -24,8 +24,8 @@ export class Ejemplo2Component implements OnInit {
   top_style = this.top + 'px';
   is_form = false;
   submit = false;
-  inputFieldVar:string = '';
-  list_to_values_input:any[] = [];
+  inputFieldVar: string = '';
+  list_to_values_input: any[] = [];
   reload = false;
 
   // Variables del ejemplo
@@ -60,100 +60,100 @@ export class Ejemplo2Component implements OnInit {
 
   code_obj = [
     {
-      'line_explain':'Se incluye la libreria <cstdio> la cual permite manejar funciones de entrada y salida',
+      'line_explain': 'Se incluye la libreria <cstdio> la cual permite manejar funciones de entrada y salida',
     },
     {
-      'line_explain':'Se incluye la libreria <string.h> la cual contiene la definición de macros, constantes, funciones y tipos y algunas operaciones de manipulación de memoria.',
+      'line_explain': 'Se incluye la libreria <string.h> la cual contiene la definición de macros, constantes, funciones y tipos y algunas operaciones de manipulación de memoria.',
     },
     {
-      'line_explain':'Se declara la función principal con la que arranca el programa',
+      'line_explain': 'Se declara la función principal con la que arranca el programa',
     },
     {
-      'line_explain':'Se inicializa un arreglo llamado password_user[] con el valor de "MinuevaClave"',
-      'var_values':{
-        'password_user':'MinuevaClave'
+      'line_explain': 'Se inicializa un arreglo llamado password_user[] con el valor de "MinuevaClave"',
+      'var_values': {
+        'password_user': 'MinuevaClave'
       },
     },
     {
-      'line_explain':'Se declara una variable size y se iguala al valor que devuelva la función strlen',
-      'var_values':{
-        'size':12
+      'line_explain': 'Se declara una variable size y se iguala al valor que devuelva la función strlen',
+      'var_values': {
+        'size': 12
       },
     },
     {
-      'line_explain':'Se define un nuevo arreglo con la misma longitud que la variable password_user',
-      'var_values':{
-        'size':12
+      'line_explain': 'Se define un nuevo arreglo con la misma longitud que la variable password_user',
+      'var_values': {
+        'size': 12
       },
     },
     {
-      'line_explain':'Se le pide al usuario que ingrese una contraseña',
-      'output':'Ingrese contraseña',
+      'line_explain': 'Se le pide al usuario que ingrese una contraseña',
+      'output': 'Ingrese contraseña',
     },
     {
-      'line_explain':'Se captura lo ingresado por el usuario',
+      'line_explain': 'Se captura lo ingresado por el usuario',
     },
     {
-      'line_explain':'Se declara un condicional y se iguala a true, esto con la intensión de validar si todos los caractaeres de las cadenas de caracteres',
-      'var_values':{
-        'equal':"true"
+      'line_explain': 'Se declara un condicional y se iguala a true, esto con la intensión de validar si todos los caractaeres de las cadenas de caracteres',
+      'var_values': {
+        'equal': "true"
       },
     },
     {
-      'line_explain':'Se define un ciclo for que empieza en i = 0 y va hasta el valor de la variable size',
-      'var_values':{
-        'i':this.i,
-        'size':"12"
+      'line_explain': 'Se define un ciclo for que empieza en i = 0 y va hasta el valor de la variable size',
+      'var_values': {
+        'i': this.i,
+        'size': "12"
       },
     },
     {
-      'line_explain':'Se valida si el caracter en la posición i de la cadena password es diferente del caracter i en la cadena password_user',
-      'var_values':{
-        'i':this.i,
-        'password':'',
-        'password_user':'',
-        'password[i]':'',
-        'password_user[i]':''
+      'line_explain': 'Se valida si el caracter en la posición i de la cadena password es diferente del caracter i en la cadena password_user',
+      'var_values': {
+        'i': this.i,
+        'password': '',
+        'password_user': '',
+        'password[i]': '',
+        'password_user[i]': ''
       }
     },
     {
-      'line_explain':'Dado el caso que la condición se cumpla entonces la variable equal se iguala a false',
-      'var_values':{
-        'equal':'',
+      'line_explain': 'Dado el caso que la condición se cumpla entonces la variable equal se iguala a false',
+      'var_values': {
+        'equal': '',
       }
     },
     {
-      'line_explain':'Se cierra el condicional',
+      'line_explain': 'Se cierra el condicional',
     },
     {
-      'line_explain':'Se cierra el ciclo for',
+      'line_explain': 'Se cierra el ciclo for',
     },
     {
-      'line_explain':'Se valida si el valor de la variable equal es igual a true',
-      'var_values':{
-        'equal':this.equal,
+      'line_explain': 'Se valida si el valor de la variable equal es igual a true',
+      'var_values': {
+        'equal': this.equal,
       }
     },
     {
-      'line_explain':'Si la condición anterior se cumple entonces se imprime que las claves son iguales',
-      'output':'Claves iguales',
+      'line_explain': 'Si la condición anterior se cumple entonces se imprime que las claves son iguales',
+      'output': 'Claves iguales',
     },
     {
-      'line_explain':'Si la condición no se cumple',
+      'line_explain': 'Si la condición no se cumple',
     },
     {
-      'line_explain':'Se imprime que las claves no son iguales',
-      'output':'Claves no iguales',
+      'line_explain': 'Se imprime que las claves no son iguales',
+      'output': 'Claves no iguales',
     },
     {
-      'line_explain':'Se cierra el condicional',
+      'line_explain': 'Se cierra el condicional',
     },
     {
-      'line_explain':'Fin del programa',
+      'line_explain': 'Fin del programa',
     },
   ]
-  
-  
+
+
 
   constructor(
     private highlightService: HighlightService,
@@ -161,7 +161,7 @@ export class Ejemplo2Component implements OnInit {
     private toastr: ToastrService
   ) { }
 
-  ngAfterViewChecked(){
+  ngAfterViewChecked() {
     this.highlightService.highlightAll();
     this.modalService.dismissAll();
   }
@@ -172,59 +172,59 @@ export class Ejemplo2Component implements OnInit {
   refresh = () => {
     window.location.reload();
   }
-  
-  loop_jump = (to_jump:number, num_jump:number, direcction:number = 1) => {
+
+  loop_jump = (to_jump: number, num_jump: number, direcction: number = 1) => {
     this.current_line = to_jump;
-    if( direcction === 1 ){
-      for(let i = 0; i < num_jump; i++){
+    if (direcction === 1) {
+      for (let i = 0; i < num_jump; i++) {
         this.add_top();
       }
-    }else{
-      for(let i = 0; i < num_jump; i++){
+    } else {
+      for (let i = 0; i < num_jump; i++) {
         this.less_top();
       }
     }
   }
 
   jump = () => {
-    switch(this.current_line){
-      case 12:{
-        if( this.password[this.i] === this.password_user[this.i] ){
-          this.loop_jump(13,1);
-        }else{
+    switch (this.current_line) {
+      case 12: {
+        if (this.password[this.i] === this.password_user[this.i]) {
+          this.loop_jump(13, 1);
+        } else {
           this.equal = false;
         }
         break;
       }
-      case 15:{
-        if ( this.i < 11 )
-        this.loop_jump(10,5,2);
+      case 15: {
+        if (this.i < 11)
+          this.loop_jump(10, 5, 2);
         this.i += 1;
         break;
       }
-      case 16:{
-        if ( !this.equal )
-        this.loop_jump(17,1);
+      case 16: {
+        if (!this.equal)
+          this.loop_jump(17, 1);
         break
       }
-      case 17:{        
-        if ( this.equal )
-        this.loop_jump(19,2);
+      case 17: {
+        if (this.equal)
+          this.loop_jump(19, 2);
         break;
       }
     }
-   
+
   }
 
   validate_input = () => {
-    if ( this.lines_to_validate.includes(this.current_line) ){
-      if ( this.password === '' ){
+    if (this.lines_to_validate.includes(this.current_line)) {
+      if (this.password === '') {
         this.toastr.error('Debe ingresar un valor para continuar');
-        this.current_line --;
+        this.current_line--;
         this.less_top();
-      }else if( this.password.length < 12 ){
+      } else if (this.password.length < 12) {
         this.toastr.error('La longitud de la cadena debe ser del mismo tamaño que la variable password_user');
-        this.current_line --;
+        this.current_line--;
         this.less_top();
       }
     }
@@ -245,10 +245,10 @@ export class Ejemplo2Component implements OnInit {
   }
 
   add_var = () => {
-    if ( this.code_obj[this.current_line - 1]['var_values'] ){
+    if (this.code_obj[this.current_line - 1]['var_values']) {
       let data = this.code_obj[this.current_line - 1]['var_values'];
       for (const key in data) {
-        switch( key ){
+        switch (key) {
           case 'password':
             this.value_vars += `<strong>${key}</strong> = ${this.password}<br/>`
             break;
@@ -271,23 +271,23 @@ export class Ejemplo2Component implements OnInit {
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
             break
         }
-      }      
+      }
       // this.value_vars = this.value_vars.substring(0,this.value_vars.length - 2)
     }
   }
 
   add_output = () => {
-    if ( this.lines_to_input.includes(this.current_line) ){
-        this.is_form = true;
-        this.list_to_values_input = [];
-    }else{
-        this.is_form = false;
-        let data = this.code_obj[this.current_line - 1]['output'];
-        if( data ){
-          this.value_out = data;
-        }
+    if (this.lines_to_input.includes(this.current_line)) {
+      this.is_form = true;
+      this.list_to_values_input = [];
+    } else {
+      this.is_form = false;
+      let data = this.code_obj[this.current_line - 1]['output'];
+      if (data) {
+        this.value_out = data;
+      }
     }
-  } 
+  }
 
   start = () => {
     this.add_explain()
@@ -297,7 +297,7 @@ export class Ejemplo2Component implements OnInit {
   next = () => {
     this.value_vars = ''
     this.value_out = ''
-    if( this.current_line >= this.max_line ){
+    if (this.current_line >= this.max_line) {
       return;
     }
     this.current_line += 1;
@@ -307,9 +307,9 @@ export class Ejemplo2Component implements OnInit {
     this.add_top();
     this.add_var();
     this.add_output();
-    if ( this.current_line >= this.max_line ){
-      this.toastr.success('Fin del programa!','Programa finalizado');
-      this.reload = true; 
+    if (this.current_line >= this.max_line) {
+      this.toastr.success('Fin del programa!', 'Programa finalizado');
+      this.reload = true;
     }
   }
 }
