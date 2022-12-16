@@ -13,7 +13,7 @@ export class Ejemplo1Component implements OnInit {
 
   lines_to_input = [14, 17, 20]
   current_line = 1;
-  max_line = 31;
+  max_line = 23;
   run_code = false;
   explain_pass = '';
   value_vars = '';
@@ -264,7 +264,7 @@ int main(){
   }
 
   add_explain = () => {
-    this.explain_pass = this.code_obj[this.current_line - 1]['line_explain'];
+    this.explain_pass = this.code_obj[this.current_line - 1]['line_explain']
   }
 
   add_var = () => {
