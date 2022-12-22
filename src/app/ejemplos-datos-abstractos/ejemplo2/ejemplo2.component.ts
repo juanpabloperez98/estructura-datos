@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class Ejemplo2Component implements OnInit {
 
-  lines_to_input = [10]
+  lines_to_input = [10, 19, 22, 25]
   current_line = 1;
   max_line = 49;
   run_code = false;
@@ -29,6 +29,10 @@ export class Ejemplo2Component implements OnInit {
   // Variables del ejemplo
   i: number = 0;
   num_empleados: number = 0;
+  nombre: String[] = [];
+  sexo: String[] = [];
+  sueldo: number[] = [];
+
 
   code = `
   #include <cstdio>
@@ -53,7 +57,7 @@ int main(){
             fflush(stdin);
             printf("Ingrese sexo del empleado [%d]: ",i+1);
             gets(emp[i].sexo);
-            
+            fflush(stdin);
             printf("Ingrese el sueldo del empleado [%d]: ",i+1);
             scanf("%f",&emp[i].sueldo);
             fflush(stdin);
@@ -141,7 +145,7 @@ int main(){
       'line_explain': 'Se inicializa el ciclo for donde  i = 0 hasta num_empleados (ingresdado anteriormente por el usuario)',
       'var_values': {
         'i': '',
-        'num_empleados  ': '',
+        'num_empleados': '',
 
       },
     }, //17
@@ -298,6 +302,16 @@ int main(){
       case 15:
         this.loop_jump(48, 33);
         break
+      case 18:
+        if (this.i >= this.num_empleados) {
+          this.loop_jump(27, 9);
+        }
+        break
+      case 27:
+        this.loop_jump(17, 10, 2);
+        this.i++;
+        break
+
     }
   }
 
@@ -310,18 +324,37 @@ int main(){
       }
       this.num_empleados = parseInt(this.inputfield)
       this.inputfield = '';
-    }/* 
-    if (this.current_line === 9) {
-      if (this.inputfield === '' || isNaN(parseInt(this.inputfield))) {
-        this.toastr.error('Debe ingresar un valor para continuar');
+    }
+    if (this.current_line === 20) {
+      if (this.inputfield === '') {
+        this.toastr.error('Debe ingresar el nombre para continuar');
         this.current_line--;
         this.less_top();
       }
-      // this.b = parseInt(this.inputfield)
+      this.nombre[this.i] = this.inputfield
+      console.log(this.nombre[this.i])
       this.inputfield = '';
-    } */
-  }
+    }
+    if (this.current_line === 23) {
+      if (this.inputfield === '') {
+        this.toastr.error('Debe ingresar su genero');
+        this.current_line--;
+        this.less_top();
+      }
+      this.sexo[this.i] = this.inputfield
+      this.inputfield = '';
+    }
+    if (this.current_line === 26) {
+      if (this.inputfield === '' || isNaN(parseInt(this.inputfield))) {
+        this.toastr.error('Debe ingresar un sueldo para continuar');
+        this.current_line--;
+        this.less_top();
+      }
+      this.sueldo[this.i] = parseInt(this.inputfield)
+      this.inputfield = '';
+    }
 
+  }
   add_top = () => {
     this.top += 21
     this.top_style = this.top + 'px';
@@ -347,9 +380,20 @@ int main(){
           case 'num_empleados':
             this.value_vars += `<strong>${key}</strong> = ${this.num_empleados}<br/>`
             break;
+          case 'nombre[i]':
+            this.value_vars += `<strong>${key}</strong> = ${this.nombre[this.i]}<br/>`
+            break;
+          case 'sexo[i]':
+            this.value_vars += `<strong>${key}</strong> = ${this.sexo[this.i]}<br/>`
+            break;
+          case 'sueldo[i]':
+            this.value_vars += `<strong>${key}</strong> = ${this.sueldo[this.i]}<br/>`
+            break;
           default:
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
             break
+
+
         }
       }
     }
