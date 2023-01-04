@@ -7,8 +7,12 @@
     min-height: 100vh;
 }
 
-#solution {
-    margin-top: 100px;
+#margen {
+    margin-top: 60px;
+}
+
+#margen2 {
+    margin-top: 80px;
 }
 
 .content-after h3 {

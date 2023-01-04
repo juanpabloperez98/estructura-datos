@@ -1,8 +1,8 @@
 <!-- <app-ejemplos></app-ejemplos> -->
 <div class="row mx-auto container">
 
-    <div class="col-lg-6">
-        <div class="content-after" id="solution">
+    <div class="col-lg-6 my-2">
+        <div class="content-after" id="margen">
             <h2 class="text-center">Solución</h2>
             <div class="content-before">
                 <!--codigo  -->
@@ -21,8 +21,8 @@
         <a class="btn btn-outline-danger my-4" *ngIf='reload' (click)="refresh()">Volver a ejecutar</a>
     </div>
 
-    <div class="col-lg-6 my-4" style="top: 180px;">
-        <div class="row mx-auto">
+    <div class="col-lg-6 my-4">
+        <div class="row mx-auto" id="margen2">
             <div class=" content-after col-lg-12 my-4">
                 <span *ngIf="run_code" id="lne-current">Linea {{ current_line }}</span>
                 <h3>Paso a paso</h3>
@@ -47,4 +47,5 @@
             </div>
         </div>
     </div>
+
 </div>
