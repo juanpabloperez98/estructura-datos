@@ -313,7 +313,7 @@ export class Ejemplo2Component implements OnInit {
   // Functions to run program
   modify_vars = () => {
     switch (this.current_line) {
-      case 18:///se resetea empleado desde cero para poder pedir mas datos 
+      case 18:
         this.empleado = {
           nombre: '',
           sexo: '',

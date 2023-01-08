@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HighlightService } from 'src/app/services/highlight.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
-
+import { Persona } from './ejemplo1.interface';
 @Component({
   selector: 'app-ejemplo1',
   templateUrl: './ejemplo1.component.html',
@@ -30,8 +30,11 @@ export class Ejemplo1Component implements OnInit {
   // Variables del ejemplo
   nombre: String = '';
   edad: number = 0;
-  estatura: number = 0;
+  estatura = 0;
   peso: number = 0;
+  metros = 0;
+  kilogramos: number = 0;
+  new_persona!: Persona;
 
   code = `
   #include <cstdio>
@@ -110,6 +113,7 @@ int main(){
       'line_explain': 'Se retorna el valor de su nueva estatura ',
       'var_values': {
         'estatura': '',
+        'metros': '',
       },
     },//9
     {
@@ -122,6 +126,7 @@ int main(){
       'line_explain': 'Se retorna el valor de su nuevo peso ',
       'var_values': {
         'peso': '',
+        'kilogramos': '',
       },
     },//12
     {
@@ -185,24 +190,28 @@ int main(){
     {
       'line_explain': 'Al objeto instaciado anteriormente se le asigna en el atributo nombre el valor de la variable nombre ingresado por el usuario',
       'var_values': {
+        'new_persona.nombre': '',
         'nombre': '',
       },
     },//32
     {
       'line_explain': 'Al objeto instanciado anteriormente se le asigna en el atributo edad el valor de la edad ingresado por el usuario',
       'var_values': {
+        'new_persona.edad': '',
         'edad': '',
       },
     },//33
     {
       'line_explain': 'Al objeto instanciado anteriormente se le asigna en el atributo edad el valor de la edad ingresado por el usuario',
       'var_values': {
+        'new_persona.estatura': '',
         'estatura': '',
       },
     },//34
     {
       'line_explain': 'Al objeto instanciado anteriormente se le asigna en el atributo peso el valor del peso ingresado por el usuario',
       'var_values': {
+        'new_persona.peso': '',
         'peso': '',
       },
     },//35
@@ -242,7 +251,14 @@ int main(){
     private highlightService: HighlightService,
     private modalService: NgbModal,
     private toastr: ToastrService
-  ) { }
+  ) {
+    this.new_persona = {
+      nombre: '',
+      edad: 0,
+      estatura: 0,
+      peso: 0
+    }
+  }
 
   ngAfterViewChecked() {
     this.highlightService.highlightAll();
@@ -254,7 +270,26 @@ int main(){
 
   // Functions to run program
   modify_vars = () => {
-    switch (this.current_line) { }
+    switch (this.current_line) {
+      case 32:
+        this.nombre = this.new_persona.nombre;
+        break
+      case 33:
+        this.edad = this.new_persona.edad;
+        break
+      case 34:
+        this.estatura = this.new_persona.estatura;
+        break
+      case 35:
+        this.peso = this.new_persona.peso;
+        break
+      case 42:
+        this.peso = this.new_persona.peso + this.kilogramos;
+        break
+      case 43:
+        this.estatura = this.new_persona.estatura + this.metros;
+        break
+    }
   }
 
   refresh = () => {
@@ -279,11 +314,11 @@ int main(){
       case 2:
         this.loop_jump(15, 13);
         break;
-      case 31:
-        this.loop_jump(2, 29, 2);
-        break;
       case 15:
         this.loop_jump(32, 17);
+        break;
+      case 32:
+        this.loop_jump(2, 30, 2);
         break;
     }
   }
@@ -294,8 +329,9 @@ int main(){
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+        return;
       }
-      this.nombre = this.inputfield
+      this.new_persona.nombre = this.inputfield;
       this.inputfield = '';
     }
     if (this.current_line === 24) {
@@ -303,8 +339,9 @@ int main(){
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+        return;
       }
-      this.edad = parseInt(this.inputfield)
+      this.new_persona.edad = parseInt(this.inputfield);
       this.inputfield = '';
     }
     if (this.current_line === 27) {
@@ -312,8 +349,9 @@ int main(){
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+        return;
       }
-      this.estatura = parseInt(this.inputfield)
+      this.new_persona.peso = parseInt(this.inputfield);
       this.inputfield = '';
     }
     if (this.current_line === 30) {
@@ -321,8 +359,9 @@ int main(){
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+        return;
       }
-      this.peso = parseInt(this.inputfield)
+      this.new_persona.estatura = parseFloat(this.inputfield);
       this.inputfield = '';
     }
     if (this.current_line === 38) {
@@ -330,8 +369,9 @@ int main(){
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+        return;
       }
-      this.peso = parseInt(this.inputfield)
+      this.kilogramos = parseInt(this.inputfield);
       this.inputfield = '';
     }
     if (this.current_line === 41) {
@@ -339,8 +379,9 @@ int main(){
         this.toastr.error('Debe ingresar un valor para continuar');
         this.current_line--;
         this.less_top();
+        return;
       }
-      this.estatura = parseInt(this.inputfield)
+      this.metros = parseFloat(this.inputfield);
       this.inputfield = '';
     }
   }
@@ -364,6 +405,18 @@ int main(){
       let data = this.code_obj[this.current_line - 1]['var_values'];
       for (const key in data) {
         switch (key) {
+          case 'new_persona.nombre':
+            this.value_vars += `<strong>${key}</strong> = ${this.new_persona.nombre}<br/>`
+            break;
+          case 'new_persona.edad':
+            this.value_vars += `<strong>${key}</strong> = ${this.new_persona.edad}<br/>`
+            break;
+          case 'new_persona.estatura':
+            this.value_vars += `<strong>${key}</strong> = ${this.new_persona.estatura}<br/>`
+            break;
+          case 'new_persona.peso':
+            this.value_vars += `<strong>${key}</strong> = ${this.new_persona.peso}<br/>`
+            break;
           case 'nombre':
             this.value_vars += `<strong>${key}</strong> = ${this.nombre}<br/>`
             break;
@@ -375,6 +428,12 @@ int main(){
             break;
           case 'peso':
             this.value_vars += `<strong>${key}</strong> = ${this.peso}<br/>`
+            break;
+          case 'metros':
+            this.value_vars += `<strong>${key}</strong> = ${this.metros}<br/>`
+            break;
+          case 'kilogramos':
+            this.value_vars += `<strong>${key}</strong> = ${this.kilogramos}<br/>`
             break;
           default:
             this.value_vars += `<strong>${key}</strong> = ${data[key as keyof typeof data]}<br/>`
@@ -394,6 +453,9 @@ int main(){
       if (data) {
         this.value_out = data;
       }
+      if (this.current_line == 44) {
+        this.value_out = `El nuevo peso de ${this.new_persona.nombre} es  de : ${this.peso}  y la nueva estatura es ${this.estatura.toFixed(2)} `
+      }
     }
   }
 
@@ -405,6 +467,7 @@ int main(){
   next = () => {
     this.value_vars = ''
     this.value_out = ''
+
     if (this.current_line >= this.max_line) {
       return;
     }
