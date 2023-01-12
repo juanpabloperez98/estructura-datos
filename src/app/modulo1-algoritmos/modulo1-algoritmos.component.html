@@ -45,6 +45,41 @@
             Google Maps, los utilizamos cada día. Por ejemplo, las modificaciones en el algoritmo que decide qué se ve en tu muro de Facebook, conocido como EdgeRank, suelen causar grandes revuelos entre los usuarios. A principios de 2018, la empresa
             decidió dar más importancia a los usuarios particulares que empresas, marcas y medios de comunicación, en un intento de que la red social volviera a ser más "social" y paliar fenómenos como el clickbait y las noticias falsas. Dada la alta
             dependencia actual del mundo real a Facebook, el cambio dio bastantes quebraderos de cabeza, especialmente a empresas y medios.<span id="signos">"</span></p>
-        <a id="btn-module" class="btn btn-primary my-5 " [routerLink]="['/']">VER EJEMPLOS</a>
+
     </div>
+
+    <a class="btn btn-primary col-lg-3 mx-auto" (click)="open(examplemodal)">VER EJEMPLOS</a>
 </div>
+
+<ng-template #examplemodal let-modal>
+    <div class="modal-header">
+        <h2 class="modal-title" id="modal-basic-title">Ejemplos</h2>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <ol>
+            <li>
+                <a routerLink="/">
+                   EJEMPLO
+                </a>
+            </li>
+            <li>
+                <a routerLink="/">
+                    EJEMPLO
+                </a>
+            </li>
+            <li>
+                <a routerLink="/">
+                   EJEMPLO
+                </a>
+            </li>
+            <li>
+                <a routerLink="/">
+                    EJEMPLO
+                </a>
+            </li>
+        </ol>
+    </div>
+</ng-template>
