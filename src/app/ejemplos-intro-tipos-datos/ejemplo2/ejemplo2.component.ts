@@ -4,6 +4,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-ejemplo2',
@@ -158,7 +160,9 @@ export class Ejemplo2Component implements OnInit {
   constructor(
     private highlightService: HighlightService,
     private modalService: NgbModal,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+private router: Router
+
   ) { }
 
   ngAfterViewChecked() {
@@ -170,7 +174,9 @@ export class Ejemplo2Component implements OnInit {
 
   // Functions to run program
   refresh = () => {
-    window.location.reload();
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(() => {
+      this.router.navigate(['/module1/ejemplo2']).then(()=>{})
+    })
   }
 
   loop_jump = (to_jump: number, num_jump: number, direcction: number = 1) => {

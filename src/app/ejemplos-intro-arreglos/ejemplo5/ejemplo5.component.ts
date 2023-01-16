@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HighlightService } from 'src/app/services/highlight.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-ejemplo5',
   templateUrl: './ejemplo5.component.html',
@@ -155,7 +157,9 @@ printf("%d total de la suma: ",suma);
   constructor(
     private highlightService: HighlightService,
     private modalService: NgbModal,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router: Router
+
   ) { }
 
   ngAfterViewChecked() {
@@ -184,7 +188,9 @@ printf("%d total de la suma: ",suma);
   }
 
   refresh = () => {
-    window.location.reload();
+    this.router.navigateByUrl('/',{skipLocationChange:true}).then(() => {
+      this.router.navigate(['/module5/ejemplo5']).then(()=>{})
+    })
   }
 
   loop_jump = (to_jump: number, num_jump: number, direcction: number = 1) => {
